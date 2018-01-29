@@ -40,7 +40,7 @@ int main() {
 int main() {
  
    int rad;
-   float PI = 3.14, area, ci;
+   float PI = 3.2, area, ci;
  
    printf("\nEnter radius of circle: ");
    scanf("%d", &rad);
