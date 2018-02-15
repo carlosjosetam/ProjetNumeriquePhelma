@@ -11,6 +11,6 @@ end add_Round_Key;
 
 architecture A of add_Round_Key is
 
-	text_Out <= text_In xor round_Key;
+	text_Out => text_In xor round_Key;
 
 end A;

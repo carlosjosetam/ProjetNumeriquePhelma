@@ -1,0 +1,8 @@
+
+vdel -lib  /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_VHDL -all
+
+vlib /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_VHDL
+
+vmap lib_VHDL /tp/xph2sei/xph2sei401/ProjetNumeriquePhema/libs/lib_VHDL 
+
+# vcom +acc -work lib_VHDL add_Round_Key.vhd 
