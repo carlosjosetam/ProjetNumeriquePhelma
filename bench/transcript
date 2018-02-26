@@ -7,66 +7,8 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim lib_BENCH.bench_p_layer
-# vsim lib_BENCH.bench_p_layer 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading work.bench_p_layer(arch)#1
-# Loading lib_vhdl.p_layer(a)#1
-add wave -position insertpoint sim:/bench_p_layer/*
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run -continue
-run -continue
-run -continue
-run
-# ** Failure: END OF SIMULATION
-#    Time: 80 ns  Iteration: 0  Process: /bench_p_layer/line__31 File: p_Layer_Bench.vhd
-# Break in Process line__31 at p_Layer_Bench.vhd line 53
-run
-# ** Failure: END OF SIMULATION
-#    Time: 160 ns  Iteration: 0  Process: /bench_p_layer/line__31 File: p_Layer_Bench.vhd
-# Break in Process line__31 at p_Layer_Bench.vhd line 53
-run
-# ** Failure: END OF SIMULATION
-#    Time: 240 ns  Iteration: 0  Process: /bench_p_layer/line__31 File: p_Layer_Bench.vhd
-# Break in Process line__31 at p_Layer_Bench.vhd line 53
-run
-# ** Failure: END OF SIMULATION
-#    Time: 320 ns  Iteration: 0  Process: /bench_p_layer/line__31 File: p_Layer_Bench.vhd
-# Break in Process line__31 at p_Layer_Bench.vhd line 53
-run
-# ** Failure: END OF SIMULATION
-#    Time: 400 ns  Iteration: 0  Process: /bench_p_layer/line__31 File: p_Layer_Bench.vhd
-# Break in Process line__31 at p_Layer_Bench.vhd line 53
-restart
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Failure: END OF SIMULATION
-#    Time: 80 ns  Iteration: 0  Process: /bench_p_layer/line__31 File: p_Layer_Bench.vhd
-# Break in Process line__31 at p_Layer_Bench.vhd line 53
-add wave -position insertpoint  \
-sim:/bench_p_layer/sig_P_Layer_In \
-sim:/bench_p_layer/sig_P_Layer_Out
-vcom -reportprogress 300 -work lib_BENCH /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/p_Layer_Bench.vhd
-# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package MATH_REAL
-# -- Compiling entity bench_P_Layer
-# -- Compiling architecture arch of bench_P_Layer
-restart
+vsim lib_BENCH.bench_s_box
+# vsim lib_BENCH.bench_s_box 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -76,10 +18,17 @@ restart
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.math_real(body)
-# Loading work.bench_p_layer(arch)#1
-# Loading lib_vhdl.p_layer(a)#1
+# Loading work.bench_s_box(arch)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+add wave -position insertpoint  \
+sim:/bench_s_box/sig_s_Box_In \
+sim:/bench_s_box/sig_s_Box_Out
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
 run
+# ** Warning: fail to do the s_Box
+#    Time: 20 ns  Iteration: 0  Instance: /bench_s_box
+# ** Warning: fail to do the s_Box
+#    Time: 60 ns  Iteration: 0  Instance: /bench_s_box
 # ** Failure: END OF SIMULATION
-#    Time: 100 ns  Iteration: 0  Process: /bench_p_layer/line__31 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/p_Layer_Bench.vhd
-# Break in Process line__31 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/p_Layer_Bench.vhd line 58
+#    Time: 60 ns  Iteration: 0  Process: /bench_s_box/line__32 File: s_Box_Bench.vhd
+# Break in Process line__32 at s_Box_Bench.vhd line 49

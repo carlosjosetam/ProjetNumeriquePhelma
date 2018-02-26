@@ -6,3 +6,7 @@ vlib ${HOME}/ProjetNumeriquePhelma/libs/lib_BENCH
 vmap lib_BENCH ${HOME}/ProjetNumeriquePhelma/libs/lib_BENCH 
 
 vcom +acc -work lib_BENCH add_Round_Key_Bench.vhd 
+
+vcom +acc -work lib_BENCH p_Layer_Bench.vhd 
+
+vcom +acc -work lib_BENCH s_Box_Bench.vhd 
