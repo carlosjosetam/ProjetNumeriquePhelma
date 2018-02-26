@@ -1,0 +1,8 @@
+
+vdel -lib  ${HOME}/ProjetNumeriquePhelma/libs/lib_BENCH -all
+
+vlib ${HOME}/ProjetNumeriquePhelma/libs/lib_BENCH
+
+vmap lib_BENCH ${HOME}/ProjetNumeriquePhelma/libs/lib_BENCH 
+
+vcom +acc -work lib_BENCH add_Round_Key_Bench.vhd 

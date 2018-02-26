@@ -1,0 +1,46 @@
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim lib_BENCH.bench_add_round_key
+# vsim lib_BENCH.bench_add_round_key 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading work.bench_add_round_key(arch)#1
+# Loading lib_vhdl.add_round_key(a)#1
+add wave -position insertpoint  \
+sim:/bench_add_round_key/sig_Round_Key \
+sim:/bench_add_round_key/sig_Text_In \
+sim:/bench_add_round_key/sig_Text_Out
+add wave -position insertpoint  \
+sim:/bench_add_round_key/sig_Round_Key \
+sim:/bench_add_round_key/sig_Text_In \
+sim:/bench_add_round_key/sig_Text_Out
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: xph2sei401  Hostname: cimeld44  ProcessID: 6582
+#           Attempting to use alternate WLF file "./wlft3gw6Va".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3gw6Va
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+# Can't move the Now cursor.
+run
+# ** Failure: END OF SIMULATION
+#    Time: 80 ns  Iteration: 0  Process: /bench_add_round_key/line__32 File: add_Round_Key_Bench.vhd
+# Break in Process line__32 at add_Round_Key_Bench.vhd line 58
