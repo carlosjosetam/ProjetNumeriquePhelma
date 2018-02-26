@@ -1,8 +1,8 @@
 
 vdel -lib  ${HOME}/ProjetNumeriquePhelma/libs/lib_VHDL -all
 
-vlib ${TP_PATH}/libs/lib_VHDL
+vlib ${HOME}/ProjetNumeriquePhelma/libs/lib_VHDL
 
-vmap lib_VHDL ${TP_PATH}/libs/lib_VHDL 
+vmap lib_VHDL ${HOME}/ProjetNumeriquePhelma/libs/lib_VHDL 
 
-# vcom +acc -work lib_VHDL add_Round_Key.vhd 
+vcom +acc -work lib_VHDL add_Round_Key.vhd 
