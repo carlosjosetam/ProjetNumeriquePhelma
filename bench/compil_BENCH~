@@ -10,3 +10,5 @@ vcom +acc -work lib_BENCH add_Round_Key_Bench.vhd
 vcom +acc -work lib_BENCH p_Layer_Bench.vhd 
 
 vcom +acc -work lib_BENCH s_Box_Bench.vhd 
+
+vcom +acc -work lib_BENCH s_Box_4x16_Bits_Bench.vhd 

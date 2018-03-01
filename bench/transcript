@@ -7,8 +7,48 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim lib_BENCH.bench_s_box
-# vsim lib_BENCH.bench_s_box 
+vsim lib_BENCH.bench_s_box_4x16_bits
+# vsim lib_BENCH.bench_s_box_4x16_bits 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading work.bench_s_box_4x16_bits(arch)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+add wave -position insertpoint  \
+sim:/bench_s_box_4x16_bits/sig_s_Box_64_Bits_In \
+sim:/bench_s_box_4x16_bits/sig_s_Box_64_Bits_Out
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Warning: fail to do the s_Box_64_Bits
+#    Time: 20 ns  Iteration: 0  Instance: /bench_s_box_4x16_bits
+# ** Warning: fail to do the s_Box_64_Bits
+#    Time: 40 ns  Iteration: 0  Instance: /bench_s_box_4x16_bits
+# ** Warning: fail to do the s_Box_64_Bits
+#    Time: 60 ns  Iteration: 0  Instance: /bench_s_box_4x16_bits
+# ** Failure: END OF SIMULATION
+#    Time: 60 ns  Iteration: 0  Process: /bench_s_box_4x16_bits/line__33 File: s_Box_4x16_Bits_Bench.vhd
+# Break in Process line__33 at s_Box_4x16_Bits_Bench.vhd line 50
+# Causality operation skipped due to absence of debug database file
+vcom -reportprogress 300 -work lib_BENCH /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/s_Box_4x16_Bits_Bench.vhd
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Compiling entity bench_S_Box_4x16_Bits
+# -- Compiling architecture arch of bench_S_Box_4x16_Bits
+restart
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -18,17 +58,17 @@ vsim lib_BENCH.bench_s_box
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.math_real(body)
-# Loading work.bench_s_box(arch)#1
+# Loading work.bench_s_box_4x16_bits(arch)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
 # Loading lib_vhdl.s_box_4_bits(a)#1
-add wave -position insertpoint  \
-sim:/bench_s_box/sig_s_Box_In \
-sim:/bench_s_box/sig_s_Box_Out
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
 run
-# ** Warning: fail to do the s_Box
-#    Time: 20 ns  Iteration: 0  Instance: /bench_s_box
-# ** Warning: fail to do the s_Box
-#    Time: 60 ns  Iteration: 0  Instance: /bench_s_box
+# ** Warning: fail to do the s_Box_64_Bits
+#    Time: 20 ns  Iteration: 0  Instance: /bench_s_box_4x16_bits
+# ** Warning: fail to do the s_Box_64_Bits
+#    Time: 40 ns  Iteration: 0  Instance: /bench_s_box_4x16_bits
+# ** Warning: fail to do the s_Box_64_Bits
+#    Time: 60 ns  Iteration: 0  Instance: /bench_s_box_4x16_bits
 # ** Failure: END OF SIMULATION
-#    Time: 60 ns  Iteration: 0  Process: /bench_s_box/line__32 File: s_Box_Bench.vhd
-# Break in Process line__32 at s_Box_Bench.vhd line 49
+#    Time: 60 ns  Iteration: 0  Process: /bench_s_box_4x16_bits/line__33 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/s_Box_4x16_Bits_Bench.vhd
+# Break in Process line__33 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/s_Box_4x16_Bits_Bench.vhd line 50

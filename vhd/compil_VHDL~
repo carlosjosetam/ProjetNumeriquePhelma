@@ -8,3 +8,5 @@ vmap lib_VHDL ${HOME}/ProjetNumeriquePhelma/libs/lib_VHDL
 vcom +acc -work lib_VHDL add_Round_Key.vhd 
 
 vcom +acc -work lib_VHDL p_Layer.vhd 
+
+vcom +acc -work lib_VHDL s_Box_4_Bits.vhd 
