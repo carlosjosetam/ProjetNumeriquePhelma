@@ -6,17 +6,25 @@
 #include <math.h>
 #include <limits.h>
 
-long long int reverseBits(long long int num)
-{
-    long long int reverse_num = num;
+long long int s_Box_4x16_Bits(long long int s_Box_In) {
+  long long int s_Box_Out = 0x0;
 
-    for (int i = 0; i < (sizeof(long long int) * CHAR_BIT); i++)
-    {
-      reverse_num |= (num & 1);
-      num = num >> 1;
-      reverse_num = reverse_num << 1;
-    }
-    return reverse_num;
+  // printing binary array in reverse order
+
+  for (size_t i = 0; i < 16; i++) {
+    s_Box_Out = s_Box_Out << 4 | s_Box_4_Bits(s_Box_In & 15);
+    s_Box_In = s_Box_In >> 4;
+  }
+
+  /*reverse bits */
+  long long int aux = s_Box_Out;
+  s_Box_Out = aux & 15;
+  for (size_t i = 1; i < 16; i++) {
+    aux = aux >> 4;
+    s_Box_Out = s_Box_Out << 4 | (aux & 15);
+  }
+
+  return s_Box_Out;
 }
 
 int s_Box_4_Bits(int In) {
@@ -60,43 +68,10 @@ int s_Box_4_Bits(int In) {
 
 int main (int argc, char **argv ) {
 
-  int n = atoi(argv[1]);
-
-  printf("s_Box_4x16 for ", n);
-
   long long int s_Box_In = 0x123456789ABCDEF;
-  long long int s_Box_Out = 0x0;
+  printf("s_Box_4x16 for %llX\n", s_Box_In);
 
-  // counter for binary array
-  s_Box_In = s_Box_In | (n % 16);
-  n = n / 16;
-
-
-  int i = 1;
-  while (n > 0) {
-      // storing remainder in binary array
-      printf("%d\n", ((n % 16) << (4*i)));
-      printf("%lld\n", s_Box_In >> 4);
-      s_Box_In = s_Box_In | ((n % 16) << (4*i));
-      n = n / 16;
-      i++;
-  }
-
-  // printing binary array in reverse order
-  printf("%llX\n", s_Box_In);
-
-  for (size_t i = 0; i < 16; i++) {
-    s_Box_Out = s_Box_Out << 4 | s_Box_4_Bits(s_Box_In & 15);
-    s_Box_In = s_Box_In >> 4;
-  }
-
-  /*reverse bits */
-  long long int aux = s_Box_Out;
-  s_Box_Out = aux & 15;
-  for (size_t i = 1; i < 16; i++) {
-    aux = aux >> 4;
-    s_Box_Out = s_Box_Out << 4 | (aux & 15);
-  }
+  long long int s_Box_Out = s_Box_4x16_Bits(s_Box_In);
 
   printf("AFTER S_BOX ====>>> %llX\n", s_Box_Out);
 

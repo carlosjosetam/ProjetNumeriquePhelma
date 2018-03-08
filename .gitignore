@@ -1,10 +1,14 @@
 # intermediate build files
+libs/*.*
 *.bgn
 *.bit
 *.bld
 *.cmd_log
 *.drc
 *.ll
+*.wlf
+*.qdb
+*.qpg
 *.lso
 *.msd
 *.msk
@@ -41,27 +45,3 @@
 *_summary.xml
 *_usage.xml
 *_xst.xrpt
-
-# iMPACT generated files
-_impactbatch.log
-impact.xsl
-impact_impact.xwbt
-ise_impact.cmd
-webtalk_impact.xml
-
-# Core Generator generated files
-xaw2verilog.log
-
-# project-wide generated files
-*.gise
-par_usage_statistics.html
-usage_statistics_webtalk.html
-webtalk.log
-webtalk_pn.xml
-
-# generated folders
-iseconfig/
-xlnx_auto_0_xdb/
-xst/
-_ngo/
-_xmsgs/
