@@ -12,4 +12,4 @@ vcom +acc -work lib_VHDL s_Box_4_Bits.vhd
 
 vcom +acc -work lib_VHDL s_Box_4x16_Bits.vhd 
 
-vcom +acc -work lib_VHDL register_80_bits.vhd 
+vcom +acc -work lib_VHDL register_80_Bits.vhd 

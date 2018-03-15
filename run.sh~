@@ -1,0 +1,3 @@
+sh vhd/compil_VHDL
+sh bench/compil_BENCH
+

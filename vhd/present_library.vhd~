@@ -8,17 +8,15 @@ package present_library is
 	constant ROUND_KEY_SIZE : natural := 64;
 	constant ROUND_COUNTER_SIZE : natural := 5;
 
-	type CNT_key_Schedule is
-	record
-		mux 		: STD_LOGIC;
-		write 		: STD_LOGIC;
-	end record;
-
 	type CNT is
 	record
 		key_Schedule : CNT_key_Schedule;
 	end record;
 
-	
+	type CNT_key_Schedule is
+	record
+		mux 		: STD_LOGIC;
+		write 		: STD_LOGIC;
+	end record;
 
 end present_library ;
