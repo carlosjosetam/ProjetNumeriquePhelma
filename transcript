@@ -98,3 +98,36 @@ add wave -position insertpoint  \
 sim:/bench_key_schedule/KEY_SCHED/mux_Out \
 sim:/bench_key_schedule/KEY_SCHED/register_Out \
 sim:/bench_key_schedule/KEY_SCHED/register_Rotation
+restart
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Warning: fail HOLD_KEY
+#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
+# ** Warning: fail UPD_KEY
+#    Time: 68 ns  Iteration: 0  Instance: /bench_key_schedule
+# ** Warning: fail HOLD_KEY
+#    Time: 88 ns  Iteration: 0  Instance: /bench_key_schedule
+# ** Warning: fail UPD_KEY
+#    Time: 108 ns  Iteration: 0  Instance: /bench_key_schedule
+# ** Failure: END OF SIMULATION
+#    Time: 108 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
+# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 93
+add wave -position insertpoint  \
+sim:/bench_key_schedule/KEY_SCHED/round_Counter \
+sim:/bench_key_schedule/KEY_SCHED/s_Box_Out \
+sim:/bench_key_schedule/KEY_SCHED/add_Round_Counter_Out
+restart
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Warning: fail HOLD_KEY
+#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
+# ** Warning: fail UPD_KEY
+#    Time: 68 ns  Iteration: 0  Instance: /bench_key_schedule
+# ** Warning: fail HOLD_KEY
+#    Time: 88 ns  Iteration: 0  Instance: /bench_key_schedule
+# ** Warning: fail UPD_KEY
+#    Time: 108 ns  Iteration: 0  Instance: /bench_key_schedule
+# ** Failure: END OF SIMULATION
+#    Time: 108 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
+# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 93
+# Causality operation skipped due to absence of debug database file
