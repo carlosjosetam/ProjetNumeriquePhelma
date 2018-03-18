@@ -1,48 +1,4 @@
-def s_Box_4(In):
-    if In == 0:
-        return 0xC
-    if In == 1:
-        return 0x5
-    if In == 2:
-        return 0x6
-    if In == 3:
-        return 0xB
-    if In == 4:
-        return 0x9
-    if In == 5:
-        return 0x0
-    if In == 6:
-        return 0xA
-    if In == 7:
-        return 0xD
-    if In == 8:
-        return 0x3
-    if In == 9:
-        return 0xE
-    if In == 0xA:
-        return 0xF
-    if In == 0xB:
-        return 0x8
-    if In == 0xC:
-        return 0x4
-    if In == 0xD:
-        return 0x7
-    if In == 0xE:
-        return 0x1
-    if In == 0xF:
-        return 0x2
-    return 0
-
-
-def rotl(num, bits):
-    bit = num & (1 << (bits-1))
-    num <<= 1
-    if(bit):
-        num |= 1
-    num &= (2**bits-1)
-
-    return num
-
+from s_box_4 import s_Box_4
 
 rol = lambda val, r_bits, max_bits: \
     (val << r_bits%max_bits) & (2**max_bits-1) | \
@@ -54,26 +10,66 @@ ror = lambda val, r_bits, max_bits: \
     (val << (max_bits-(r_bits%max_bits)) & (2**max_bits-1))
 
 
+def key_Schedule_core(key, round_key, round_counter, CNT_mux, CNT_write):
+    #runs a cycle of function
 
+    if CNT_mux == '0' and CNT_write == '1':
+        #UPDATE_KEY
 
-max_bits = 80
+        max_bits = 80
 
-newval = ror(0xeba00000000000000ea1, 19, max_bits)
-print (hex(newval))
+        newval = ror(round_key, 19, max_bits)
+        test = str(hex(newval))
+        test = test[2:len(test)-1]
+        #print (test)
+        test = ('0' * (20 - len(test))) + test
+        print ("value_rotation", test)
 
-value_sbox = newval >> (80 - 8)
+        value_sbox = test[0]
+        #print("value_sbox", value_sbox)
 
-print (hex(value_sbox))
+        s_Box_Out = int(s_Box_4(value_sbox), 16)
+        #print("s_Box_Out", s_Box_Out)
 
-s_Box_Out = s_Box_4(value_sbox)
+        #print ((newval >> 15 & 0b11111) ^ round_counter)
 
-round_counter = 0b00000
+        add_Round_Counter_Out  = (newval >> 15 & 0b11111) ^ round_counter
+        print (bin(add_Round_Counter_Out << 14))
 
-print ((newval >> 15 & 0b11111) ^ round_counter)
+        print hex(newval)
 
+        fim = s_Box_Out << 76 | (newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 14 |  (newval & 0x3fff)
+        print(hex((newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 14))
 
-add_Round_Counter_Out  = (newval >> 15 & 0b11111) ^ round_counter
+        return fim
 
-fim = s_Box_Out << 76 | (newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 14 |  (newval & 0x3fff)
+    if CNT_mux == '1' and CNT_write == '1':
+        #LOAD_KEY
+        return key
 
-print(hex(fim))
+    if CNT_mux == '0' and CNT_write == '0':
+        #HOLD_KEY
+        return round_key
+
+    return round_key
+
+#KEY_SCHEDULE
+key = 0xEBA00000000000000EA1
+print ("KEY", hex(key))
+round_key = 0
+
+#LOAD_KEY
+round_key = key_Schedule_core(key, round_key, 0b00000, '1', '1')
+print ("LOAD_KEY", hex(round_key))
+
+#UPD 1
+round_key = key_Schedule_core(key, round_key, 0b00000, '0', '1')
+print ("UPD 1", hex(round_key))
+
+#UPD 2
+round_key = key_Schedule_core(key, round_key, 0b00000, '0', '1')
+print ("UPD 2", hex(round_key))
+
+#UPD 3
+round_key = key_Schedule_core(key, round_key, 0b00000, '0', '1')
+print ("UPD 3", hex(round_key))
