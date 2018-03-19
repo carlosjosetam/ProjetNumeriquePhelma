@@ -1,7 +1,7 @@
 #p_Layer of 64 bits
 
 def p_Layer(In):
-    print ("p_Layer for ", hex(In))
+    #print ("p_Layer for ", hex(In))
 
     p_Layer_In = str(bin(In))[2:]
     p_Layer_In = ('0' * (64 - len(p_Layer_In))) + p_Layer_In

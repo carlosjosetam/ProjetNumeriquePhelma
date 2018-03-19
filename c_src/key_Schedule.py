@@ -22,7 +22,7 @@ def key_Schedule_core(key, round_key, round_counter, CNT_mux, CNT_write):
         test = str(hex(newval))
         test = test[2:len(test)-1]
         #print (test)
-        test = ('0' * (20 - len(test))) + test
+        test = ('0' * (20 - len(test))) + test[:20]
         #print ("value_rotation", test)
 
         value_sbox = test[0]
