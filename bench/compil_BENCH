@@ -17,4 +17,4 @@ vcom +acc -work lib_BENCH register_80_Bits_Bench.vhd
 
 vcom +acc -work lib_BENCH key_Schedule_Bench.vhd 
 
-
+vcom +acc -work lib_BENCH register_Generic_Bits_Bench.vhd

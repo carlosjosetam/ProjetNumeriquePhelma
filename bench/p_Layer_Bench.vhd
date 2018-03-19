@@ -54,6 +54,10 @@ begin
 	wait for 20 ns;
 	assert sig_P_Layer_Out = std_logic_vector(to_unsigned(194,64)) report "fail to do the p_Layer" severity warning;
 
+	sig_P_Layer_In <= x"0123456789ABCDEF";
+        
+	wait for 20 ns;
+	assert sig_P_Layer_Out = x"FF0F0F33335555" report "fail to do the p_Layer" severity warning;
 	
 	assert false report "END OF SIMULATION" severity failure;
  end process;

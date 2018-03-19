@@ -7,8 +7,8 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim lib_BENCH.bench_register_80_bits
-# vsim lib_BENCH.bench_register_80_bits 
+vsim lib_BENCH.bench_register_width_bits
+# vsim lib_BENCH.bench_register_width_bits 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
@@ -18,182 +18,17 @@ vsim lib_BENCH.bench_register_80_bits
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.math_real(body)
-# Loading work.bench_register_80_bits(arch)#1
-# Loading lib_vhdl.register_80_bits(a)#1
+# Loading work.bench_register_width_bits(arch)#1
+# Loading lib_vhdl.register_width_bits(a)#1
 add wave -position insertpoint  \
-sim:/bench_register_80_bits/sig_reg_in \
-sim:/bench_register_80_bits/sig_reg_out \
-sim:/bench_register_80_bits/sig_enable \
-sim:/bench_register_80_bits/sig_reset \
-sim:/bench_register_80_bits/sig_clk
+sim:/bench_register_width_bits/sig_reg_in \
+sim:/bench_register_width_bits/sig_reg_out \
+sim:/bench_register_width_bits/sig_enable \
+sim:/bench_register_width_bits/sig_reset \
+sim:/bench_register_width_bits/sig_clk \
+sim:/bench_register_width_bits/delay
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
 run
 # ** Failure: END OF SIMULATION
-#    Time: 50 ns  Iteration: 0  Process: /bench_register_80_bits/line__37 File: register_80_Bits_Bench.vhd
-# Break in Process line__37 at register_80_Bits_Bench.vhd line 55
-run
-# ** Failure: END OF SIMULATION
-#    Time: 100 ns  Iteration: 0  Process: /bench_register_80_bits/line__37 File: register_80_Bits_Bench.vhd
-# Break in Process line__37 at register_80_Bits_Bench.vhd line 55
-quit -sim
-dataset reload -f
-# wrong number of args for "dataset info".
-# Usage: dataset info {name | file | exists} <dataset_name>
-dataset reload -f
-# wrong number of args for "dataset info".
-# Usage: dataset info {name | file | exists} <dataset_name>
-dataset reload -f
-# wrong number of args for "dataset info".
-# Usage: dataset info {name | file | exists} <dataset_name>
-vsim lib_BENCH.bench_key_schedule
-# vsim lib_BENCH.bench_key_schedule 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_key_schedule(arch)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-add wave -position insertpoint  \
-sim:/bench_key_schedule/key_s \
-sim:/bench_key_schedule/round_Counter_s \
-sim:/bench_key_schedule/CNT_s \
-sim:/bench_key_schedule/reset_s \
-sim:/bench_key_schedule/clk_s \
-sim:/bench_key_schedule/round_Key_s
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Failure: END OF SIMULATION
-#    Time: 20 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: key_Schedule_Bench.vhd
-# Break in Process line__47 at key_Schedule_Bench.vhd line 59
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_key_schedule(arch)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 60 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: key_Schedule_Bench.vhd
-# Break in Process line__47 at key_Schedule_Bench.vhd line 72
-add wave -position insertpoint  \
-sim:/bench_key_schedule/KEY_SCHED/mux_Out
-restart
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 60 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: key_Schedule_Bench.vhd
-# Break in Process line__47 at key_Schedule_Bench.vhd line 72
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_key_schedule(arch)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 60 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: key_Schedule_Bench.vhd
-# Break in Process line__47 at key_Schedule_Bench.vhd line 72
-add wave -position insertpoint  \
-sim:/bench_key_schedule/KEY_SCHED/register_Out
-restart
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 60 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: key_Schedule_Bench.vhd
-# Break in Process line__47 at key_Schedule_Bench.vhd line 72
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_key_schedule(arch)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 60 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: key_Schedule_Bench.vhd
-# Break in Process line__47 at key_Schedule_Bench.vhd line 72
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_key_schedule(arch)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 60 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: key_Schedule_Bench.vhd
-# Break in Process line__47 at key_Schedule_Bench.vhd line 72
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-31) Unable to unlink file "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt3/.nfs00000000014100b200000055".
-# Device or resource busy. (errno = EBUSY)
-# ** Warning: (vopt-133) Unable to remove directory "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt3".
-# Directory not empty. (errno = 39)
-# ** Error: (vopt-11) Could not find work.bench_key_schedule(arch).
-# ** Error: Failed to find design unit lib_BENCH.bench_key_schedule(arch).
-# Optimization failed
-run
-# No Design Loaded!
-restart
-# No Design Loaded!
-
-quit -sim
-quit -sim
+#    Time: 50 ns  Iteration: 0  Process: /bench_register_width_bits/line__38 File: register_Generic_Bits_Bench.vhd
+# Break in Process line__38 at register_Generic_Bits_Bench.vhd line 56
