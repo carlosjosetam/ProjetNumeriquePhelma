@@ -14,11 +14,19 @@ package present_library is
 		write 		: STD_LOGIC;
 	end record;
 
+	type CNT_block_Cypher is
+	record
+		text_In 		: STD_LOGIC;
+		write 		: STD_LOGIC;
+		text_Out
+	end record;
+
 	type CNT is
 	record
 		key_Schedule : CNT_key_Schedule;
+		block_Cypher : CNT_block_Cypher;
 	end record;
 
-	
+
 
 end present_library ;
