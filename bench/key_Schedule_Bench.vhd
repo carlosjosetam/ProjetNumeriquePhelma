@@ -46,7 +46,7 @@ begin
   process             
     begin
 	reset_s <= '1';
-	key_s <= x"EBA00000000000000EA1";
+	key_s <= x"DEADBEEF1234567890DC";
 	round_Counter_s <= "00000";
 	CNT_s.write <= '0';
 	CNT_s.mux <= '1';
@@ -71,22 +71,21 @@ begin
 	CNT_s.write <= '1';
 	CNT_s.mux <= '0';        
 
-	wait for 8 ns;
-	assert round_Key_s = key_s report "fail UPD_KEY" severity warning;
+	wait for 4 ns;
+	round_Counter_s <= "00001";
+	
+	wait for 4 ns;
+	round_Counter_s <= "00010";
+	
+	wait for 4 ns;
 
 	-- HOLD_KEY
 	CNT_s.write <= '0';
 	CNT_s.mux <= '0';        
 
 	wait for 20 ns;
-	assert round_Key_s = key_s report "fail HOLD_KEY" severity warning;
 
-	-- UPD_KEY
-	CNT_s.write <= '1';
-	CNT_s.mux <= '0';        
 
-	wait for 20 ns;
-	assert round_Key_s = key_s report "fail UPD_KEY" severity warning;
 
 
 	

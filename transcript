@@ -31,62 +31,24 @@ sim:/bench_key_schedule/reset_s \
 sim:/bench_key_schedule/clk_s \
 sim:/bench_key_schedule/round_Key_s
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-add wave -position insertpoint /bench_key_schedule/KEY_SCHED/register_Rotation
 run
 # ** Warning: fail HOLD_KEY
 #    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 68 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail HOLD_KEY
-#    Time: 88 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 108 ns  Iteration: 0  Instance: /bench_key_schedule
 # ** Failure: END OF SIMULATION
-#    Time: 108 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
-# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 93
-add wave -position insertpoint /bench_key_schedule/KEY_SCHED/register_Out
+#    Time: 92 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
+# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 92
+add wave -position insertpoint  \
+sim:/bench_key_schedule/KEY_SCHED/mux_Out
+add wave -position insertpoint  \
+sim:/bench_key_schedule/KEY_SCHED/register_Out
 restart
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
 run
 # ** Warning: fail HOLD_KEY
 #    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 68 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail HOLD_KEY
-#    Time: 88 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 108 ns  Iteration: 0  Instance: /bench_key_schedule
 # ** Failure: END OF SIMULATION
-#    Time: 108 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
-# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 93
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_key_schedule(arch)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 68 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail HOLD_KEY
-#    Time: 88 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 108 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 108 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
-# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 93
+#    Time: 92 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
+# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 92
 add wave -position insertpoint  \
 sim:/bench_key_schedule/key_s \
 sim:/bench_key_schedule/round_Counter_s \
@@ -95,39 +57,14 @@ sim:/bench_key_schedule/reset_s \
 sim:/bench_key_schedule/clk_s \
 sim:/bench_key_schedule/round_Key_s
 add wave -position insertpoint  \
+sim:/bench_key_schedule/KEY_SCHED/reset \
+sim:/bench_key_schedule/KEY_SCHED/clk \
+sim:/bench_key_schedule/KEY_SCHED/key \
+sim:/bench_key_schedule/KEY_SCHED/round_Counter \
+sim:/bench_key_schedule/KEY_SCHED/CNT \
+sim:/bench_key_schedule/KEY_SCHED/round_Key \
+sim:/bench_key_schedule/KEY_SCHED/s_Box_Out \
+sim:/bench_key_schedule/KEY_SCHED/add_Round_Counter_Out \
 sim:/bench_key_schedule/KEY_SCHED/mux_Out \
 sim:/bench_key_schedule/KEY_SCHED/register_Out \
 sim:/bench_key_schedule/KEY_SCHED/register_Rotation
-restart
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 68 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail HOLD_KEY
-#    Time: 88 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 108 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 108 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
-# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 93
-add wave -position insertpoint  \
-sim:/bench_key_schedule/KEY_SCHED/round_Counter \
-sim:/bench_key_schedule/KEY_SCHED/s_Box_Out \
-sim:/bench_key_schedule/KEY_SCHED/add_Round_Counter_Out
-restart
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 68 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail HOLD_KEY
-#    Time: 88 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Warning: fail UPD_KEY
-#    Time: 108 ns  Iteration: 0  Instance: /bench_key_schedule
-# ** Failure: END OF SIMULATION
-#    Time: 108 ns  Iteration: 0  Process: /bench_key_schedule/line__47 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd
-# Break in Process line__47 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/key_Schedule_Bench.vhd line 93
-# Causality operation skipped due to absence of debug database file
