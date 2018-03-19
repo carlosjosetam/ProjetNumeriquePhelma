@@ -23,7 +23,7 @@ def key_Schedule_core(key, round_key, round_counter, CNT_mux, CNT_write):
         test = test[2:len(test)-1]
         #print (test)
         test = ('0' * (20 - len(test))) + test
-        print ("value_rotation", test)
+        #print ("value_rotation", test)
 
         value_sbox = test[0]
         #print("value_sbox", value_sbox)
@@ -34,11 +34,11 @@ def key_Schedule_core(key, round_key, round_counter, CNT_mux, CNT_write):
         #print ((newval >> 15 & 0b11111) ^ round_counter)
 
         add_Round_Counter_Out  = (newval >> 15 & 0b11111) ^ round_counter
-        print (bin(add_Round_Counter_Out << 14))
+        #print (bin(add_Round_Counter_Out << 14))
 
-        print hex(newval)
+        #print hex(newval)
 
-        fim = s_Box_Out << 76 | (newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 14 |  (newval & 0x3fff)
+        fim = s_Box_Out << 76 | (newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 15 |  (newval & 0x7fff)
         print(hex((newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 14))
 
         return fim
@@ -54,7 +54,7 @@ def key_Schedule_core(key, round_key, round_counter, CNT_mux, CNT_write):
     return round_key
 
 #KEY_SCHEDULE
-key = 0xEBA00000000000000EA1
+key = 0xDEADBEEF1234567890DC
 print ("KEY", hex(key))
 round_key = 0
 
@@ -67,9 +67,13 @@ round_key = key_Schedule_core(key, round_key, 0b00000, '0', '1')
 print ("UPD 1", hex(round_key))
 
 #UPD 2
-round_key = key_Schedule_core(key, round_key, 0b00000, '0', '1')
+round_key = key_Schedule_core(key, round_key, 0b00001, '0', '1')
 print ("UPD 2", hex(round_key))
 
 #UPD 3
-round_key = key_Schedule_core(key, round_key, 0b00000, '0', '1')
+round_key = key_Schedule_core(key, round_key, 0b00010, '0', '1')
 print ("UPD 3", hex(round_key))
+
+#HOLD_KEY
+round_key = key_Schedule_core(key, round_key, 0b00010, '0', '0')
+print ("HOLD", hex(round_key))
