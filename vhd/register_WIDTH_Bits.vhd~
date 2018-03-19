@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 library lib_VHDL;
 
 entity register_WIDTH_bits is
-   generic(WIDTH : natural);
+   generic(WIDTH : integer := 64);
    port(reg_in  	: in  std_logic_vector(WIDTH-1 downto 0);
 	enable		: in  std_logic;
 	reset		: in  std_logic;

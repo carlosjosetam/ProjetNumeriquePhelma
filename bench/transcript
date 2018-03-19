@@ -7,8 +7,12 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim lib_BENCH.bench_register_width_bits
-# vsim lib_BENCH.bench_register_width_bits 
+# vsim ² 
+# ** Error: (vsim-19) Failed to access library 'work' at "work".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+vsim lib_BENCH.bench_block_cypher
+# vsim lib_BENCH.bench_block_cypher 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
@@ -18,17 +22,221 @@ vsim lib_BENCH.bench_register_width_bits
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.math_real(body)
-# Loading work.bench_register_width_bits(arch)#1
+# Loading lib_vhdl.present_library
+# Loading work.bench_block_cypher(arch)#1
+# Loading lib_vhdl.block_cypher(a)#1
 # Loading lib_vhdl.register_width_bits(a)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+# Loading lib_vhdl.add_round_key(a)#1
+# Loading lib_vhdl.p_layer(a)#1
 add wave -position insertpoint  \
-sim:/bench_register_width_bits/sig_reg_in \
-sim:/bench_register_width_bits/sig_reg_out \
-sim:/bench_register_width_bits/sig_enable \
-sim:/bench_register_width_bits/sig_reset \
-sim:/bench_register_width_bits/sig_clk \
-sim:/bench_register_width_bits/delay
+sim:/bench_block_cypher/plein_text_s \
+sim:/bench_block_cypher/round_key_s \
+sim:/bench_block_cypher/CNT_s \
+sim:/bench_block_cypher/reset_s \
+sim:/bench_block_cypher/clk_s \
+sim:/bench_block_cypher/cypher_text_s
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+add wave -position insertpoint  \
+sim:/bench_block_cypher/BLOCK_CHYPER_COMP/reg_64_Out
+run
+# ** Failure: END OF SIMULATION
+#    Time: 100 ns  Iteration: 0  Process: /bench_block_cypher/line__46 File: bench_Block_Cypher.vhd
+# Break in Process line__46 at bench_Block_Cypher.vhd line 87
+vcom -reportprogress 300 -work lib_BENCH /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_block_cypher(arch)#1
+# Loading lib_vhdl.block_cypher(a)#1
+# Loading lib_vhdl.register_width_bits(a)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+# Loading lib_vhdl.add_round_key(a)#1
+# Loading lib_vhdl.p_layer(a)#1
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
 run
 # ** Failure: END OF SIMULATION
-#    Time: 50 ns  Iteration: 0  Process: /bench_register_width_bits/line__38 File: register_Generic_Bits_Bench.vhd
-# Break in Process line__38 at register_Generic_Bits_Bench.vhd line 56
+#    Time: 210 ns  Iteration: 0  Process: /bench_block_cypher/line__46 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Break in Process line__46 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd line 87
+vcom -reportprogress 300 -work lib_BENCH /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_block_cypher(arch)#1
+# Loading lib_vhdl.block_cypher(a)#1
+# Loading lib_vhdl.register_width_bits(a)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+# Loading lib_vhdl.add_round_key(a)#1
+# Loading lib_vhdl.p_layer(a)#1
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Failure: END OF SIMULATION
+#    Time: 184 ns  Iteration: 0  Process: /bench_block_cypher/line__46 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Break in Process line__46 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd line 87
+run
+# ** Failure: END OF SIMULATION
+#    Time: 368 ns  Iteration: 0  Process: /bench_block_cypher/line__46 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Break in Process line__46 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd line 87
+vcom -reportprogress 300 -work lib_BENCH /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_block_cypher(arch)#1
+# Loading lib_vhdl.block_cypher(a)#1
+# Loading lib_vhdl.register_width_bits(a)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+# Loading lib_vhdl.add_round_key(a)#1
+# Loading lib_vhdl.p_layer(a)#1
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Failure: END OF SIMULATION
+#    Time: 204 ns  Iteration: 0  Process: /bench_block_cypher/line__46 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Break in Process line__46 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd line 87
+add wave -position insertpoint  \
+sim:/bench_block_cypher/BLOCK_CHYPER_COMP/s_Box_Out
+add wave -position insertpoint  \
+sim:/bench_block_cypher/BLOCK_CHYPER_COMP/p_Layer_Out
+restart
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Failure: END OF SIMULATION
+#    Time: 204 ns  Iteration: 0  Process: /bench_block_cypher/line__46 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Break in Process line__46 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd line 87
+vcom -reportprogress 300 -work lib_BENCH /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_block_cypher(arch)#1
+# Loading lib_vhdl.block_cypher(a)#1
+# Loading lib_vhdl.register_width_bits(a)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+# Loading lib_vhdl.add_round_key(a)#1
+# Loading lib_vhdl.p_layer(a)#1
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Failure: END OF SIMULATION
+#    Time: 204 ns  Iteration: 0  Process: /bench_block_cypher/line__46 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Break in Process line__46 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd line 87
+vcom -reportprogress 300 -work lib_BENCH /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_block_cypher(arch)#1
+# Loading lib_vhdl.block_cypher(a)#1
+# Loading lib_vhdl.register_width_bits(a)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+# Loading lib_vhdl.add_round_key(a)#1
+# Loading lib_vhdl.p_layer(a)#1
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Failure: END OF SIMULATION
+#    Time: 204 ns  Iteration: 0  Process: /bench_block_cypher/line__46 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd
+# Break in Process line__46 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_Block_Cypher.vhd line 87
+# Break key hit 
+# Break key hit 

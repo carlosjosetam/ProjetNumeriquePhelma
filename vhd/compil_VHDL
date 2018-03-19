@@ -18,4 +18,6 @@ vcom +acc -work lib_VHDL register_80_Bits.vhd
 
 vcom +acc -work lib_VHDL key_Schedule.vhd 
 
-vcom +acc -work lib_VHDL register_64_Bits.vhd
+vcom +acc -work lib_VHDL register_WIDTH_Bits.vhd
+
+vcom +acc -work lib_VHDL block_Cypher.vhd
