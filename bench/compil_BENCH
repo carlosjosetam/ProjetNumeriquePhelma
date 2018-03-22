@@ -20,3 +20,7 @@ vcom +acc -work lib_BENCH key_Schedule_Bench.vhd
 vcom +acc -work lib_BENCH register_Generic_Bits_Bench.vhd
 
 vcom +acc -work lib_BENCH bench_Block_Cypher.vhd
+
+vcom +acc -work lib_BENCH fsm_present_Bench.vhd
+
+vcom +acc -work lib_BENCH bench_present.vhd

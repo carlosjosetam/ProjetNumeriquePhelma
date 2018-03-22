@@ -1,0 +1,75 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_textio.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+use std.textio.all;
+use ieee.math_real.all;
+use ieee.std_logic_arith.ALL;
+library lib_BENCH;
+library lib_VHDL;
+
+use lib_VHDL.present_library.all;
+
+
+entity bench_fsm_Present is
+end entity;  
+
+architecture arch of bench_fsm_Present is
+
+  component fsm_Present is
+     port(
+	reset		: in std_logic;
+	clk		: in std_logic;
+        start		: in std_logic;
+      	
+	CNT		: out CNT;
+	round_Counter	: out std_logic_vector(4 downto 0)
+	);
+  end component;
+
+signal start_s  			: std_logic;
+signal CNT_s				: CNT;
+signal reset_s, clk_s 			: std_logic := '0';
+signal round_Counter_s			: std_logic_vector(4 downto 0);
+
+begin
+	FSM: fsm_Present port map (reset_s, clk_s, start_s, CNT_s, round_Counter_s);
+
+	CLK_DEF: clk_s <= not clk_s after 2 ns;
+
+  process             
+    begin
+	reset_s <= '1';
+	start_s <= '0';
+	wait for 5 ns;
+
+	reset_s <= '1';
+	start_s <= '1';
+	wait for 4 ns;
+
+	start_s <= '0';
+	reset_s <= '0';
+	wait for 5 ns;
+
+	-- TEST FSM
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 150 ns;
+
+	start_s <= '1';
+	wait for 50 ns;
+	
+	assert false report "END OF SIMULATION" severity failure;
+ end process;
+end arch;
+
+
+
+
+
+
+
+

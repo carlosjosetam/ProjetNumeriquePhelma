@@ -18,7 +18,7 @@ package present_library is
 	record
 		text_In 		: STD_LOGIC;
 		write 		: STD_LOGIC;
-		text_Out
+		text_Out	: STD_LOGIC;
 	end record;
 
 	type CNT is
