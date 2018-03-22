@@ -39,7 +39,7 @@ def key_Schedule_core(key, round_key, round_counter, CNT_mux, CNT_write):
         #print hex(newval)
 
         fim = s_Box_Out << 76 | (newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 15 |  (newval & 0x7fff)
-        print(hex((newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 14))
+        #print("Key_in_Mux: ",hex((newval >> 20 & 0xffffffffffffff) << 20 | add_Round_Counter_Out << 14))
 
         return fim
 
