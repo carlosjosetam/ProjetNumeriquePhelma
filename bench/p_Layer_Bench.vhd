@@ -8,6 +8,8 @@ use std.textio.all;
 use ieee.math_real.all;
 library lib_BENCH;
 library lib_VHDL;
+use lib_VHDL.present_library.all;
+
 
 
 
@@ -18,17 +20,21 @@ architecture arch of bench_P_Layer is
 
   component p_Layer
   	port(   p_Layer_In  	: in  std_logic_vector(63 downto 0);
+		MODE		: in MODE_TYPE;
        		p_Layer_Out	: out std_logic_vector(63 downto 0));
   end component;
 
 signal sig_P_Layer_In, sig_P_Layer_Out : std_logic_vector (63 downto 0);
+signal MODE_s			       : MODE_TYPE;
 
 begin
-	S2 : p_Layer port map(sig_P_Layer_In, sig_P_Layer_Out);  
+	S2 : p_Layer port map(sig_P_Layer_In, MODE_s, sig_P_Layer_Out);  
 
 
   process             
     begin
+	-- CRYP
+	MODE_s <= CRYP;
 	sig_P_Layer_In <= std_logic_vector(to_unsigned(0,64));
         
 	wait for 20 ns;

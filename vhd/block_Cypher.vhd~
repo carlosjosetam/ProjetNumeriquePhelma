@@ -12,6 +12,7 @@ entity block_Cypher is
 	plein_Text  	: in std_logic_vector(63 downto 0);  
 	round_Key  	: in std_logic_vector(63 downto 0);       	
 	CNT		: in CNT_Block_Cypher;
+	MODE		: in MODE_TYPE;
 	
 	cypher_Text	: out std_logic_vector(63 downto 0)
 	);
@@ -32,6 +33,7 @@ architecture A of block_Cypher is
 
 	component s_Box_4x16_Bits is
  	 	port( 	s_Box_In_64  	: in  std_logic_vector(63 downto 0);
+			MODE		: in MODE_TYPE;
         		s_Box_Out_64	: out std_logic_vector(63 downto 0));
 	end component;
 
@@ -65,7 +67,7 @@ begin
 	
 	REG2: register_WIDTH_bits generic map (64) port map (xor_Out, CNT.text_Out, reset, clk, cypher_Text);
 
-	SBOX_64: s_Box_4x16_Bits port map (reg_64_Out, s_Box_Out);
+	SBOX_64: s_Box_4x16_Bits port map (reg_64_Out, MODE, s_Box_Out);
 
 	ADD_ROUND_KEY_COMP: add_Round_Key port map (mux_Out, round_Key, add_Round_Key_Out);
 	

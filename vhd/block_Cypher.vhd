@@ -39,6 +39,7 @@ architecture A of block_Cypher is
 
 	component p_Layer is
   		port( 	p_Layer_In  	: in  std_logic_vector(63 downto 0);
+			MODE		: in MODE_TYPE;
         		p_Layer_Out	: out std_logic_vector(63 downto 0));
 	end component;
 
@@ -71,7 +72,7 @@ begin
 
 	ADD_ROUND_KEY_COMP: add_Round_Key port map (mux_Out, round_Key, add_Round_Key_Out);
 	
-	P_LAYER_COMP: p_Layer port map (s_Box_Out, p_Layer_Out);
+	P_LAYER_COMP: p_Layer port map (s_Box_Out, MODE, p_Layer_Out);
 
 
 	process (CNT.text_In, clk, plein_Text, p_Layer_Out)

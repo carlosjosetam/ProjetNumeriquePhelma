@@ -44,3 +44,56 @@ run
 # ** Failure: END OF SIMULATION
 #    Time: 999 ns  Iteration: 0  Process: /bench_present/line__45 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_present.vhd
 # Break in Process line__45 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_present.vhd line 137
+quit -sim
+vsim lib_BENCH.bench_p_layer
+# vsim lib_BENCH.bench_p_layer 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-133) Unable to remove directory "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt3".
+# Directory not empty. (errno = 39)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_p_layer(arch)#1
+# Loading lib_vhdl.p_layer(a)#1
+add wave -position insertpoint  \
+sim:/bench_p_layer/sig_P_Layer_In \
+sim:/bench_p_layer/sig_P_Layer_Out \
+sim:/bench_p_layer/mode_s
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: fail to do the p_Layer
+#    Time: 20 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 40 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: fail to do the p_Layer
+#    Time: 40 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: fail to do the p_Layer
+#    Time: 60 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: fail to do the p_Layer
+#    Time: 80 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: fail to do the p_Layer
+#    Time: 100 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Warning: fail to do the p_Layer
+#    Time: 120 ns  Iteration: 0  Instance: /bench_p_layer
+# ** Failure: END OF SIMULATION
+#    Time: 120 ns  Iteration: 0  Process: /bench_p_layer/line__35 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/p_Layer_Bench.vhd
+# Break in Process line__35 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/p_Layer_Bench.vhd line 68
+# Window cannot be closed because the modal window "Quit Vsim" is still open.
+# Window cannot be closed because the modal window "Quit Vsim" is still open.
+# Window cannot be closed because the modal window "Quit Vsim" is still open.
