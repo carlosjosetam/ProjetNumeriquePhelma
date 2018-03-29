@@ -353,3 +353,11 @@ compile
 # Info: [11019]: Total CPU time for synthesis: 2.7 s secs.
 # Info: [11020]: Overall running time for synthesis: 3.1 s secs.
 synthesize
+# COMMAND: save_project
+# Info: [9562]: Saved implementation synthese_present_cyph_impl_1 in project /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/synth/synthese_present_cyph.psp.
+save_project
+# COMMAND: close_project -discard
+# Info: [9530]: Closed project: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/synth/synthese_present_cyph.psp.
+close_project -discard
+# COMMAND: exit
+exit
