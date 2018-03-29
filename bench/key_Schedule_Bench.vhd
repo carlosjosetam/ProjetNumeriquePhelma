@@ -27,6 +27,7 @@ architecture arch of bench_key_Schedule is
 	key  		: in std_logic_vector(79 downto 0);       	
         round_Counter	: in std_logic_vector(4 downto 0);
 	CNT		: in CNT_key_Schedule;
+	MODE		: in MODE_TYPE;
 
 	round_Key	: out std_logic_vector(63 downto 0)
 	);
@@ -37,14 +38,18 @@ signal round_Counter_s 		: std_logic_vector(4 downto 0);
 signal CNT_s			: CNT_key_Schedule;
 signal reset_s, clk_s 		: std_logic := '0';
 signal round_Key_s		: std_logic_vector(63 downto 0);
+signal MODE_s			: MODE_TYPE;
 
 begin
-	KEY_SCHED: key_Schedule port map(reset_s, clk_s, key_s, round_Counter_s, CNT_s, round_Key_s);
+	KEY_SCHED: key_Schedule port map(reset_s, clk_s, key_s, round_Counter_s, CNT_s, MODE_s, round_Key_s);
 
 	CLK_DEF: clk_s <= not clk_s after 2 ns;
 
   process             
     begin
+	-- CRYP
+	MODE_s <= CRYP;
+
 	reset_s <= '1';
 	key_s <= x"FFFFFFFFFFFFFFFFFFFF";
 	round_Counter_s <= "00000";

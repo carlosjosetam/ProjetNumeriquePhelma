@@ -14,6 +14,7 @@ entity key_Schedule is
 	key  		: in std_logic_vector(79 downto 0);       	
         round_Counter	: in std_logic_vector(4 downto 0);
 	CNT		: in CNT_key_Schedule;
+	MODE		: in MODE_TYPE;
 
 	round_Key	: out std_logic_vector(63 downto 0)
 	);
@@ -32,6 +33,7 @@ architecture A of key_Schedule is
 
 	component s_Box_4_Bits is
   		port( 	s_Box_In  	: in  std_logic_vector(3 downto 0);
+			MODE		: in MODE_TYPE;
         		s_Box_Out	: out std_logic_vector(3 downto 0));
 	end component;
 
@@ -45,7 +47,7 @@ begin
 
 	REG: register_80_bits port map (mux_Out, CNT.write, reset, clk, register_Out);
 
-	SBOX: s_Box_4_Bits port map (register_Rotation(79 downto 76), s_Box_Out);
+	SBOX: s_Box_4_Bits port map (register_Rotation(79 downto 76), MODE, s_Box_Out);
 
 	ADD: add_Round_Counter_Out <= register_Rotation(19 downto 15) XOR round_Counter;
 

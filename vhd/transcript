@@ -1,0 +1,255 @@
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim lib_BENCH.bench_s_box
+# vsim lib_BENCH.bench_s_box 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: Failed to find design unit lib_BENCH.bench_s_box.
+# Optimization failed
+# Error loading design
+vlog -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Skipping entity bench_add_round_key
+# -- Skipping entity bench_block_cypher
+# -- Skipping entity bench_fsm_present
+# -- Skipping entity bench_key_schedule
+# -- Skipping entity bench_p_layer
+# -- Skipping entity bench_present
+# -- Skipping entity bench_present_synth_cryp
+# -- Skipping entity bench_register_80_bits
+# -- Skipping entity bench_register_width_bits
+# -- Skipping entity bench_s_box
+# -- Skipping entity bench_s_box_4x16_bits
+vcom -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Compiling entity bench_add_Round_Key
+# -- Compiling architecture arch of bench_add_Round_Key
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+# -- Compiling entity bench_fsm_Present
+# -- Compiling architecture arch of bench_fsm_Present
+# -- Compiling entity bench_key_Schedule
+# -- Compiling architecture arch of bench_key_Schedule
+# -- Compiling entity bench_P_Layer
+# -- Compiling architecture arch of bench_P_Layer
+# -- Compiling entity bench_Present
+# -- Compiling architecture arch of bench_Present
+# -- Compiling entity bench_Present_synth_cryp
+# -- Compiling architecture arch of bench_Present_synth_cryp
+# -- Compiling entity bench_Register_80_Bits
+# -- Compiling architecture arch of bench_register_80_bits
+# -- Compiling entity bench_Register_WIDTH_Bits
+# -- Compiling architecture arch of bench_register_WIDTH_bits
+# -- Compiling entity bench_S_Box
+# -- Compiling architecture arch of bench_S_Box
+# -- Compiling entity bench_S_Box_4x16_Bits
+# -- Compiling architecture arch of bench_S_Box_4x16_Bits
+vsim lib_BENCH.bench_s_box
+# vsim lib_BENCH.bench_s_box 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_s_box(arch)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+add wave -position insertpoint  \
+sim:/bench_s_box/sig_s_Box_In \
+sim:/bench_s_box/sig_s_Box_Out \
+sim:/bench_s_box/MODE_s
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Warning: fail to do the s_Box
+#    Time: 20 ns  Iteration: 0  Instance: /bench_s_box
+# ** Warning: fail to do the s_Box
+#    Time: 60 ns  Iteration: 0  Instance: /bench_s_box
+# ** Failure: END OF SIMULATION
+#    Time: 120 ns  Iteration: 0  Process: /bench_s_box/line__34 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/s_Box_Bench.vhd
+# Break in Process line__34 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/s_Box_Bench.vhd line 68
+quit -sim
+vlog -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Skipping entity bench_add_round_key
+# -- Skipping entity bench_block_cypher
+# -- Skipping entity bench_fsm_present
+# -- Skipping entity bench_key_schedule
+# -- Skipping entity bench_p_layer
+# -- Skipping entity bench_present
+# -- Skipping entity bench_present_synth_cryp
+# -- Skipping entity bench_register_80_bits
+# -- Skipping entity bench_register_width_bits
+# -- Skipping entity bench_s_box
+# -- Skipping entity bench_s_box_4x16_bits
+vcom -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Compiling entity bench_add_Round_Key
+# -- Compiling architecture arch of bench_add_Round_Key
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+# -- Compiling entity bench_fsm_Present
+# -- Compiling architecture arch of bench_fsm_Present
+# -- Compiling entity bench_key_Schedule
+# -- Compiling architecture arch of bench_key_Schedule
+# -- Compiling entity bench_P_Layer
+# -- Compiling architecture arch of bench_P_Layer
+# -- Compiling entity bench_Present
+# -- Compiling architecture arch of bench_Present
+# -- Compiling entity bench_Present_synth_cryp
+# -- Compiling architecture arch of bench_Present_synth_cryp
+# -- Compiling entity bench_Register_80_Bits
+# -- Compiling architecture arch of bench_register_80_bits
+# -- Compiling entity bench_Register_WIDTH_Bits
+# -- Compiling architecture arch of bench_register_WIDTH_bits
+# -- Compiling entity bench_S_Box
+# -- Compiling architecture arch of bench_S_Box
+# -- Compiling entity bench_S_Box_4x16_Bits
+# -- Compiling architecture arch of bench_S_Box_4x16_Bits
+vsim lib_BENCH.bench_s_box_4x16_bits
+# vsim lib_BENCH.bench_s_box_4x16_bits 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-133) Unable to remove directory "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt3".
+# Directory not empty. (errno = 39)
+# ** Warning: s_Box_4x16_Bits_Bench.vhd(31): (vopt-1447) Instance "/bench_S_Box_4x16_Bits/S4" is bound to entity "lib_vhdl.s_box_4x16_bits" that has no architectures.
+# ** Warning: [1] s_Box_4x16_Bits_Bench.vhd(31): (vopt-3473) Component instance "/bench_S_Box_4x16_Bits/S4 : s_Box_4x16_Bits" is not bound.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_s_box_4x16_bits(arch)#1
+# ** Error: (vsim-3173) Entity '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_VHDL.s_box_4x16_bits' has no architecture.
+# Load interrupted
+# Error loading design
+vsim -voptargs=+acc lib_BENCH.bench_s_box_4x16_bits
+# vsim -voptargs=+acc lib_BENCH.bench_s_box_4x16_bits 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-31) Unable to unlink file "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt3/.nfs00000000015586000000002d".
+# Device or resource busy. (errno = EBUSY)
+# ** Warning: (vopt-31) Unable to unlink file "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt3/.nfs00000000015585ff0000002c".
+# Device or resource busy. (errno = EBUSY)
+# ** Warning: (vopt-31) Unable to unlink file "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt3/.nfs00000000015585fa0000002b".
+# Device or resource busy. (errno = EBUSY)
+# ** Warning: (vopt-133) Unable to remove directory "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt3".
+# Directory not empty. (errno = 39)
+# ** Warning: s_Box_4x16_Bits_Bench.vhd(31): (vopt-1447) Instance "/bench_S_Box_4x16_Bits/S4" is bound to entity "lib_vhdl.s_box_4x16_bits" that has no architectures.
+# ** Warning: [1] s_Box_4x16_Bits_Bench.vhd(31): (vopt-3473) Component instance "/bench_S_Box_4x16_Bits/S4 : s_Box_4x16_Bits" is not bound.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_s_box_4x16_bits(arch)#1
+# ** Error: (vsim-3173) Entity '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_VHDL.s_box_4x16_bits' has no architecture.
+# Load interrupted
+# Error loading design
+vlog -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Skipping entity bench_add_round_key
+# -- Skipping entity bench_block_cypher
+# -- Skipping entity bench_fsm_present
+# -- Skipping entity bench_key_schedule
+# -- Skipping entity bench_p_layer
+# -- Skipping entity bench_present
+# -- Skipping entity bench_present_synth_cryp
+# -- Skipping entity bench_register_80_bits
+# -- Skipping entity bench_register_width_bits
+# -- Skipping entity bench_s_box
+# -- Skipping entity bench_s_box_4x16_bits
+vcom -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Compiling entity bench_add_Round_Key
+# -- Compiling architecture arch of bench_add_Round_Key
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+# -- Compiling entity bench_fsm_Present
+# -- Compiling architecture arch of bench_fsm_Present
+# -- Compiling entity bench_key_Schedule
+# -- Compiling architecture arch of bench_key_Schedule
+# -- Compiling entity bench_P_Layer
+# -- Compiling architecture arch of bench_P_Layer
+# -- Compiling entity bench_Present
+# -- Compiling architecture arch of bench_Present
+# -- Compiling entity bench_Present_synth_cryp
+# -- Compiling architecture arch of bench_Present_synth_cryp
+# -- Compiling entity bench_Register_80_Bits
+# -- Compiling architecture arch of bench_register_80_bits
+# -- Compiling entity bench_Register_WIDTH_Bits
+# -- Compiling architecture arch of bench_register_WIDTH_bits
+# -- Compiling entity bench_S_Box
+# -- Compiling architecture arch of bench_S_Box
+# -- Compiling entity bench_S_Box_4x16_Bits
+# -- Compiling architecture arch of bench_S_Box_4x16_Bits
+vsim lib_BENCH.bench_s_box_4x16_bits
+# vsim lib_BENCH.bench_s_box_4x16_bits 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading lib_vhdl.present_library
+# Loading work.bench_s_box_4x16_bits(arch)#1
+# Loading lib_vhdl.s_box_4x16_bits(a)#1
+# Loading lib_vhdl.s_box_4_bits(a)#1
+add wave -position insertpoint  \
+sim:/bench_s_box_4x16_bits/sig_s_Box_64_Bits_In \
+sim:/bench_s_box_4x16_bits/sig_s_Box_64_Bits_Out \
+sim:/bench_s_box_4x16_bits/MODE_s
+# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+run
+# ** Warning: fail to do the s_Box_64_Bits
+#    Time: 20 ns  Iteration: 0  Instance: /bench_s_box_4x16_bits
+# ** Warning: fail to do the s_Box_64_Bits
+#    Time: 40 ns  Iteration: 0  Instance: /bench_s_box_4x16_bits
+# ** Failure: END OF SIMULATION
+#    Time: 80 ns  Iteration: 0  Process: /bench_s_box_4x16_bits/line__35 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/s_Box_4x16_Bits_Bench.vhd
+# Break in Process line__35 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/s_Box_4x16_Bits_Bench.vhd line 61

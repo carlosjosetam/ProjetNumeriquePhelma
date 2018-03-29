@@ -101,6 +101,34 @@ begin
 	start_s <= '0';
 	wait for 150 ns;
 	
+
+	plein_Text_S <= x"ACABAE55ACACAEBA";
+	key_S <= x"DEADDEADDEADDEADDEAD";
+
+
+	start_s <= '0';
+	wait for 5 ns;
+
+	-- TEST PRESENT	
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 150 ns;
+
+	plein_Text_S <= x"ACABAE55ACACAEBA";
+	key_S <= x"DEADBEEF1234567890DC";
+
+
+	start_s <= '0';
+	wait for 5 ns;
+
+	-- TEST PRESENT	
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 150 ns;
+	
+	
 	assert false report "END OF SIMULATION" severity failure;
  end process;
 end arch;

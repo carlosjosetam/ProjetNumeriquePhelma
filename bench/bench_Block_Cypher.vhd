@@ -26,6 +26,7 @@ architecture arch of bench_Block_Cypher is
 	plein_Text  	: in std_logic_vector(63 downto 0);  
 	round_Key  	: in std_logic_vector(63 downto 0);       	
 	CNT		: in CNT_Block_Cypher;
+	MODE		: in MODE_TYPE;
 	
 	cypher_Text	: out std_logic_vector(63 downto 0)
 	);
@@ -36,14 +37,18 @@ signal round_key_s	 		: std_logic_vector(63 downto 0);
 signal CNT_s				: CNT_Block_Cypher;
 signal reset_s, clk_s 			: std_logic := '0';
 signal cypher_text_s			: std_logic_vector(63 downto 0);
+signal MODE_s				: MODE_TYPE;
 
 begin
-	BLOCK_CHYPER_COMP: block_Cypher port map(reset_s, clk_s, plein_text_s, round_key_s, CNT_s, cypher_text_s);
+	BLOCK_CHYPER_COMP: block_Cypher port map(reset_s, clk_s, plein_text_s, round_key_s, CNT_s, MODE_s, cypher_text_s);
 
 	CLK_DEF: clk_s <= not clk_s after 2 ns;
 
   process             
     begin
+	-- CRYP
+	MODE_s <= CRYP;
+
 	reset_s <= '1';
 	plein_text_s <= x"ACABAE55ACACAEBA";
 	round_key_s <= x"0123456789ABCDEF";

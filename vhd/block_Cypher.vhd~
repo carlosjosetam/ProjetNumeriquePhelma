@@ -63,7 +63,7 @@ begin
 
 	REG1: register_WIDTH_bits generic map (64) port map (add_Round_Key_Out, CNT.write, reset, clk, reg_64_Out);
 	
-	REG2: register_WIDTH_bits generic map (64) port map ((xor_Out, CNT.text_Out, reset, clk, cypher_Text);
+	REG2: register_WIDTH_bits generic map (64) port map (xor_Out, CNT.text_Out, reset, clk, cypher_Text);
 
 	SBOX_64: s_Box_4x16_Bits port map (reg_64_Out, s_Box_Out);
 

@@ -23,6 +23,7 @@ architecture arch of bench_Present is
 		reset		: in std_logic;
 		clk		: in std_logic;
 		start		: in std_logic;
+		MODE		: in MODE_TYPE;
 		plein_Text  	: in std_logic_vector(63 downto 0);  
 		key	  	: in std_logic_vector(79 downto 0);       	
 		cypher_Text	: out std_logic_vector(63 downto 0)
@@ -33,14 +34,18 @@ signal start_s  			: std_logic;
 signal plein_Text_S, cypher_Text_S	: std_logic_vector(63 downto 0);
 signal reset_s, clk_s 			: std_logic := '0';
 signal key_S				: std_logic_vector(79 downto 0);
+signal MODE_s				: MODE_TYPE;
 
 begin
-	P: Present port map (reset_s, clk_s, start_s, plein_Text_S, key_S, cypher_Text_S);
+	P: Present port map (reset_s, clk_s, start_s, MODE_s, plein_Text_S, key_S, cypher_Text_S);
 
 	CLK_DEF: clk_s <= not clk_s after 2 ns;
 
   process             
     begin
+	-- CRYP
+	MODE_s <= CRYP;
+
 	plein_Text_S <= x"0000000000000000";
 	key_S <= x"00000000000000000000";
 

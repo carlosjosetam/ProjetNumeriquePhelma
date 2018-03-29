@@ -10,6 +10,7 @@ entity present is
 	reset		: in std_logic;
 	clk		: in std_logic;
 	start		: in std_logic;
+	MODE		: in MODE_TYPE;
 	plein_Text  	: in std_logic_vector(63 downto 0);  
 	key	  	: in std_logic_vector(79 downto 0);       	
 	cypher_Text	: out std_logic_vector(63 downto 0)
@@ -26,6 +27,7 @@ architecture A of present is
 			plein_Text  	: in std_logic_vector(63 downto 0);  
 			round_Key  	: in std_logic_vector(63 downto 0);       	
 			CNT		: in CNT_Block_Cypher;
+			MODE		: in MODE_TYPE;
 	
 			cypher_Text	: out std_logic_vector(63 downto 0)
 			);
@@ -50,6 +52,7 @@ architecture A of present is
 			key  		: in std_logic_vector(79 downto 0);       	
 			round_Counter	: in std_logic_vector(4 downto 0);
 			CNT		: in CNT_key_Schedule;
+			MODE		: in MODE_TYPE;
 
 			round_Key	: out std_logic_vector(63 downto 0)
 			);
@@ -68,9 +71,9 @@ signal CNT_s : CNT;
 
 
 begin
-	B_C : block_Cypher port map (reset, clk, plein_Text, round_Key_S, CNT_S.block_Cypher, cypher_Text);
+	B_C : block_Cypher port map (reset, clk, plein_Text, round_Key_S, CNT_S.block_Cypher, MODE, cypher_Text);
 	F_P : fsm_Present  port map (reset, clk, start, CNT_s, round_Counter_S);
-	K_S : key_Schedule port map (reset, clk, key, round_Counter_S, CNT_s.key_Schedule, round_Key_S); 
+	K_S : key_Schedule port map (reset, clk, key, round_Counter_S, CNT_s.key_Schedule, MODE, round_Key_S); 
 			
 	
 

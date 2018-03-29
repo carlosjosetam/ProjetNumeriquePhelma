@@ -2,6 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 library lib_VHDL;
 
+
 package present_library is
 
 	constant KEY_SIZE : natural := 80;
@@ -26,6 +27,8 @@ package present_library is
 		key_Schedule : CNT_key_Schedule;
 		block_Cypher : CNT_block_Cypher;
 	end record;
+
+	type MODE is (CRYP, DECRYP);
 
 
 
