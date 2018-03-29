@@ -1,0 +1,25 @@
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Module : work.fsm_Present(A)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of FSMs Extracted : 1
+
+1.
+--------------------------------------------------
+Number of States                : 5
+Primary State Variable          : current_state[4:0]
+Other State Variable(s)         : 1) next_state[4:0]
+Async set/reset state(s)        : 00001 
+Re-encoding Scheme              : ONEHOT 
+FSM: Info, state encoding table:
+FSM:	Index	                         State Name	                            Literal	                      Encoding
+FSM:	    0	                            RESET_S	                              00001	                         00001
+FSM:	    1	                           LOAD_KEY	                              00010	                         00010
+FSM:	    2	                          LOAD_TEXT	                              00100	                         00100
+FSM:	    3	                          LOOP_TEXT	                              01000	                         01000
+FSM:	    4	                           TEXT_OUT	                              10000	                         10000
+
+
+

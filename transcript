@@ -7,8 +7,55 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim lib_BENCH.bench_fsm_present
-# vsim lib_BENCH.bench_fsm_present 
+vlog -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Skipping entity bench_add_round_key
+# -- Skipping entity bench_block_cypher
+# -- Skipping entity bench_fsm_present
+# -- Skipping entity bench_key_schedule
+# -- Skipping entity bench_p_layer
+# -- Skipping entity bench_present
+# -- Skipping entity bench_present_synth_cryp
+# -- Skipping entity bench_register_80_bits
+# -- Skipping entity bench_register_width_bits
+# -- Skipping entity bench_s_box
+# -- Skipping entity bench_s_box_4x16_bits
+vcom -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
+# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Compiling entity bench_add_Round_Key
+# -- Compiling architecture arch of bench_add_Round_Key
+# -- Loading package present_library
+# -- Compiling entity bench_Block_Cypher
+# -- Compiling architecture arch of bench_Block_Cypher
+# -- Compiling entity bench_fsm_Present
+# -- Compiling architecture arch of bench_fsm_Present
+# -- Compiling entity bench_key_Schedule
+# -- Compiling architecture arch of bench_key_Schedule
+# -- Compiling entity bench_P_Layer
+# -- Compiling architecture arch of bench_P_Layer
+# -- Compiling entity bench_Present
+# -- Compiling architecture arch of bench_Present
+# -- Compiling entity bench_Present_synth_cryp
+# -- Compiling architecture arch of bench_Present_synth_cryp
+# -- Compiling entity bench_Register_80_Bits
+# -- Compiling architecture arch of bench_register_80_bits
+# -- Compiling entity bench_Register_WIDTH_Bits
+# -- Compiling architecture arch of bench_register_WIDTH_bits
+# -- Compiling entity bench_S_Box
+# -- Compiling architecture arch of bench_S_Box
+# -- Compiling entity bench_S_Box_4x16_Bits
+# -- Compiling architecture arch of bench_S_Box_4x16_Bits
+vsim lib_BENCH.bench_present_synth_cryp
+# vsim lib_BENCH.bench_present_synth_cryp 
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -17,64 +64,59 @@ vsim lib_BENCH.bench_fsm_present
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_fsm_present(arch)#1
-# Loading lib_vhdl.fsm_present(a)#1
+# Loading work.bench_present_synth_cryp(arch)#1
+# Loading unisim.vcomponents
+# Loading vital2000.vital_timing(body)
+# Loading simprim.vcomponents
+# Loading lib_synth.present(a)#1
+# Loading lib_synth.block_cypher(a)#1
+# Loading lib_synth.register_width_bits_64(a_unfold_1)#1
+# Loading unisim.fdce(fdce_v)#1
+# Loading lib_synth.register_width_bits_64_unfolded0(a)#1
+# Loading lib_synth.add_round_key(a)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Instance: /bench_present_synth_cryp/P/B_C/ADD_ROUND_KEY_COMP/ix10346z24204
+# Loading unisim.lut4(lut4_v)#1
+# Loading unisim.lut2(lut2_v)#1
+# Loading lib_synth.key_schedule(a)#1
+# Loading lib_synth.register_80_bits(a)#1
+# Loading unisim.lut3(lut3_v)#1
+# Loading lib_synth.inc_5_0(implementation)#1
+# Loading unisim.gnd(gnd_v)#1
+# Loading unisim.vcc(vcc_v)#1
+# Loading unisim.lut1_l(lut1_l_v)#1
+# Loading unisim.xorcy(xorcy_v)#1
+# Loading unisim.muxcy_l(muxcy_l_v)#1
+# Loading unisim.obuf(obuf_v)#1
+# Loading unisim.ibuf(ibuf_v)#1
+# Loading unisim.ld(ld_v)#1
+# Loading unisim.fdc(fdc_v)#1
+# Loading unisim.fdp(fdp_v)#1
+# Loading unisim.bufgp(bufgp_v)#1
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_cryp/P/F_P_rtlc_153_inc_2/cout has no driver.
+# This port will contribute value (U) to the signal network.
 add wave -position insertpoint  \
-sim:/bench_fsm_present/start_s \
-sim:/bench_fsm_present/CNT_s \
-sim:/bench_fsm_present/reset_s \
-sim:/bench_fsm_present/clk_s \
-sim:/bench_fsm_present/round_Counter_s
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-add wave -position insertpoint  \
-sim:/bench_fsm_present/FSM/current_state
-run
-# ** Failure: END OF SIMULATION
-#    Time: 220 ns  Iteration: 0  Process: /bench_fsm_present/line__43 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/fsm_present_Bench.vhd
-# Break in Process line__43 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/fsm_present_Bench.vhd line 58
-add wave -position insertpoint  \
-sim:/bench_fsm_present/FSM/next_round_Counter_s
-restart
+sim:/bench_present_synth_cryp/start_s \
+sim:/bench_present_synth_cryp/plein_Text_S \
+sim:/bench_present_synth_cryp/cypher_Text_S \
+sim:/bench_present_synth_cryp/reset_s \
+sim:/bench_present_synth_cryp/clk_s \
+sim:/bench_present_synth_cryp/key_S
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
 run
 # ** Failure: END OF SIMULATION
-#    Time: 220 ns  Iteration: 0  Process: /bench_fsm_present/line__43 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/fsm_present_Bench.vhd
-# Break in Process line__43 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/fsm_present_Bench.vhd line 58
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "fsm_Present(A)".
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_fsm_present(arch)#1
-# Loading lib_vhdl.fsm_present(a)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
+#    Time: 999 ns  Iteration: 0  Process: /bench_present_synth_cryp/line__40 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_present_synth_cryp.vhd
+# Break in Process line__40 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_present_synth_cryp.vhd line 129
 run
 # ** Failure: END OF SIMULATION
-#    Time: 220 ns  Iteration: 0  Process: /bench_fsm_present/line__43 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/fsm_present_Bench.vhd
-# Break in Process line__43 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/fsm_present_Bench.vhd line 58
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_fsm_present(arch)#1
-# Loading lib_vhdl.fsm_present(a)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Failure: END OF SIMULATION
-#    Time: 224 ns  Iteration: 0  Process: /bench_fsm_present/line__43 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/fsm_present_Bench.vhd
-# Break in Process line__43 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/fsm_present_Bench.vhd line 65
+#    Time: 1998 ns  Iteration: 0  Process: /bench_present_synth_cryp/line__40 File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_present_synth_cryp.vhd
+# Break in Process line__40 at /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/bench/bench_present_synth_cryp.vhd line 129
+
+
+
+
+
+quit -sim

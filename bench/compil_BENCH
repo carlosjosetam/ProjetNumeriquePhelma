@@ -24,3 +24,5 @@ vcom +acc -work lib_BENCH bench_Block_Cypher.vhd
 vcom +acc -work lib_BENCH fsm_present_Bench.vhd
 
 vcom +acc -work lib_BENCH bench_present.vhd
+
+vcom +acc -work lib_BENCH bench_present_synth_cryp.vhd

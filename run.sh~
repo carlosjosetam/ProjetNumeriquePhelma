@@ -1,3 +1,6 @@
-sh vhd/compil_VHDL
-sh bench/compil_BENCH
+cd vhd
+sh compil_VHDL
+cd ../bench
+sh compil_BENCH
+cd ..
 
