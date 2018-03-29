@@ -71,6 +71,12 @@ class Present:
                 self.rounds = rounds
                 if len(key) * 8 == 80:
                         self.roundkeys = generateRoundkeys80(string2number(key),self.rounds)
+                        print "Round Keys for KEY %X => " % string2number(key)
+                        i = 0
+                        for x in self.roundkeys:
+                            print "%d: %X" % (i, x)
+                            i = i + 1
+
                 elif len(key) * 8 == 128:
                         self.roundkeys = generateRoundkeys128(string2number(key),self.rounds)
                 else:
@@ -227,3 +233,34 @@ def _test():
 
 if __name__ == "__main__":
     _test()
+
+
+key = "00000000000000000000".decode('hex')
+plain = "0000000000000000".decode('hex')
+cipher = Present(key)
+encrypted = cipher.encrypt(plain)
+encrypted.encode('hex')
+'5579c1387b228445'
+decrypted = cipher.decrypt(encrypted)
+decrypted.encode('hex')
+'0000000000000000'
+
+
+print pLayer_dec(0x123456789ABCDEF0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#END
