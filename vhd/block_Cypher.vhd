@@ -67,7 +67,7 @@ signal s_Box_Out : std_logic_vector(63 downto 0);
 signal s_Box_Inv_Out : std_logic_vector(63 downto 0);
 signal p_Layer_Out : std_logic_vector(63 downto 0);
 signal p_Layer_Inv_Out : std_logic_vector(63 downto 0);
-signal xor_Out : std_logic_vector(63 downto 0);
+signal xor_Out, xor_In : std_logic_vector(63 downto 0);
 
 
 
@@ -91,19 +91,20 @@ begin
 	process (MODE, p_Layer_Out, s_Box_Inv_Out)
 	begin
 		if MODE = CRYP then
-			xor_Out <= p_Layer_Out xor round_Key;
+			xor_In <= p_Layer_Out;
 		else 
-			xor_Out <= s_Box_Inv_Out xor round_Key;
+			xor_In <= s_Box_Inv_Out;
 		end if;
 	end process;
 
+	xor_Out <= xor_In xor round_Key;
 
 	process (CNT.text_In, clk, plein_Text, p_Layer_Out)
 	begin
 		if (CNT.text_In = '0') then
 			mux_Out <= plein_Text;
 		else
-			mux_Out <= p_Layer_Out;
+			mux_Out <= xor_In;
 		end if;
 	end process;
 			
