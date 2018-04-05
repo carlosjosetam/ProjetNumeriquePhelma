@@ -25,7 +25,7 @@ architecture arch of bench_S_Box_4x16_Bits is
   end component;
 
 signal sig_s_Box_64_Bits_In, sig_s_Box_64_Bits_Out : std_logic_vector (63 downto 0);
-signal MODE_s					   : MODE;
+signal MODE_s					   : MODE_TYPE;
 
 begin
 	S4 : s_Box_4x16_Bits port map(sig_s_Box_64_Bits_In, MODE_s, sig_s_Box_64_Bits_Out);  

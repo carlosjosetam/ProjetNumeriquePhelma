@@ -33,15 +33,18 @@ architecture A of present is
 			);
 	end component;
 
-	component fsm_Present is
+	component fsm_Present_MEM is
      		port(
-			reset		: in std_logic;
-			clk		: in std_logic;
-       			start		: in std_logic;
-      	
-			CNT		: out CNT;
-			round_Counter	: out std_logic_vector(4 downto 0)
-			);
+				reset		: in std_logic;
+				clk		: in std_logic;
+				start		: in std_logic;
+				MODE 		: MODE_TYPE;
+			      	
+				CNT		: out CNT;
+				address_write	: out std_logic_vector(4 downto 0);
+				address_read	: out std_logic_vector(4 downto 0);
+				round_Counter	: out std_logic_vector(4 downto 0)
+				);
 	end component;
 
 	component key_Schedule is
@@ -52,28 +55,42 @@ architecture A of present is
 			key  		: in std_logic_vector(79 downto 0);       	
 			round_Counter	: in std_logic_vector(4 downto 0);
 			CNT		: in CNT_key_Schedule;
-			MODE		: in MODE_TYPE;
 
 			round_Key	: out std_logic_vector(63 downto 0)
 			);
 	
 	end component;
-	
+
+	component sync_ram is
+	port(
+		       clock   		: in  std_logic;
+		       we      		: in  std_logic;
+		       address_write 	: in  std_logic_vector(4 downto 0);
+		       address_read 	: in  std_logic_vector(4 downto 0);
+		       datain 		: in  std_logic_vector(63 downto 0);
+		       dataout		: out std_logic_vector(63 downto 0)
+		       );
+	end component;
 		
 	
 
 
 
-signal round_Key_S : std_logic_vector(63 downto 0);
+signal round_Key_In, round_Key_Out : std_logic_vector(63 downto 0);
 signal round_Counter_S : std_logic_vector(4 downto 0);
 signal CNT_s : CNT;
+
+signal adress_write_s: std_logic_vector(4 downto 0);
+signal adress_read_s: std_logic_vector(4 downto 0);
+
 
 
 
 begin
-	B_C : block_Cypher port map (reset, clk, plein_Text, round_Key_S, CNT_S.block_Cypher, MODE, cypher_Text);
-	F_P : fsm_Present  port map (reset, clk, start, CNT_s, round_Counter_S);
-	K_S : key_Schedule port map (reset, clk, key, round_Counter_S, CNT_s.key_Schedule, MODE, round_Key_S); 
+	B_C : block_Cypher port map (reset, clk, plein_Text, round_Key_Out , CNT_S.block_Cypher, MODE, cypher_Text);
+	F_P : fsm_Present_MEM  port map (reset, clk, start, MODE, CNT_s, adress_write_s, adress_read_s,  round_Counter_S);
+	K_S : key_Schedule port map (reset, clk, key, round_Counter_S, CNT_s.key_Schedule, round_Key_In); 
+	M_M : sync_ram	   port map (clk, CNT_s.memory.write, adress_write_s, adress_read_s, round_Key_In, round_Key_Out);
 			
 	
 

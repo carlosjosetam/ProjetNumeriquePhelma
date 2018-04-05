@@ -19,20 +19,18 @@ architecture arch of bench_S_Box is
 
   component s_Box_4_Bits
   	port(   s_Box_In  	: in  std_logic_vector(3 downto 0);
-		MODE		: in MODE_TYPE;
       	        s_Box_Out	: out std_logic_vector(3 downto 0));
   end component;
 
 signal sig_s_Box_In, sig_s_Box_Out : std_logic_vector (3 downto 0);
-signal MODE_s 			   : MODE_TYPE;
+
 
 begin
-	S3 : s_Box_4_Bits port map(sig_s_Box_In, MODE_s, sig_s_Box_Out);  
+	S3 : s_Box_4_Bits port map(sig_s_Box_In, sig_s_Box_Out);  
 
 
   process             
     begin
-	MODE_s <= CRYP;
 	sig_s_Box_In <= std_logic_vector(to_unsigned(0,4));
         
 	wait for 20 ns;
@@ -50,7 +48,6 @@ begin
 
 	-- MODE = DECRYP
 
-	MODE_s <= DECRYP;
 	sig_s_Box_In <= std_logic_vector(to_unsigned(0,4));
         
 	wait for 20 ns;

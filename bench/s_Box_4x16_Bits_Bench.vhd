@@ -20,21 +20,17 @@ architecture arch of bench_S_Box_4x16_Bits is
 
   component s_Box_4x16_Bits
   port( s_Box_In_64  	: in  std_logic_vector(63 downto 0);
-	MODE		: in MODE_TYPE;
         s_Box_Out_64	: out std_logic_vector(63 downto 0));
   end component;
 
 signal sig_s_Box_64_Bits_In, sig_s_Box_64_Bits_Out : std_logic_vector (63 downto 0);
-signal MODE_s					   : MODE_TYPE;
 
 begin
-	S4 : s_Box_4x16_Bits port map(sig_s_Box_64_Bits_In, MODE_s, sig_s_Box_64_Bits_Out);  
+	S4 : s_Box_4x16_Bits port map(sig_s_Box_64_Bits_In, sig_s_Box_64_Bits_Out);  
 
 
   process             
     begin
-	-- CRYP
-	MODE_s <= CRYP;
 
 	sig_s_Box_64_Bits_In <= x"000000000000000A";
         
@@ -45,13 +41,6 @@ begin
         
 	wait for 20 ns;
 	assert sig_s_Box_64_Bits_Out = std_logic_vector(to_unsigned(15,64)) report "fail to do the s_Box_64_Bits" severity warning;
-
-	sig_s_Box_64_Bits_In <= x"0123456789ABCDEF";
-	wait for 20 ns;
-
-
-	-- DECRYP
-	MODE_s <= DECRYP;
 
 	sig_s_Box_64_Bits_In <= x"0123456789ABCDEF";
 	wait for 20 ns;

@@ -1,0 +1,105 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_textio.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+use std.textio.all;
+use ieee.math_real.all;
+use ieee.std_logic_arith.ALL;
+library lib_BENCH;
+library lib_VHDL;
+
+use lib_VHDL.present_library.all;
+
+
+entity bench_fsm_Present_MEM is
+end entity;  
+
+architecture arch of bench_fsm_Present_MEM is
+
+  component fsm_Present_MEM is
+     port(
+	reset		: in std_logic;
+	clk		: in std_logic;
+        start		: in std_logic;
+	MODE 		: MODE;
+      	
+	CNT		: out CNT;
+	address_write	: out std_logic_vector(4 downto 0);
+	address_read	: out std_logic_vector(4 downto 0);
+	round_Counter	: out std_logic_vector(4 downto 0)
+	);
+  end component;
+
+signal start_s  			: std_logic;
+signal mode_s				: MODE;
+signal CNT_s				: CNT;
+signal reset_s, clk_s 			: std_logic := '0';
+signal round_Counter_s, address_write_s, address_read_s		: std_logic_vector(4 downto 0);
+
+begin
+	FSM: fsm_Present_MEM port map (reset_s, clk_s, start_s, mode_s, CNT_s, address_write_s, address_read_s, round_Counter_s);
+
+	CLK_DEF: clk_s <= not clk_s after 2 ns;
+
+  process             
+    begin
+
+-- Cypher
+	mode_s <= CRYP;
+	reset_s <= '1';
+	start_s <= '0';
+	wait for 5 ns;
+
+	reset_s <= '1';
+	start_s <= '1';
+	wait for 4 ns;
+
+	start_s <= '0';
+	reset_s <= '0';
+	wait for 5 ns;
+
+	-- TEST FSM
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 150 ns;
+
+	start_s <= '1';
+	wait for 200 ns;
+
+-- Decypher
+	mode_s <= DECRYP;
+	reset_s <= '1';
+	start_s <= '0';
+	wait for 5 ns;
+
+	reset_s <= '1';
+	start_s <= '1';
+	wait for 4 ns;
+
+	start_s <= '0';
+	reset_s <= '0';
+	wait for 5 ns;
+
+	-- TEST FSM
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 150 ns;
+
+	start_s <= '1';
+	wait for 200 ns;
+	
+	assert false report "END OF SIMULATION" severity failure;
+ end process;
+end arch;
+
+
+
+
+
+
+
+

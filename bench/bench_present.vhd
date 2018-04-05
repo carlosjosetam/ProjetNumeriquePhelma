@@ -65,7 +65,7 @@ begin
 	start_s <= '1';
 	wait for 10 ns;
 	start_s <= '0';
-	wait for 150 ns;
+	wait for 300 ns;
 
 	plein_Text_S <= x"0000000000000000";
 	key_S <= x"FFFFFFFFFFFFFFFFFFFF";
@@ -78,7 +78,7 @@ begin
 	start_s <= '1';
 	wait for 10 ns;
 	start_s <= '0';
-	wait for 150 ns;
+	wait for 300 ns;
 	
 	plein_Text_S <= x"FFFFFFFFFFFFFFFF";
 	key_S <= x"00000000000000000000";
@@ -91,7 +91,7 @@ begin
 	start_s <= '1';
 	wait for 10 ns;
 	start_s <= '0';
-	wait for 150 ns;
+	wait for 300 ns;
 
 	plein_Text_S <= x"FFFFFFFFFFFFFFFF";
 	key_S <= x"FFFFFFFFFFFFFFFFFFFF";
@@ -104,7 +104,7 @@ begin
 	start_s <= '1';
 	wait for 10 ns;
 	start_s <= '0';
-	wait for 150 ns;
+	wait for 300 ns;
 	
 
 	plein_Text_S <= x"ACABAE55ACACAEBA";
@@ -118,7 +118,7 @@ begin
 	start_s <= '1';
 	wait for 10 ns;
 	start_s <= '0';
-	wait for 150 ns;
+	wait for 300 ns;
 
 	plein_Text_S <= x"ACABAE55ACACAEBA";
 	key_S <= x"DEADBEEF1234567890DC";
@@ -131,7 +131,23 @@ begin
 	start_s <= '1';
 	wait for 10 ns;
 	start_s <= '0';
-	wait for 150 ns;
+	wait for 300 ns;
+
+-- DECRYP
+
+	MODE_s <= DECRYP;
+	plein_Text_S <= x"FDC260ADDAF48E50";
+	key_S <= x"DEADBEEF1234567890DC";
+
+
+	start_s <= '0';
+	wait for 5 ns;
+
+	-- TEST PRESENT	
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 300 ns;
 	
 	
 	assert false report "END OF SIMULATION" severity failure;

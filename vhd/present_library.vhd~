@@ -22,13 +22,19 @@ package present_library is
 		text_Out	: STD_LOGIC;
 	end record;
 
-	type CNT is
+	type CNT_memory is
 	record
-		key_Schedule : CNT_key_Schedule;
-		block_Cypher : CNT_block_Cypher;
+		write 		: STD_LOGIC;
 	end record;
 
-	type MODE is (CRYP, DECRYP);
+	type CNT is
+	record
+		memory 		: CNT_memory;
+		key_Schedule 	: CNT_key_Schedule;
+		block_Cypher 	: CNT_block_Cypher;
+	end record;
+
+	type MODE_TYPE is (CRYP, DECRYP);
 
 
 
