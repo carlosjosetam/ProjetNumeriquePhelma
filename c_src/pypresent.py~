@@ -99,7 +99,7 @@ class Present:
                         state = sBoxLayer(state)
                         state = pLayer(state)
                 cipher = addRoundKey(state,self.roundkeys[-1])
-		print "cipher: %s" % number2string_N(cipher,8).encode('hex')
+		print "cipher: %s" % number2string_N(cipher,8)
                 return number2string_N(cipher,8)
 
         def decrypt(self,block):

@@ -79,6 +79,7 @@ architecture A of present is
 signal round_Key_In, round_Key_Out : std_logic_vector(63 downto 0);
 signal round_Counter_S : std_logic_vector(4 downto 0);
 signal CNT_s : CNT;
+
 signal adress_write_s: std_logic_vector(4 downto 0);
 signal adress_read_s: std_logic_vector(4 downto 0);
 
@@ -87,7 +88,7 @@ signal adress_read_s: std_logic_vector(4 downto 0);
 
 begin
 	B_C : block_Cypher port map (reset, clk, plein_Text, round_Key_Out , CNT_S.block_Cypher, MODE, cypher_Text);
-	F_P : fsm_Present_MEM  port map (reset, clk, start, CNT_s, adress_write_s, adress_read_s,  round_Counter_S);
+	F_P : fsm_Present_MEM  port map (reset, clk, start, MODE, CNT_s, adress_write_s, adress_read_s,  round_Counter_S);
 	K_S : key_Schedule port map (reset, clk, key, round_Counter_S, CNT_s.key_Schedule, round_Key_In); 
 	M_M : sync_ram	   port map (clk, CNT_s.memory.write, adress_write_s, adress_read_s, round_Key_In, round_Key_Out);
 			

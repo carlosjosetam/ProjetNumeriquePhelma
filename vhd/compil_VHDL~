@@ -30,6 +30,8 @@ vcom +acc -work lib_VHDL block_Cypher.vhd
 
 vcom +acc -work lib_VHDL fsm_present.vhd
 
+vcom +acc -work lib_VHDL fsm_present_MEM.vhd
+
 vcom +acc -work lib_VHDL memory.vhd
 
 vcom +acc -work lib_VHDL present.vhd

@@ -36,6 +36,8 @@ package present_library is
 
 	type MODE_TYPE is (CRYP, DECRYP);
 
+	type KEY_SIZE is (K_80, K_128);
+
 
 
 end present_library ;

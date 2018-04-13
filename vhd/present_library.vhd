@@ -5,7 +5,6 @@ library lib_VHDL;
 
 package present_library is
 
-	constant KEY_SIZE : natural := 80;
 	constant ROUND_KEY_SIZE : natural := 64;
 	constant ROUND_COUNTER_SIZE : natural := 5;
 
@@ -35,6 +34,8 @@ package present_library is
 	end record;
 
 	type MODE_TYPE is (CRYP, DECRYP);
+
+	type KEY_SIZE is (K_80, K_128);
 
 
 
