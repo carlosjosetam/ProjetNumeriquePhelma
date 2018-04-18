@@ -54,818 +54,836 @@ R2
 R3
 !s110 1522922029
 T_opt5
-!s110 1523623279
-VhU;i_iYYGVEInGH?iVO`E3
+V0Yo6dEXzTd1lhH8:_F:2^0
 R4
-=5-bc305b9b2875-5ad0a56e-d2709-1b9b
+=1-bc305b9b26c7-5ad73bf4-72cdf-1813
 R1
 n@_opt5
 R2
-Ebench_add_round_key
-Z5 w1519652757
-Z6 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
-Z7 DPx4 ieee 15 std_logic_arith 0 22 I`lKR?Ob>E^B_e2VdVLiQ0
-Z8 DPx4 ieee 18 std_logic_unsigned 0 22 @_jbHPR7i^Jh?`2fDCO`m3
-Z9 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
-Z10 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
-Z11 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
-Z12 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
 R3
-Z13 8add_Round_Key_Bench.vhd
-Z14 Fadd_Round_Key_Bench.vhd
+!s110 1524055028
+T_opt6
+V[FaCN]jZVcZXeJ;`24P;V2
+Z5 04 25 4 work bench_present_synth_final arch 1
+=1-bc305b9b26c7-5ad73e7a-a918d-19c1
+R1
+n@_opt6
+R2
+R3
+!s110 1524055675
+T_opt7
+!s110 1524062153
+VY?VS06MQieX<4X<Jl6@P^0
+R5
+=1-bc305b9b26c7-5ad757c8-128f8-2a2d
+R1
+n@_opt7
+R2
+Ebench_add_round_key
+Z6 w1519652757
+Z7 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
+Z8 DPx4 ieee 15 std_logic_arith 0 22 I`lKR?Ob>E^B_e2VdVLiQ0
+Z9 DPx4 ieee 18 std_logic_unsigned 0 22 @_jbHPR7i^Jh?`2fDCO`m3
+Z10 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z11 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
+Z12 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z13 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R3
+Z14 8add_Round_Key_Bench.vhd
+Z15 Fadd_Round_Key_Bench.vhd
 l0
 L14
 V:X18hoUj>S1elKf@FzW<I2
-Z15 OL;C;10.2c;57
+Z16 OL;C;10.2c;57
 32
-Z16 !s110 1523623274
-Z17 !s108 1523623274.331457
-Z18 !s90 +acc|-work|lib_BENCH|add_Round_Key_Bench.vhd|
-Z19 !s107 add_Round_Key_Bench.vhd|
-Z20 o+acc -work lib_BENCH
-Z21 tOptimize_1164 0 Explicit 1 IgnoreVitalErrors 1 Show_VitalChecksWarnings 0
+Z17 !s110 1524062111
+Z18 !s108 1524062111.267819
+Z19 !s90 +acc|-work|lib_BENCH|add_Round_Key_Bench.vhd|
+Z20 !s107 add_Round_Key_Bench.vhd|
+Z21 o+acc -work lib_BENCH
+Z22 tOptimize_1164 0 Explicit 1 IgnoreVitalErrors 1 Show_VitalChecksWarnings 0
 !s100 Pb38ei1UJ^>Z]SQc^?66E3
 !i10b 1
 !i111 0
 Aarch
-R6
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 19 bench_add_round_key 0 22 :X18hoUj>S1elKf@FzW<I2
 l27
 L17
 Vii]TZCa6^G7LZ@0Yi1K0g2
-R15
-32
 R16
+32
 R17
 R18
 R19
 R20
 R21
+R22
 !s100 ]`d7KknfVz^5e8EeKcG712
 !i10b 1
 !i111 0
 Ebench_block_cypher
-Z22 w1522316412
-Z23 DPx8 lib_vhdl 15 present_library 0 22 860;nj7M=5l:Dfeg20c>I2
-R6
+Z23 w1522316412
+Z24 DPx8 lib_vhdl 15 present_library 0 22 860;nj7M=5l:Dfeg20c>I2
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z24 8bench_Block_Cypher.vhd
-Z25 Fbench_Block_Cypher.vhd
+Z25 8bench_Block_Cypher.vhd
+Z26 Fbench_Block_Cypher.vhd
 l0
 L17
 VH6i^6bMNf3jXShHn3_chf2
-R15
+R16
 32
-Z26 !s110 1523623275
-Z27 !s108 1523623275.247645
-Z28 !s90 +acc|-work|lib_BENCH|bench_Block_Cypher.vhd|
-Z29 !s107 bench_Block_Cypher.vhd|
-R20
+Z27 !s110 1524062112
+Z28 !s108 1524062112.153870
+Z29 !s90 +acc|-work|lib_BENCH|bench_Block_Cypher.vhd|
+Z30 !s107 bench_Block_Cypher.vhd|
 R21
+R22
 !s100 DK6H1M4Qb3:GHK`5ezkoF1
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 18 bench_block_cypher 0 22 H6i^6bMNf3jXShHn3_chf2
 l42
 L20
 V<IzmeUMg8c8P1@hBZiV4G2
-R15
+R16
 32
-R26
 R27
 R28
 R29
-R20
+R30
 R21
+R22
 !s100 ?<0F6=5ZRMDV]zaVL6_T71
 !i10b 1
 !i111 0
 Ebench_fsm_present
-Z30 w1521712246
-R23
-R6
+Z31 w1521712246
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z31 8fsm_present_Bench.vhd
-Z32 Ffsm_present_Bench.vhd
+Z32 8fsm_present_Bench.vhd
+Z33 Ffsm_present_Bench.vhd
 l0
 L16
 V;P0Da@cWzGkb]NS<gL`KC0
-R15
+R16
 32
-R26
-Z33 !s108 1523623275.358182
-Z34 !s90 +acc|-work|lib_BENCH|fsm_present_Bench.vhd|
-Z35 !s107 fsm_present_Bench.vhd|
-R20
+R27
+Z34 !s108 1524062112.238135
+Z35 !s90 +acc|-work|lib_BENCH|fsm_present_Bench.vhd|
+Z36 !s107 fsm_present_Bench.vhd|
 R21
+R22
 !s100 WFgG1:54R7]F8L43>X3m[3
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 17 bench_fsm_present 0 22 ;P0Da@cWzGkb]NS<gL`KC0
 l37
 L19
 V@L@aeP_M8[;h4NKbPe?4_2
-R15
+R16
 32
-R26
-R33
+R27
 R34
 R35
-R20
+R36
 R21
+R22
 !s100 >kG1FlRijHk_cPE3kR:j71
 !i10b 1
 !i111 0
 Ebench_fsm_present_mem
-Z36 w1522924568
-R23
-R6
+Z37 w1522924568
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z37 8fsm_present_MEM_Bench.vhd
-Z38 Ffsm_present_MEM_Bench.vhd
+Z38 8fsm_present_MEM_Bench.vhd
+Z39 Ffsm_present_MEM_Bench.vhd
 l0
 L16
 VEe>[8[WaK9onG@i=E;BKW1
-R15
+R16
 32
-R26
-Z39 !s108 1523623275.461895
-Z40 !s90 +acc|-work|lib_BENCH|fsm_present_MEM_Bench.vhd|
-Z41 !s107 fsm_present_MEM_Bench.vhd|
-R20
+R27
+Z40 !s108 1524062112.322831
+Z41 !s90 +acc|-work|lib_BENCH|fsm_present_MEM_Bench.vhd|
+Z42 !s107 fsm_present_MEM_Bench.vhd|
 R21
+R22
 !s100 <oOlNS8b9YJ8mS23JXNKL2
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 21 bench_fsm_present_mem 0 22 Ee>[8[WaK9onG@i=E;BKW1
 l41
 L19
 VgDVUdkG<IIGa5KYYQA8hb2
-R15
+R16
 32
-R26
-R39
+R27
 R40
 R41
-R20
+R42
 R21
+R22
 !s100 WmD@2kOcDT9:FC[YAnNn=2
 !i10b 1
 !i111 0
 Ebench_key_schedule
-Z42 w1522316276
-R23
-R6
+Z43 w1522316276
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z43 8key_Schedule_Bench.vhd
-Z44 Fkey_Schedule_Bench.vhd
+Z44 8key_Schedule_Bench.vhd
+Z45 Fkey_Schedule_Bench.vhd
 l0
 L17
 V;EoDi::ZNmEWmQQB80C]83
-R15
-32
 R16
-Z45 !s108 1523623274.956389
-Z46 !s90 +acc|-work|lib_BENCH|key_Schedule_Bench.vhd|
-Z47 !s107 key_Schedule_Bench.vhd|
-R20
+32
+R17
+Z46 !s108 1524062111.899529
+Z47 !s90 +acc|-work|lib_BENCH|key_Schedule_Bench.vhd|
+Z48 !s107 key_Schedule_Bench.vhd|
 R21
+R22
 !s100 HDP5R1le8z:^ka8e01R842
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 18 bench_key_schedule 0 22 ;EoDi::ZNmEWmQQB80C]83
 l43
 L20
 V725KWRAO?@642]?W1Oz??2
-R15
-32
 R16
-R45
+32
+R17
 R46
 R47
-R20
+R48
 R21
+R22
 !s100 OkO?;0KaeUC66HBl1]f5]0
 !i10b 1
 !i111 0
 Ebench_key_schedule_128
-Z48 w1523621884
-R23
-R6
+Z49 w1523621884
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z49 8key_Schedule_128_Bench.vhd
-Z50 Fkey_Schedule_128_Bench.vhd
+Z50 8key_Schedule_128_Bench.vhd
+Z51 Fkey_Schedule_128_Bench.vhd
 l0
 L17
 V0J5gWB?;gU7?8:GmoHMR63
-R15
+R16
 32
-R26
-Z51 !s108 1523623275.038132
-Z52 !s90 +acc|-work|lib_BENCH|key_Schedule_128_Bench.vhd|
-Z53 !s107 key_Schedule_128_Bench.vhd|
-R20
+R27
+Z52 !s108 1524062111.988126
+Z53 !s90 +acc|-work|lib_BENCH|key_Schedule_128_Bench.vhd|
+Z54 !s107 key_Schedule_128_Bench.vhd|
 R21
+R22
 !s100 KilgA9o:PAh=0a^CWI4N40
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 22 bench_key_schedule_128 0 22 0J5gWB?;gU7?8:GmoHMR63
 l42
 L20
 VI5D90BmQK=f?Xmfm3WAI30
-R15
+R16
 32
-R26
-R51
+R27
 R52
 R53
-R20
+R54
 R21
+R22
 !s100 KYSciV=HBCZPfC4QlZ`c`3
 !i10b 1
 !i111 0
 Ebench_memory
-Z54 w1522914271
-R23
-R6
+Z55 w1522914271
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z55 8memory_bench.vhd
-Z56 Fmemory_bench.vhd
+Z56 8memory_bench.vhd
+Z57 Fmemory_bench.vhd
 l0
 L16
 VD?BT;YAUegR]>cLGjJa_51
-R15
+R16
 32
-R26
-Z57 !s108 1523623275.705553
-Z58 !s90 +acc|-work|lib_BENCH|memory_bench.vhd|
-Z59 !s107 memory_bench.vhd|
-R20
+R27
+Z58 !s108 1524062112.572119
+Z59 !s90 +acc|-work|lib_BENCH|memory_bench.vhd|
+Z60 !s107 memory_bench.vhd|
 R21
+R22
 !s100 4LTXT`]P58KSO=]b?A^J;2
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 12 bench_memory 0 22 D?BT;YAUegR]>cLGjJa_51
 l37
 L19
 VRHQ7GLUMj;4JggGdg`;`Z2
-R15
+R16
 32
-R26
-R57
+R27
 R58
 R59
-R20
+R60
 R21
+R22
 !s100 B[Q30EC>8F]CH=;gZad`B2
 !i10b 1
 !i111 0
 Ebench_p_layer
-Z60 w1522915170
-R23
-R6
+Z61 w1522915170
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z61 8p_Layer_Bench.vhd
-Z62 Fp_Layer_Bench.vhd
+Z62 8p_Layer_Bench.vhd
+Z63 Fp_Layer_Bench.vhd
 l0
 L16
 VnHOO`f0j4LZ0]_b<I;h582
-R15
-32
 R16
-Z63 !s108 1523623274.455947
-Z64 !s90 +acc|-work|lib_BENCH|p_Layer_Bench.vhd|
-Z65 !s107 p_Layer_Bench.vhd|
-R20
+32
+R17
+Z64 !s108 1524062111.393911
+Z65 !s90 +acc|-work|lib_BENCH|p_Layer_Bench.vhd|
+Z66 !s107 p_Layer_Bench.vhd|
 R21
+R22
 !s100 9VQ2>fN7?mT0UA:iP5SRN3
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 13 bench_p_layer 0 22 nHOO`f0j4LZ0]_b<I;h582
 l28
 L19
 VKjd^06EfkLM@fzD]47h[<3
-R15
-32
 R16
-R63
+32
+R17
 R64
 R65
-R20
+R66
 R21
+R22
 !s100 d341FiBUn_E6F0z9RZe3J0
 !i10b 1
 !i111 0
 Ebench_p_layer_inv
-Z66 w1522915501
-R23
-R6
+Z67 w1522915501
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z67 8p_Layer_Inv_Bench.vhd
-Z68 Fp_Layer_Inv_Bench.vhd
+Z68 8p_Layer_Inv_Bench.vhd
+Z69 Fp_Layer_Inv_Bench.vhd
 l0
 L16
 VNJli9N>@MXk>52F37>M863
-R15
-32
 R16
-Z69 !s108 1523623274.536784
-Z70 !s90 +acc|-work|lib_BENCH|p_Layer_Inv_Bench.vhd|
-Z71 !s107 p_Layer_Inv_Bench.vhd|
-R20
+32
+R17
+Z70 !s108 1524062111.481358
+Z71 !s90 +acc|-work|lib_BENCH|p_Layer_Inv_Bench.vhd|
+Z72 !s107 p_Layer_Inv_Bench.vhd|
 R21
+R22
 !s100 KAi]E[9^ZE3ZAQVChQ:ol3
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 17 bench_p_layer_inv 0 22 NJli9N>@MXk>52F37>M863
 l28
 L19
 VgV[URM>0aLozS:WO02Ei@3
-R15
-32
 R16
-R69
+32
+R17
 R70
 R71
-R20
+R72
 R21
+R22
 !s100 ]FR`bKb?4BSMGiE9;oi9W0
 !i10b 1
 !i111 0
 Ebench_present
-Z72 w1523623271
-R23
-R6
+Z73 w1523623271
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z73 8bench_present.vhd
-Z74 Fbench_present.vhd
+Z74 8bench_present.vhd
+Z75 Fbench_present.vhd
 l0
 L16
 VV`@B7h7e`b@PTB0LQnNgT2
-R15
+R16
 32
-R26
-Z75 !s108 1523623275.541512
-Z76 !s90 +acc|-work|lib_BENCH|bench_present.vhd|
-Z77 !s107 bench_present.vhd|
-R20
+R27
+Z76 !s108 1524062112.404378
+Z77 !s90 +acc|-work|lib_BENCH|bench_present.vhd|
+Z78 !s107 bench_present.vhd|
 R21
+R22
 !s100 _lJ3LL_ogP^o]YMI@Cj^61
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 13 bench_present 0 22 V`@B7h7e`b@PTB0LQnNgT2
 l41
 L19
 V9`CKC^Efh;z0hQZZ@mI7I1
-R15
+R16
 32
-R26
-R75
+R27
 R76
 R77
-R20
+R78
 R21
+R22
 !s100 X_]TA2kD1?fQjRTW@Qg0R2
 !i10b 1
 !i111 0
-Ebench_present_synth_cryp
-Z78 w1522313531
-R6
+Ebench_present_synth_final
+Z79 w1524059728
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z79 8bench_present_synth_cryp.vhd
-Z80 Fbench_present_synth_cryp.vhd
+Z80 8bench_present_synth_cryp.vhd
+Z81 Fbench_present_synth_cryp.vhd
 l0
-L13
-V@H1e34kj];Nzi<8E71=Q_3
-R15
+L15
+V]>>I?=CDT^f`??R:PoBF50
+R16
 32
-R26
-Z81 !s108 1523623275.622725
-Z82 !s90 +acc|-work|lib_BENCH|bench_present_synth_cryp.vhd|
-Z83 !s107 bench_present_synth_cryp.vhd|
-R20
+R27
+Z82 !s108 1524062112.490757
+Z83 !s90 +acc|-work|lib_BENCH|bench_present_synth_cryp.vhd|
+Z84 !s107 bench_present_synth_cryp.vhd|
 R21
-!s100 gF[IV`Io3j^:H3k0zG[k73
+R22
+!s100 gclmdnYEWLZef?D8VR_Ig0
 !i10b 1
 !i111 0
 Aarch
-R6
 R7
 R8
 R9
 R10
 R11
 R12
-DEx4 work 24 bench_present_synth_cryp 0 22 @H1e34kj];Nzi<8E71=Q_3
-l34
-L16
-V9HS][[;_5d]4SaBB;9M5=1
-R15
+R13
+DEx4 work 25 bench_present_synth_final 0 22 ]>>I?=CDT^f`??R:PoBF50
+l40
+L18
+VUG>o26_NW32^ca5C]]Y4R3
+R16
 32
-R26
-R81
+R27
 R82
 R83
-R20
+R84
 R21
-!s100 LBkn4ZzAlBLQdRILDO5_X1
+R22
+!s100 NQ:PDWO62JoOzDdF<Ci;R1
 !i10b 1
 !i111 0
 Ebench_register_80_bits
-Z84 w1520505126
-R6
+Z85 w1520505126
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z85 8register_80_Bits_Bench.vhd
-Z86 Fregister_80_Bits_Bench.vhd
+Z86 8register_80_Bits_Bench.vhd
+Z87 Fregister_80_Bits_Bench.vhd
 l0
 L12
 VdiJDzhRhi76Q4RcS`41Po1
-R15
-32
 R16
-Z87 !s108 1523623274.867771
-Z88 !s90 +acc|-work|lib_BENCH|register_80_Bits_Bench.vhd|
-Z89 !s107 register_80_Bits_Bench.vhd|
-R20
+32
+R17
+Z88 !s108 1524062111.817343
+Z89 !s90 +acc|-work|lib_BENCH|register_80_Bits_Bench.vhd|
+Z90 !s107 register_80_Bits_Bench.vhd|
 R21
+R22
 !s100 lLSkT:7D1a_]0YFVHmL4=2
 !i10b 1
 !i111 0
 Aarch
-R6
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 22 bench_register_80_bits 0 22 diJDzhRhi76Q4RcS`41Po1
 l31
 L15
 V[>HM<7^]P^`3KKkI>mcD]3
-R15
-32
 R16
-R87
+32
+R17
 R88
 R89
-R20
+R90
 R21
+R22
 !s100 [`5U2okVVi?0RVc04O4<:3
 !i10b 1
 !i111 0
 Ebench_register_width_bits
-Z90 w1521472605
-R6
+Z91 w1521472605
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z91 8register_Generic_Bits_Bench.vhd
-Z92 Fregister_Generic_Bits_Bench.vhd
+Z92 8register_Generic_Bits_Bench.vhd
+Z93 Fregister_Generic_Bits_Bench.vhd
 l0
 L12
 VKgX>NT1Si@Z:C>P64k:lE1
-R15
+R16
 32
-R26
-Z93 !s108 1523623275.138375
-Z94 !s90 +acc|-work|lib_BENCH|register_Generic_Bits_Bench.vhd|
-Z95 !s107 register_Generic_Bits_Bench.vhd|
-R20
+R27
+Z94 !s108 1524062112.070774
+Z95 !s90 +acc|-work|lib_BENCH|register_Generic_Bits_Bench.vhd|
+Z96 !s107 register_Generic_Bits_Bench.vhd|
 R21
+R22
 !s100 Y:`7L@QD0okRM:[1Z@faY2
 !i10b 1
 !i111 0
 Aarch
-R6
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 25 bench_register_width_bits 0 22 KgX>NT1Si@Z:C>P64k:lE1
 l32
 L15
 V<^6oVc=ScJ02k_SjGbd;T1
-R15
+R16
 32
-R26
-R93
+R27
 R94
 R95
-R20
+R96
 R21
+R22
 !s100 OXQYkFP=nj0;SVbzaHcL]2
 !i10b 1
 !i111 0
 Ebench_s_box
-Z96 w1522914235
-R23
-R6
+Z97 w1522914235
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z97 8s_Box_Bench.vhd
-Z98 Fs_Box_Bench.vhd
+Z98 8s_Box_Bench.vhd
+Z99 Fs_Box_Bench.vhd
 l0
 L15
 Vd;KZ3@2WZ9aHdO?Hf`>:=0
-R15
-32
 R16
-Z99 !s108 1523623274.623632
-Z100 !s90 +acc|-work|lib_BENCH|s_Box_Bench.vhd|
-Z101 !s107 s_Box_Bench.vhd|
-R20
+32
+R17
+Z100 !s108 1524062111.566338
+Z101 !s90 +acc|-work|lib_BENCH|s_Box_Bench.vhd|
+Z102 !s107 s_Box_Bench.vhd|
 R21
+R22
 !s100 :glbVXURQz;nj5_jICFLY1
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 11 bench_s_box 0 22 d;KZ3@2WZ9aHdO?Hf`>:=0
 l28
 L18
 VQ5Xc7J]^37SRc=bKVj9U>3
-R15
-32
 R16
-R99
+32
+R17
 R100
 R101
-R20
+R102
 R21
+R22
 !s100 d>4:D8:Z9G?DM=fFZA_kG2
 !i10b 1
 !i111 0
 Ebench_s_box_4x16_bits
-Z102 w1522912922
-R23
-R6
+Z103 w1522912922
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z103 8s_Box_4x16_Bits_Bench.vhd
-Z104 Fs_Box_4x16_Bits_Bench.vhd
+Z104 8s_Box_4x16_Bits_Bench.vhd
+Z105 Fs_Box_4x16_Bits_Bench.vhd
 l0
 L16
 V;c^@c_40Onobj3z1Y5cmJ3
-R15
-32
 R16
-Z105 !s108 1523623274.707884
-Z106 !s90 +acc|-work|lib_BENCH|s_Box_4x16_Bits_Bench.vhd|
-Z107 !s107 s_Box_4x16_Bits_Bench.vhd|
-R20
+32
+R17
+Z106 !s108 1524062111.650493
+Z107 !s90 +acc|-work|lib_BENCH|s_Box_4x16_Bits_Bench.vhd|
+Z108 !s107 s_Box_4x16_Bits_Bench.vhd|
 R21
+R22
 !s100 bUSOK<5>B=mNATDYT0[e10
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 21 bench_s_box_4x16_bits 0 22 ;c^@c_40Onobj3z1Y5cmJ3
 l28
 L19
 V8S2MI`z`obGDYfl>SioBF2
-R15
-32
 R16
-R105
+32
+R17
 R106
 R107
-R20
+R108
 R21
+R22
 !s100 [6_I:3z1Y=^H@0^OYB^P23
 !i10b 1
 !i111 0
 Ebench_s_box_inv_4x16_bits
-Z108 w1522914094
-R23
-R6
+Z109 w1522914094
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 R3
-Z109 8s_Box_Inv_4x16_Bits_Bench.vhd
-Z110 Fs_Box_Inv_4x16_Bits_Bench.vhd
+Z110 8s_Box_Inv_4x16_Bits_Bench.vhd
+Z111 Fs_Box_Inv_4x16_Bits_Bench.vhd
 l0
 L16
 V]cho<m9?UfA8RKZbmk1`h0
-R15
-32
 R16
-Z111 !s108 1523623274.790167
-Z112 !s90 +acc|-work|lib_BENCH|s_Box_Inv_4x16_Bits_Bench.vhd|
-Z113 !s107 s_Box_Inv_4x16_Bits_Bench.vhd|
-R20
+32
+R17
+Z112 !s108 1524062111.733993
+Z113 !s90 +acc|-work|lib_BENCH|s_Box_Inv_4x16_Bits_Bench.vhd|
+Z114 !s107 s_Box_Inv_4x16_Bits_Bench.vhd|
 R21
+R22
 !s100 8Il6_P;]1hg_5^ck<gSJ:1
 !i10b 1
 !i111 0
 Aarch
-R23
-R6
+R24
 R7
 R8
 R9
 R10
 R11
 R12
+R13
 DEx4 work 25 bench_s_box_inv_4x16_bits 0 22 ]cho<m9?UfA8RKZbmk1`h0
 l28
 L19
 VfiIe3h15SkP5Gz^4?]NCT2
-R15
-32
 R16
-R111
+32
+R17
 R112
 R113
-R20
+R114
 R21
+R22
 !s100 ]SNhGA_c6f`;oz`TLgMUR2
 !i10b 1
 !i111 0

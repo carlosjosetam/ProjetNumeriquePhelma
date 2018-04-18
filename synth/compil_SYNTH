@@ -1,0 +1,7 @@
+vdel -lib  ${HOME}/ProjetNumeriquePhelma/libs/lib_SYNTH -all
+
+vlib ${HOME}/ProjetNumeriquePhelma/libs/lib_SYNTH
+
+vmap lib_SYNTH ${HOME}/ProjetNumeriquePhelma/libs/lib_SYNTH
+
+vcom +acc -work lib_VHDL present.vhd

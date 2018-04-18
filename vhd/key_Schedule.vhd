@@ -53,7 +53,7 @@ begin
 
 	round_Key <= register_Out(79 downto 16);
 
-	process (CNT.mux, clk, s_Box_Out, add_Round_Counter_Out, register_Rotation)
+	process (CNT.mux, clk, s_Box_Out, add_Round_Counter_Out, register_Rotation, key)
 	begin
 		if (CNT.mux = '1') then
 			mux_Out <= key;

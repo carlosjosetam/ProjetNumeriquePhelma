@@ -99,7 +99,7 @@ begin
 
 	xor_Out <= xor_In xor round_Key;
 
-	process (CNT.text_In, clk, plein_Text, p_Layer_Out)
+	process (CNT.text_In, clk, plein_Text, p_Layer_Out, xor_In)
 	begin
 		if (CNT.text_In = '0') then
 			mux_Out <= plein_Text;

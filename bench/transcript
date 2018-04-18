@@ -7,220 +7,8 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim lib_BENCH.bench_key_schedule_128
-# vsim lib_BENCH.bench_key_schedule_128 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: key_Schedule_128_Bench.vhd(44): (vopt-1270) Bad default binding for component instance "KEY_SCHED: key_Schedule_128".
-#  (Component port "MODE" is not on the entity.)
-# ** Warning: [1] key_Schedule_128_Bench.vhd(44): (vopt-3473) Component instance "/bench_key_Schedule_128/KEY_SCHED : key_Schedule_128" is not bound.
-# Optimization failed
-# Error loading design
-vlog -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
-# -- Skipping entity bench_add_round_key
-# -- Skipping entity bench_block_cypher
-# -- Skipping entity bench_fsm_present
-# -- Skipping entity bench_fsm_present_mem
-# -- Skipping entity bench_key_schedule
-# -- Skipping entity bench_key_schedule_128
-# -- Skipping entity bench_memory
-# -- Skipping entity bench_p_layer
-# -- Skipping entity bench_p_layer_inv
-# -- Skipping entity bench_present
-# -- Skipping entity bench_present_synth_cryp
-# -- Skipping entity bench_register_80_bits
-# -- Skipping entity bench_register_width_bits
-# -- Skipping entity bench_s_box
-# -- Skipping entity bench_s_box_4x16_bits
-# -- Skipping entity bench_s_box_inv_4x16_bits
-vcom -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package MATH_REAL
-# -- Compiling entity bench_add_Round_Key
-# -- Compiling architecture arch of bench_add_Round_Key
-# -- Loading package present_library
-# -- Compiling entity bench_Block_Cypher
-# -- Compiling architecture arch of bench_Block_Cypher
-# -- Compiling entity bench_fsm_Present
-# -- Compiling architecture arch of bench_fsm_Present
-# -- Compiling entity bench_fsm_Present_MEM
-# -- Compiling architecture arch of bench_fsm_Present_MEM
-# -- Compiling entity bench_key_Schedule
-# -- Compiling architecture arch of bench_key_Schedule
-# -- Compiling entity bench_key_Schedule_128
-# -- Compiling architecture arch of bench_key_Schedule_128
-# -- Compiling entity bench_memory
-# -- Compiling architecture arch of bench_memory
-# -- Compiling entity bench_P_Layer
-# -- Compiling architecture arch of bench_P_Layer
-# -- Compiling entity bench_P_Layer_Inv
-# -- Compiling architecture arch of bench_P_Layer_Inv
-# -- Compiling entity bench_Present
-# -- Compiling architecture arch of bench_Present
-# -- Compiling entity bench_Present_synth_cryp
-# -- Compiling architecture arch of bench_Present_synth_cryp
-# -- Compiling entity bench_Register_80_Bits
-# -- Compiling architecture arch of bench_register_80_bits
-# -- Compiling entity bench_Register_WIDTH_Bits
-# -- Compiling architecture arch of bench_register_WIDTH_bits
-# -- Compiling entity bench_S_Box
-# -- Compiling architecture arch of bench_S_Box
-# -- Compiling entity bench_S_Box_4x16_Bits
-# -- Compiling architecture arch of bench_S_Box_4x16_Bits
-# -- Compiling entity bench_S_Box_Inv_4x16_Bits
-# -- Compiling architecture arch of bench_S_Box_Inv_4x16_Bits
-vsim lib_BENCH.bench_key_schedule_128
-# vsim lib_BENCH.bench_key_schedule_128 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: key_Schedule_128_Bench.vhd(44): (vopt-1270) Bad default binding for component instance "KEY_SCHED: key_Schedule_128".
-#  (Component port "MODE" is not on the entity.)
-# ** Warning: [1] key_Schedule_128_Bench.vhd(44): (vopt-3473) Component instance "/bench_key_Schedule_128/KEY_SCHED : key_Schedule_128" is not bound.
-# Optimization failed
-# Error loading design
-vsim lib_BENCH.bench_key_schedule_128
-# vsim lib_BENCH.bench_key_schedule_128 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: key_Schedule_128_Bench.vhd(44): (vopt-1270) Bad default binding for component instance "KEY_SCHED: key_Schedule_128".
-#  (Component port "MODE" is not on the entity.)
-# ** Warning: [1] key_Schedule_128_Bench.vhd(44): (vopt-3473) Component instance "/bench_key_Schedule_128/KEY_SCHED : key_Schedule_128" is not bound.
-# Optimization failed
-# Error loading design
-vlog -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
-# -- Skipping entity bench_add_round_key
-# -- Skipping entity bench_block_cypher
-# -- Skipping entity bench_fsm_present
-# -- Skipping entity bench_fsm_present_mem
-# -- Skipping entity bench_key_schedule
-# -- Skipping entity bench_key_schedule_128
-# -- Skipping entity bench_memory
-# -- Skipping entity bench_p_layer
-# -- Skipping entity bench_p_layer_inv
-# -- Skipping entity bench_present
-# -- Skipping entity bench_present_synth_cryp
-# -- Skipping entity bench_register_80_bits
-# -- Skipping entity bench_register_width_bits
-# -- Skipping entity bench_s_box
-# -- Skipping entity bench_s_box_4x16_bits
-# -- Skipping entity bench_s_box_inv_4x16_bits
-vcom -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package MATH_REAL
-# -- Compiling entity bench_add_Round_Key
-# -- Compiling architecture arch of bench_add_Round_Key
-# -- Loading package present_library
-# -- Compiling entity bench_Block_Cypher
-# -- Compiling architecture arch of bench_Block_Cypher
-# -- Compiling entity bench_fsm_Present
-# -- Compiling architecture arch of bench_fsm_Present
-# -- Compiling entity bench_fsm_Present_MEM
-# -- Compiling architecture arch of bench_fsm_Present_MEM
-# -- Compiling entity bench_key_Schedule
-# -- Compiling architecture arch of bench_key_Schedule
-# -- Compiling entity bench_key_Schedule_128
-# -- Compiling entity bench_memory
-# -- Compiling architecture arch of bench_memory
-# -- Compiling entity bench_P_Layer
-# -- Compiling architecture arch of bench_P_Layer
-# -- Compiling entity bench_P_Layer_Inv
-# -- Compiling architecture arch of bench_P_Layer_Inv
-# -- Compiling entity bench_Present
-# -- Compiling architecture arch of bench_Present
-# -- Compiling entity bench_Present_synth_cryp
-# -- Compiling architecture arch of bench_Present_synth_cryp
-# -- Compiling entity bench_Register_80_Bits
-# -- Compiling architecture arch of bench_register_80_bits
-# -- Compiling entity bench_Register_WIDTH_Bits
-# -- Compiling architecture arch of bench_register_WIDTH_bits
-# -- Compiling entity bench_S_Box
-# -- Compiling architecture arch of bench_S_Box
-# -- Compiling entity bench_S_Box_4x16_Bits
-# -- Compiling architecture arch of bench_S_Box_4x16_Bits
-# -- Compiling entity bench_S_Box_Inv_4x16_Bits
-# -- Compiling architecture arch of bench_S_Box_Inv_4x16_Bits
-vsim lib_BENCH.bench_key_schedule_128
-# vsim lib_BENCH.bench_key_schedule_128 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: Failed to find design unit lib_BENCH.bench_key_schedule_128.
-# Optimization failed
-# Error loading design
-vlog -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
-# -- Skipping entity bench_add_round_key
-# -- Skipping entity bench_block_cypher
-# -- Skipping entity bench_fsm_present
-# -- Skipping entity bench_fsm_present_mem
-# -- Skipping entity bench_key_schedule
-# -- Skipping entity bench_key_schedule_128
-# -- Skipping entity bench_memory
-# -- Skipping entity bench_p_layer
-# -- Skipping entity bench_p_layer_inv
-# -- Skipping entity bench_present
-# -- Skipping entity bench_present_synth_cryp
-# -- Skipping entity bench_register_80_bits
-# -- Skipping entity bench_register_width_bits
-# -- Skipping entity bench_s_box
-# -- Skipping entity bench_s_box_4x16_bits
-# -- Skipping entity bench_s_box_inv_4x16_bits
-vcom -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package MATH_REAL
-# -- Compiling entity bench_add_Round_Key
-# -- Compiling architecture arch of bench_add_Round_Key
-# -- Loading package present_library
-# -- Compiling entity bench_Block_Cypher
-# -- Compiling architecture arch of bench_Block_Cypher
-# -- Compiling entity bench_fsm_Present
-# -- Compiling architecture arch of bench_fsm_Present
-# -- Compiling entity bench_fsm_Present_MEM
-# -- Compiling architecture arch of bench_fsm_Present_MEM
-# -- Compiling entity bench_key_Schedule
-# -- Compiling architecture arch of bench_key_Schedule
-# -- Compiling entity bench_key_Schedule_128
-# -- Compiling architecture arch of bench_key_Schedule_128
-# -- Compiling entity bench_memory
-# -- Compiling architecture arch of bench_memory
-# -- Compiling entity bench_P_Layer
-# -- Compiling architecture arch of bench_P_Layer
-# -- Compiling entity bench_P_Layer_Inv
-# -- Compiling architecture arch of bench_P_Layer_Inv
-# -- Compiling entity bench_Present
-# -- Compiling architecture arch of bench_Present
-# -- Compiling entity bench_Present_synth_cryp
-# -- Compiling architecture arch of bench_Present_synth_cryp
-# -- Compiling entity bench_Register_80_Bits
-# -- Compiling architecture arch of bench_register_80_bits
-# -- Compiling entity bench_Register_WIDTH_Bits
-# -- Compiling architecture arch of bench_register_WIDTH_bits
-# -- Compiling entity bench_S_Box
-# -- Compiling architecture arch of bench_S_Box
-# -- Compiling entity bench_S_Box_4x16_Bits
-# -- Compiling architecture arch of bench_S_Box_4x16_Bits
-# -- Compiling entity bench_S_Box_Inv_4x16_Bits
-# -- Compiling architecture arch of bench_S_Box_Inv_4x16_Bits
-vsim lib_BENCH.bench_key_schedule_128
-# vsim lib_BENCH.bench_key_schedule_128 
+vsim lib_BENCH.bench_present_synth_final
+# vsim lib_BENCH.bench_present_synth_final 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
@@ -230,279 +18,317 @@ vsim lib_BENCH.bench_key_schedule_128
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_key_schedule_128(arch)#1
-# Loading lib_vhdl.key_schedule_128(a)#1
-# Loading lib_vhdl.register_width_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
+# Loading work.bench_present_synth_final(arch)#1
+# Loading unisim.vcomponents
+# Loading vital2000.vital_timing(body)
+# Loading simprim.vcomponents
+# Loading lib_synth.present(a)#1
+# Loading lib_synth.block_cypher(a_unfolded0_unfold_1508)#1
+# Loading unisim.muxf5(muxf5_v)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Instance: /bench_present_synth_final/P/B_C/ix11869z40853
+# Loading unisim.lut4(lut4_v)#1
+# Loading lib_synth.fsm_present_mem(a_unfold_853)#1
+# Loading unisim.ld(ld_v)#1
+# Loading unisim.fdc(fdc_v)#1
+# Loading unisim.fdp(fdp_v)#1
+# Loading unisim.inv(inv_v)#1
+# Loading unisim.lut2(lut2_v)#1
+# Loading unisim.lut3(lut3_v)#1
+# Loading lib_synth.key_schedule(a)#1
+# Loading lib_synth.register_80_bits(a)#1
+# Loading unisim.fdce(fdce_v)#1
+# Loading lib_synth.key_schedule_128(a)#1
+# Loading lib_synth.register_width_bits_128(a)#1
+# Loading lib_synth.ram_dq_64_0(implementation)#1
+# Loading unisim.ramb16_s36_s36(ramb16_s36_s36_v)#1
+# Loading unisim.ramb16_s36_s36(ramb16_s36_s36_v)#2
+# Loading unisim.fd(fd_v)#1
+# Loading unisim.gnd(gnd_v)#1
+# Loading unisim.vcc(vcc_v)#1
+# Loading unisim.obuf(obuf_v)#1
+# Loading unisim.ibuf(ibuf_v)#1
+# Loading unisim.bufgp(bufgp_v)#1
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_67 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_69 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_71 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_73 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_75 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_77 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_79 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_81 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_83 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_85 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_87 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_89 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_91 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_93 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_95 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_97 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_99 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_101 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_103 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_105 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_107 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_109 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_111 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_113 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_115 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_117 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_119 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_121 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_123 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_125 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_127 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_129 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_131 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_133 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_135 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_137 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_139 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_141 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_143 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_145 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_147 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_149 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_151 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_153 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_155 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_157 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_159 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_161 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_163 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_165 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_167 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_169 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_171 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_173 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_175 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_177 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_179 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_181 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_183 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_185 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_187 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_189 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_191 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/B_C/CrossHierOut_193 has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/F_P/address_read(4) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/F_P/address_read(3) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/F_P/address_read(2) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/F_P/address_read(1) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/F_P/address_read(0) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(63) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(62) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(61) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(60) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(59) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(58) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(57) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(56) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(55) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(54) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(53) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(52) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(51) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(50) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(49) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(48) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(47) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(46) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(45) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(44) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(43) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(42) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(41) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(40) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(39) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(38) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(37) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(36) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(35) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(34) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(33) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(32) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(31) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(30) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(29) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(28) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(27) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(26) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(25) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(24) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(23) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(22) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(21) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(20) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(19) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(18) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(17) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(16) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(15) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(14) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(13) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(12) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(11) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(10) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(9) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(8) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(7) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(6) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(5) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(4) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(3) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(2) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(1) has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /bench_present_synth_final/P/ram/rd_data1(0) has no driver.
+# This port will contribute value (U) to the signal network.
 add wave -position insertpoint  \
-sim:/bench_key_schedule_128/CNT_s \
-sim:/bench_key_schedule_128/MODE_s \
-sim:/bench_key_schedule_128/clk_s \
-sim:/bench_key_schedule_128/key_s \
-sim:/bench_key_schedule_128/reset_s \
-sim:/bench_key_schedule_128/round_Counter_s \
-sim:/bench_key_schedule_128/round_Key_s
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: fail HOLD_KEY
-#    Time: 60 ns  Iteration: 0  Instance: /bench_key_schedule_128
-# ** Failure: END OF SIMULATION
-#    Time: 92 ns  Iteration: 0  Process: /bench_key_schedule_128/line__48 File: key_Schedule_128_Bench.vhd
-# Break in Process line__48 at key_Schedule_128_Bench.vhd line 98
-# Causality operation skipped due to absence of debug database file
-quit -sim
-vlog -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 18 2013
-# -- Skipping entity bench_add_round_key
-# -- Skipping entity bench_block_cypher
-# -- Skipping entity bench_fsm_present
-# -- Skipping entity bench_fsm_present_mem
-# -- Skipping entity bench_key_schedule
-# -- Skipping entity bench_key_schedule_128
-# -- Skipping entity bench_memory
-# -- Skipping entity bench_p_layer
-# -- Skipping entity bench_p_layer_inv
-# -- Skipping entity bench_present
-# -- Skipping entity bench_present_synth_cryp
-# -- Skipping entity bench_register_80_bits
-# -- Skipping entity bench_register_width_bits
-# -- Skipping entity bench_s_box
-# -- Skipping entity bench_s_box_4x16_bits
-# -- Skipping entity bench_s_box_inv_4x16_bits
-vcom -work /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_textio
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Loading package MATH_REAL
-# -- Compiling entity bench_add_Round_Key
-# -- Compiling architecture arch of bench_add_Round_Key
-# -- Loading package present_library
-# -- Compiling entity bench_Block_Cypher
-# -- Compiling architecture arch of bench_Block_Cypher
-# -- Compiling entity bench_fsm_Present
-# -- Compiling architecture arch of bench_fsm_Present
-# -- Compiling entity bench_fsm_Present_MEM
-# -- Compiling architecture arch of bench_fsm_Present_MEM
-# -- Compiling entity bench_key_Schedule
-# -- Compiling architecture arch of bench_key_Schedule
-# -- Compiling entity bench_key_Schedule_128
-# -- Compiling architecture arch of bench_key_Schedule_128
-# -- Compiling entity bench_memory
-# -- Compiling architecture arch of bench_memory
-# -- Compiling entity bench_P_Layer
-# -- Compiling architecture arch of bench_P_Layer
-# -- Compiling entity bench_P_Layer_Inv
-# -- Compiling architecture arch of bench_P_Layer_Inv
-# -- Compiling entity bench_Present
-# -- Compiling architecture arch of bench_Present
-# -- Compiling entity bench_Present_synth_cryp
-# -- Compiling architecture arch of bench_Present_synth_cryp
-# -- Compiling entity bench_Register_80_Bits
-# -- Compiling architecture arch of bench_register_80_bits
-# -- Compiling entity bench_Register_WIDTH_Bits
-# -- Compiling architecture arch of bench_register_WIDTH_bits
-# -- Compiling entity bench_S_Box
-# -- Compiling architecture arch of bench_S_Box
-# -- Compiling entity bench_S_Box_4x16_Bits
-# -- Compiling architecture arch of bench_S_Box_4x16_Bits
-# -- Compiling entity bench_S_Box_Inv_4x16_Bits
-# -- Compiling architecture arch of bench_S_Box_Inv_4x16_Bits
-vsim lib_BENCH.bench_present
-# vsim lib_BENCH.bench_present 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-133) Unable to remove directory "/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/libs/lib_BENCH/@_opt5".
-# Directory not empty. (errno = 39)
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "fsm_Present_MEM(A)".
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_present(arch)#1
-# Loading lib_vhdl.present(a)#1
-# Loading lib_vhdl.block_cypher(a)#1
-# Loading lib_vhdl.register_width_bits(a)#1
-# Loading lib_vhdl.s_box_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4_bits(a)#1
-# Loading lib_vhdl.add_round_key(a)#1
-# Loading lib_vhdl.p_layer(a)#1
-# Loading lib_vhdl.p_layer_inv(a)#1
-# Loading lib_vhdl.fsm_present_mem(a)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.key_schedule_128(a)#1
-# Loading lib_vhdl.register_width_bits(a)#2
-# Loading lib_vhdl.sync_ram(rtl)#1
-vsim lib_BENCH.bench_present
-# vsim lib_BENCH.bench_present 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_present(arch)#1
-# Loading lib_vhdl.present(a)#1
-# Loading lib_vhdl.block_cypher(a)#1
-# Loading lib_vhdl.register_width_bits(a)#1
-# Loading lib_vhdl.s_box_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4_bits(a)#1
-# Loading lib_vhdl.add_round_key(a)#1
-# Loading lib_vhdl.p_layer(a)#1
-# Loading lib_vhdl.p_layer_inv(a)#1
-# Loading lib_vhdl.fsm_present_mem(a)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.key_schedule_128(a)#1
-# Loading lib_vhdl.register_width_bits(a)#2
-# Loading lib_vhdl.sync_ram(rtl)#1
-add wave -position insertpoint  \
-sim:/bench_present/K_SIZE_s \
-sim:/bench_present/MODE_s \
-sim:/bench_present/clk_s \
-sim:/bench_present/cypher_Text_S \
-sim:/bench_present/key_S \
-sim:/bench_present/plein_Text_S \
-sim:/bench_present/reset_s \
-sim:/bench_present/start_s
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /bench_present/P/M_M
-run
-run
-# ** Failure: END OF SIMULATION
-#    Time: 2214 ns  Iteration: 0  Process: /bench_present/line__47 File: bench_present.vhd
-# Break in Process line__47 at bench_present.vhd line 156
-run
-run
-restart
+sim:/bench_present_synth_final/K_SIZE_s \
+sim:/bench_present_synth_final/MODE_s \
+sim:/bench_present_synth_final/clk_s \
+sim:/bench_present_synth_final/cypher_Text_S \
+sim:/bench_present_synth_final/key_S \
+sim:/bench_present_synth_final/plein_Text_S \
+sim:/bench_present_synth_final/reset_s \
+sim:/bench_present_synth_final/start_s
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
 run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /bench_present/P/M_M
 # ** Failure: END OF SIMULATION
-#    Time: 2214 ns  Iteration: 0  Process: /bench_present/line__47 File: bench_present.vhd
-# Break in Process line__47 at bench_present.vhd line 156
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_present(arch)#1
-# Loading lib_vhdl.present(a)#1
-# Loading lib_vhdl.block_cypher(a)#1
-# Loading lib_vhdl.register_width_bits(a)#1
-# Loading lib_vhdl.s_box_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4_bits(a)#1
-# Loading lib_vhdl.add_round_key(a)#1
-# Loading lib_vhdl.p_layer(a)#1
-# Loading lib_vhdl.p_layer_inv(a)#1
-# Loading lib_vhdl.fsm_present_mem(a)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.key_schedule_128(a)#1
-# Loading lib_vhdl.register_width_bits(a)#2
-# Loading lib_vhdl.sync_ram(rtl)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /bench_present/P/M_M
-# ** Failure: END OF SIMULATION
-#    Time: 4428 ns  Iteration: 0  Process: /bench_present/line__47 File: bench_present.vhd
-# Break in Process line__47 at bench_present.vhd line 267
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_present(arch)#1
-# Loading lib_vhdl.present(a)#1
-# Loading lib_vhdl.block_cypher(a)#1
-# Loading lib_vhdl.register_width_bits(a)#1
-# Loading lib_vhdl.s_box_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4_bits(a)#1
-# Loading lib_vhdl.add_round_key(a)#1
-# Loading lib_vhdl.p_layer(a)#1
-# Loading lib_vhdl.p_layer_inv(a)#1
-# Loading lib_vhdl.fsm_present_mem(a)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.key_schedule_128(a)#1
-# Loading lib_vhdl.register_width_bits(a)#2
-# Loading lib_vhdl.sync_ram(rtl)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /bench_present/P/M_M
-# ** Failure: END OF SIMULATION
-#    Time: 2543 ns  Iteration: 0  Process: /bench_present/line__47 File: bench_present.vhd
-# Break in Process line__47 at bench_present.vhd line 195
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.math_real(body)
-# Loading lib_vhdl.present_library
-# Loading work.bench_present(arch)#1
-# Loading lib_vhdl.present(a)#1
-# Loading lib_vhdl.block_cypher(a)#1
-# Loading lib_vhdl.register_width_bits(a)#1
-# Loading lib_vhdl.s_box_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_4_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4x16_bits(a)#1
-# Loading lib_vhdl.s_box_inv_4_bits(a)#1
-# Loading lib_vhdl.add_round_key(a)#1
-# Loading lib_vhdl.p_layer(a)#1
-# Loading lib_vhdl.p_layer_inv(a)#1
-# Loading lib_vhdl.fsm_present_mem(a)#1
-# Loading lib_vhdl.key_schedule(a)#1
-# Loading lib_vhdl.register_80_bits(a)#1
-# Loading lib_vhdl.key_schedule_128(a)#1
-# Loading lib_vhdl.register_width_bits(a)#2
-# Loading lib_vhdl.sync_ram(rtl)#1
-# ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /bench_present/P/M_M
-# ** Failure: END OF SIMULATION
-#    Time: 2853 ns  Iteration: 0  Process: /bench_present/line__47 File: bench_present.vhd
-# Break in Process line__47 at bench_present.vhd line 202
+#    Time: 2853 ns  Iteration: 0  Process: /bench_present_synth_final/line__46 File: bench_present_synth_cryp.vhd
+# Break in Process line__46 at bench_present_synth_cryp.vhd line 201

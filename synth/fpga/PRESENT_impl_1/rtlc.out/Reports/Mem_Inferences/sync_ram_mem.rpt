@@ -1,0 +1,11 @@
+Inferred RAM
+------------
+  1. Instance: rtlcsync_ram_ram_20_n1
+    File: /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/synth/fpga/../../vhd/memory.vhd , Net: ram, Type: single port
+    port 1  read
+    port 1  address width: 5
+    port 1  data width: 64
+    port 2  write
+    port 2  address width: 5
+    port 2  data width: 64
+

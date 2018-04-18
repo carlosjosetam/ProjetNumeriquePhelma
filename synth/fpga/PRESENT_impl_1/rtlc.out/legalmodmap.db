@@ -1,0 +1,14 @@
+s_Box_4x16_Bits s_Box_4x16_Bits
+present present
+key_Schedule_128 key_Schedule_128
+register_WIDTH_bits-128 register_WIDTH_bits_128
+s_Box_4_Bits s_Box_4_Bits
+fsm_Present_MEM fsm_Present_MEM
+p_Layer p_Layer
+s_Box_Inv_4_Bits s_Box_Inv_4_Bits
+s_Box_Inv_4x16_Bits s_Box_Inv_4x16_Bits
+register_80_bits register_80_bits
+block_Cypher block_Cypher
+p_Layer_Inv p_Layer_Inv
+key_Schedule key_Schedule
+#LEGALIZEDMOD_COUNTER 0
