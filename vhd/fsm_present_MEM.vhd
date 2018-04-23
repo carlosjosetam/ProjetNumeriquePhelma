@@ -63,6 +63,10 @@ begin
         end if;
         
       end if;
+
+      if current_state = TEXT_OUT then
+          round_Counter_s <= to_unsigned(0, 5);
+      end if;
     end process P_SEQ;
 
     P_NXT_STATE: process (current_state, round_Counter_s, start)

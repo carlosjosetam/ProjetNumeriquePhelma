@@ -4,7 +4,7 @@
  (keywordMap (keywordLevel 0))
  (status 
   (written 
-   (timestamp 2018 04 18 14 34 50)
+   (timestamp 2018 04 23 06 42 52)
    (program "Precision RTL Synthesis" (version "2014a.1_64-bit"))
    (author "Mentor Graphics Corporation")))
  (external xis3 
@@ -4095,6 +4095,8 @@
      (instance not_round_Counter_0 (viewRef NETLIST  (cellRef INV (libraryRef xis3 ))))
      (instance ix7901z1328 (viewRef NETLIST  (cellRef LUT2 (libraryRef xis3 )))
       (property INIT (string "E")))
+     (instance ix4910z1328 (viewRef NETLIST  (cellRef LUT2 (libraryRef xis3 )))
+      (property INIT (string "E")))
      (instance ix18107z786 (viewRef NETLIST  (cellRef LUT4 (libraryRef xis3 )))
       (property INIT (string "FDF0")))
      (instance ix21098z1266 (viewRef NETLIST  (cellRef LUT4 (libraryRef xis3 )))
@@ -4115,7 +4117,7 @@
       (property INIT (string "2")))
      (instance ix5907z1316 (viewRef NETLIST  (cellRef LUT2 (libraryRef xis3 )))
       (property INIT (string "2")))
-     (instance ix4910z1316 (viewRef NETLIST  (cellRef LUT2 (libraryRef xis3 )))
+     (instance ix4910z1317 (viewRef NETLIST  (cellRef LUT2 (libraryRef xis3 )))
       (property INIT (string "2")))
      (instance ix3913z1316 (viewRef NETLIST  (cellRef LUT2 (libraryRef xis3 )))
       (property INIT (string "2")))
@@ -4163,11 +4165,7 @@
        (portRef CLR (instanceRef reg_current_state_2_ ))
        (portRef CLR (instanceRef reg_current_state_1_ ))
        (portRef PRE (instanceRef reg_current_state_0_ ))
-       (portRef CLR (instanceRef reg_round_Counter_s_4_ ))
-       (portRef CLR (instanceRef reg_round_Counter_s_3_ ))
-       (portRef CLR (instanceRef reg_round_Counter_s_2_ ))
-       (portRef CLR (instanceRef reg_round_Counter_s_1_ ))
-       (portRef CLR (instanceRef reg_round_Counter_s_0_ ))))
+       (portRef I0 (instanceRef ix4910z1328 ))))
      (net clk 
       (joined 
        (portRef clk )
@@ -4255,7 +4253,7 @@
      (net (rename next_round_Counter_s_3_ "next_round_Counter_s(3)") 
       (joined 
        (portRef Q (instanceRef lat_next_round_Counter_s_3_ ))
-       (portRef I0 (instanceRef ix4910z1316 ))))
+       (portRef I0 (instanceRef ix4910z1317 ))))
      (net (rename next_round_Counter_s_2_ "next_round_Counter_s(2)") 
       (joined 
        (portRef Q (instanceRef lat_next_round_Counter_s_2_ ))
@@ -4297,6 +4295,7 @@
       (joined 
        (portRef CNT_block_Cypher_text_Out )
        (portRef Q (instanceRef reg_current_state_6_ ))
+       (portRef I1 (instanceRef ix4910z1328 ))
        (portRef I1 (instanceRef ix46965z1328 ))
        (portRef I2 (instanceRef ix17110z1482 ))
        (portRef I2 (instanceRef ix22095z1408 ))
@@ -4310,7 +4309,7 @@
        (portRef I2 (instanceRef ix18107z786 ))
        (portRef I1 (instanceRef ix6904z1316 ))
        (portRef I1 (instanceRef ix5907z1316 ))
-       (portRef I1 (instanceRef ix4910z1316 ))
+       (portRef I1 (instanceRef ix4910z1317 ))
        (portRef I1 (instanceRef ix3913z1316 ))
        (portRef I2 (instanceRef ix42180z1316 ))
        (portRef I2 (instanceRef ix3867z1317 ))))
@@ -4330,6 +4329,14 @@
       (joined 
        (portRef O (instanceRef ix7901z1328 ))
        (portRef D (instanceRef reg_round_Counter_s_0_ ))))
+     (net nx4910z1 
+      (joined 
+       (portRef O (instanceRef ix4910z1328 ))
+       (portRef CLR (instanceRef reg_round_Counter_s_4_ ))
+       (portRef CLR (instanceRef reg_round_Counter_s_3_ ))
+       (portRef CLR (instanceRef reg_round_Counter_s_2_ ))
+       (portRef CLR (instanceRef reg_round_Counter_s_1_ ))
+       (portRef CLR (instanceRef reg_round_Counter_s_0_ ))))
      (net nx18107z1 
       (joined 
        (portRef O (instanceRef ix18107z786 ))
@@ -4370,9 +4377,9 @@
       (joined 
        (portRef O (instanceRef ix5907z1316 ))
        (portRef D (instanceRef reg_round_Counter_s_2_ ))))
-     (net nx4910z1 
+     (net nx4910z2 
       (joined 
-       (portRef O (instanceRef ix4910z1316 ))
+       (portRef O (instanceRef ix4910z1317 ))
        (portRef D (instanceRef reg_round_Counter_s_3_ ))))
      (net nx3913z1 
       (joined 

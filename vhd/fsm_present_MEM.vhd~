@@ -61,6 +61,10 @@ begin
         if current_state = LOAD_KEY then
           round_Counter_s <= to_unsigned(1, 5);
         end if;
+
+        if current_state = TEXT_OUT then
+          round_Counter_s <= to_unsigned(0, 5);
+        end if;
         
       end if;
     end process P_SEQ;
@@ -127,31 +131,23 @@ begin
          when GENERATE_KEY => buffer_CNT <= "101000";
 
 	 when WAIT_MEM => buffer_CNT <= "000000";
-		    if MODE = DECRYP then
-		    	address_write <= not std_logic_vector(round_Counter_s - 1);
-		    end if;
 
          when LOAD_TEXT => buffer_CNT <= "000010";
-		    if MODE = DECRYP then
-		    	address_write <= not std_logic_vector(round_Counter_s - 1);
-		    end if;
 
          when LOOP_TEXT => buffer_CNT <= "000110";
-		    if MODE = DECRYP then
-		    	address_write <= not std_logic_vector(round_Counter_s - 1);
-		    end if;
 
          when TEXT_OUT => buffer_CNT <= "000101";
-		    if MODE = DECRYP then
-		    	address_write <= not std_logic_vector(round_Counter_s - 1);
-		    end if;       
+		     
         when others => null;
       end case;
 
-      if MODE = CRYP then
-      	address_write <= std_logic_vector(round_Counter_s - 1);
+      if MODE = DECRYP and (current_state = WAIT_MEM or current_state = LOAD_TEXT or current_state = LOOP_TEXT or current_state = TEXT_OUT) then
+	address_write <= not std_logic_vector(round_Counter_s - 1);
+      	address_read <= not std_logic_vector(round_Counter_s - 1);
+      else 
+	address_write <= std_logic_vector(round_Counter_s - 1);
       	address_read <= std_logic_vector(round_Counter_s - 1);
-	end if;    
+      end if;
       
 
     end process P_OUTPUT;

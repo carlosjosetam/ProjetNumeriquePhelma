@@ -2,7 +2,7 @@
 -- 
 -- Definition of  present
 -- 
---      Wed Apr 18 16:34:51 2018
+--      Mon Apr 23 08:42:53 2018
 --      
 --      Precision RTL Synthesis, 2014a.1_64-bit
 -- 
@@ -911,11 +911,11 @@ architecture A_unfold_853 of fsm_Present_MEM is
    
    signal current_state_5, current_state_4, current_state_3, current_state_0, 
       CNT_block_Cypher_text_Out_EXMPLR150, CNT_key_Schedule_mux_EXMPLR151, 
-      CNT_memory_write_EXMPLR152, not_round_Counter_0, nx7901z1, nx18107z1, 
-      nx21098z1, nx6904z1, nx5907z1, nx4910z1, nx3913z1, nx16113z1, 
-      nx17110z1, nx19104z1, nx22095z3, nx22095z1, nx44174z1, nx45171z1, 
-      nx42180z2, nx42180z1, nx46168z2, nx46168z1, nx43177z1, nx4864z1, 
-      nx22095z2, nx3867z1: std_logic ;
+      CNT_memory_write_EXMPLR152, not_round_Counter_0, nx7901z1, nx4910z1, 
+      nx18107z1, nx21098z1, nx6904z1, nx5907z1, nx4910z2, nx3913z1, 
+      nx16113z1, nx17110z1, nx19104z1, nx22095z3, nx22095z1, nx44174z1, 
+      nx45171z1, nx42180z2, nx42180z1, nx46168z2, nx46168z1, nx43177z1, 
+      nx4864z1, nx22095z2, nx3867z1: std_logic ;
 
 begin
    CNT_block_Cypher_text_Out <= CNT_block_Cypher_text_Out_EXMPLR150 ;
@@ -952,21 +952,25 @@ begin
    reg_current_state_0 : FDP port map ( Q=>current_state_0, C=>clk, D=>
       nx16113z1, PRE=>reset);
    reg_round_Counter_s_4 : FDC port map ( Q=>round_Counter_EXMPLR161(4), C=>
-      clk, CLR=>reset, D=>nx3913z1);
+      clk, CLR=>nx4910z1, D=>nx3913z1);
    reg_round_Counter_s_3 : FDC port map ( Q=>round_Counter_EXMPLR161(3), C=>
-      clk, CLR=>reset, D=>nx4910z1);
+      clk, CLR=>nx4910z1, D=>nx4910z2);
    reg_round_Counter_s_2 : FDC port map ( Q=>round_Counter_EXMPLR161(2), C=>
-      clk, CLR=>reset, D=>nx5907z1);
+      clk, CLR=>nx4910z1, D=>nx5907z1);
    reg_round_Counter_s_1 : FDC port map ( Q=>round_Counter_EXMPLR161(1), C=>
-      clk, CLR=>reset, D=>nx6904z1);
+      clk, CLR=>nx4910z1, D=>nx6904z1);
    reg_round_Counter_s_0 : FDC port map ( Q=>round_Counter_EXMPLR161(0), C=>
-      clk, CLR=>reset, D=>nx7901z1);
+      clk, CLR=>nx4910z1, D=>nx7901z1);
    not_round_Counter_0_EXMPLR162 : INV port map ( O=>not_round_Counter_0, I
       =>round_Counter_EXMPLR161(0));
    ix7901z1328 : LUT2
       generic map (INIT => X"E") 
        port map ( O=>nx7901z1, I0=>next_round_Counter_s(0), I1=>
       CNT_key_Schedule_mux_EXMPLR151);
+   ix4910z1328 : LUT2
+      generic map (INIT => X"E") 
+       port map ( O=>nx4910z1, I0=>reset, I1=>
+      CNT_block_Cypher_text_Out_EXMPLR150);
    ix18107z786 : LUT4
       generic map (INIT => X"FDF0") 
        port map ( O=>nx18107z1, I0=>nx22095z2, I1=>
@@ -1008,9 +1012,9 @@ begin
       generic map (INIT => X"2") 
        port map ( O=>nx5907z1, I0=>next_round_Counter_s(2), I1=>
       CNT_key_Schedule_mux_EXMPLR151);
-   ix4910z1316 : LUT2
+   ix4910z1317 : LUT2
       generic map (INIT => X"2") 
-       port map ( O=>nx4910z1, I0=>next_round_Counter_s(3), I1=>
+       port map ( O=>nx4910z2, I0=>next_round_Counter_s(3), I1=>
       CNT_key_Schedule_mux_EXMPLR151);
    ix3913z1316 : LUT2
       generic map (INIT => X"2") 

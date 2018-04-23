@@ -4,4 +4,4 @@ vlib ${HOME}/ProjetNumeriquePhelma/libs/lib_SYNTH
 
 vmap lib_SYNTH ${HOME}/ProjetNumeriquePhelma/libs/lib_SYNTH
 
-vcom +acc -work lib_VHDL present.vhd
+vcom +acc -work lib_SYNTH ${HOME}/ProjetNumeriquePhelma/synth/fpga/PRESENT_impl_1/present.vhd

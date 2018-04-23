@@ -6,9 +6,9 @@
 //            CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
 //          PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 //  
-//  Running on Linux xph2sei401@cimeld37 #1 SMP Debian 3.2.81-2 3.2.0-4-amd64 x86_64
+//  Running on Linux xph2sei401@cimeld55 #1 SMP Debian 3.2.81-2 3.2.0-4-amd64 x86_64
 //  
-//  Start time Wed Apr 18 14:53:33 2018
+//  Start time Mon Apr 23 08:33:47 2018
 
 ***************************************************************
 Device Utilization for 3S400fg456
@@ -17,8 +17,8 @@ Resource                          Used    Avail   Utilization
 ---------------------------------------------------------------
 IOs                               261     264      98.86%
 Global Buffers                    1       8        12.50%
-LUTs                              634     7168      8.84%
-CLB Slices                        317     3584      8.84%
+LUTs                              635     7168      8.86%
+CLB Slices                        318     3584      8.87%
 Dffs or Latches                   418     7960      5.25%
 Block RAMs                        2       16       12.50%
    RAMB16_S36_S36                 2                     
@@ -43,7 +43,7 @@ Library: work    Cell: present    View: A
  block_Cypher        work          1 x    192    192 gates
                                           128    128 LUTs
                                            64     64 MUXF5
- fsm_Present_MEM     work          1 x     30     30 LUTs
+ fsm_Present_MEM     work          1 x     31     31 LUTs
                                            17     17 Dffs or Latches
  key_Schedule        work          1 x     84     84 LUTs
                                            80     80 Dffs or Latches
@@ -64,10 +64,10 @@ Library: work    Cell: present    View: A
 Total accumulated area : 
  Number of Block RAMs :                  2
  Number of Dffs or Latches :           418
- Number of LUTs :                      634
+ Number of LUTs :                      635
  Number of MUXF5 :                      64
  Number of gates :                     668
- Number of accumulated instances :    1382
+ Number of accumulated instances :    1383
 
 
 *****************************
