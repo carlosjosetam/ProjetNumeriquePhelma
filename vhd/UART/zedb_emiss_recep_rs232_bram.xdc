@@ -32,7 +32,7 @@
 # User Push Buttons - Bank 34
 # ----------------------------------------------------------------------------
 set_property PACKAGE_PIN P16 [get_ports {rst}];  # "BTNC"
-#set_property PACKAGE_PIN R16 [get_ports {BTND}];  # "BTND"
+set_property PACKAGE_PIN R16 [get_ports {start}];  # "BTND"
 #set_property PACKAGE_PIN N15 [get_ports {pb_l}];  # "BTNL"
 #set_property PACKAGE_PIN R18 [get_ports {pb_r}];  # "BTNR"
 # set_property PACKAGE_PIN T18 [get_ports {sw6}];  # "BTNU"

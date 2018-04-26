@@ -38,3 +38,25 @@ vcom +acc -work lib_VHDL memory.vhd
 
 vcom +acc -work lib_VHDL present.vhd
 
+vcom +acc -work lib_VHDL UART/shift_register.vhd
+
+vcom +acc -work lib_VHDL UART/fsm_shift_write.vhd
+
+vcom +acc -work lib_VHDL UART/hexa_to_ascii.vhd
+
+vcom +acc -work lib_VHDL UART/ascii_to_hexa.vhd
+
+vcom +acc -work lib_VHDL UART/recep_rs232.vhd
+
+vcom +acc -work lib_VHDL UART/emiss_rs232.vhd
+
+vcom +acc -work lib_VHDL UART/fsm_write.vhd
+
+vcom +acc -work lib_VHDL UART/emiss_recep_rs232_bram.vhd
+
+
+
+
+
+
+

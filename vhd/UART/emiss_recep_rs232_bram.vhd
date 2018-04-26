@@ -78,6 +78,9 @@ library IEEE ;
 use IEEE.std_logic_1164.ALL ;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_logic_unsigned.ALL;
+library lib_VHDL;
+use lib_VHDL.present_library.all;
+
 
 --use IEEE.numeric_std.ALL; 
  
@@ -86,14 +89,15 @@ use IEEE.STD_logic_unsigned.ALL;
 --use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity emiss_recep_rs232_bram is
-        port(  Clk                     : in STD_LOGIC ;
+        port(  Clk                   	: in STD_LOGIC ;
                rst                  	: in STD_LOGIC ;
-			   sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
+		start			: in STD_LOGIC;
+		sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
                ledr                  	: out STD_LOGIC_VECTOR(7 downto 0);
 			   txd_obs                  	: out STD_LOGIC;	
 			   txd_out                  	: out STD_LOGIC; 
 			   wren_obs                  	: out STD_LOGIC;
-			   rxd								: in STD_LOGIC
+			   rxd				: in STD_LOGIC
 				);
 end emiss_recep_rs232_bram;
 
@@ -103,7 +107,7 @@ CONSTANT rs232_speed : unsigned(15 downto 0):= x"0364"; -- 364 => 115200 carte Z
 
 
 signal		data_bram,q_bram		 			: 	 STD_LOGIC_VECTOR(7 downto 0) ;
-signal		raddress_bram,wraddress_bram	:   STD_LOGIC_VECTOR(3 downto 0) ;
+signal		raddress_bram,wraddress_bram, raddress_emiss	:   STD_LOGIC_VECTOR(3 downto 0) ;
 signal		wren,ledr0,rxd_int   								:   std_logic;
 signal		data_load,bit_load,err_parite	:	 std_logic;
 signal 		data_mem								:	 STD_LOGIC_VECTOR(7 downto 0) ;
@@ -155,8 +159,64 @@ component fsm_write is
 					);
 end component;
 
+-- SERIAL IN
+
+signal converter_out_s			: std_logic_vector(3 downto 0);
+signal reg_out_s			: std_logic_vector(63 downto 0);
+
+
+component ascii_to_hexa is
+	port(  ascii_in                 : in STD_LOGIC_VECTOR(7 downto 0);
+	       hexa_out                 : out STD_LOGIC_VECTOR(3 downto 0)
+	);
+end component;
+
+component shift_register_64_bits is
+   port(reg_in  	: in  std_logic_vector(3 downto 0);
+	enable		: in  std_logic;
+	shift		: in  std_logic;
+	reset		: in  std_logic;
+	clk		: in  std_logic;
+	reg_out		: out std_logic_vector(63 downto 0));
+       
+end component;
+
+-- END SERIAL IN
+
+-- PRESENT
+
+signal cypher_text_s 	: std_logic_vector(63 downto 0);
+
+component present is
+     port(
+	reset		: in std_logic;
+	clk		: in std_logic;
+	start		: in std_logic;
+	MODE		: in MODE_TYPE;
+	K_SIZE		: in KEY_SIZE;
+	plein_Text  	: in std_logic_vector(63 downto 0);  
+	key	  	: in std_logic_vector(127 downto 0);       	     	
+	cypher_Text	: out std_logic_vector(63 downto 0)
+	);
+end component;
+
+-- END PRESENT
+
+
 
 begin
+
+-- SERIAL IN
+	CASCII_HEXA :	ascii_to_hexa port map (data_bram, converter_out_s);
+	SR64 : 		shift_register_64_bits port map (converter_out_s, data_load, data_load, rst, clk, reg_out_s);
+
+
+-- END SERIAL IN
+
+-- PRESENT
+
+	PRESENT_MODULE : present port map (rst, clk, start, CRYP, K_80, reg_out_s, x"00000000000000000000000000000000", cypher_text_s);
+
 
 -- wren <= '0';
 wren <= data_load and sw(0); -- si SW0:'0' pas d'ecriture RAM
@@ -167,14 +227,15 @@ wren_obs <= wren;
 -- data_bram <= x"0000";
 data_bram(7 downto 0) <= data_mem(7 downto 0);
 
-ledr(0) <= ledr0;
-ledr(7) <= not rxd;
+--ledr(0) <= ledr0;
+--ledr(7) <= not rxd;
 rxd_int  <= rxd;
-ledr(1) <= err_parite;
-ledr(2) <= data_load;
-
-ledr(6 downto 3) <= wraddress_bram(3 downto 0);
+--ledr(1) <= err_parite;
+--ledr(2) <= data_load;
+--ledr(6 downto 3) <= wraddress_bram(3 downto 0);
 txd_out <= rxd;
+
+ledr(7 downto 0) <= cypher_text_s(7 downto 0);
 
 U1 : emiss_rs232
 port map
@@ -197,16 +258,6 @@ PORT map
                     data_mem		 => data_mem,
                     err_parite 	 => err_parite    );
 	
-U3 : bram_16x8
-PORT map           
-     (      clka            => Clk,  
-            wea(0)          => wren,
-            addra           => wraddress_bram,
-            dina            => data_bram,
-            clkb            => Clk,  
-            addrb           => raddress_bram,
-            doutb           => q_bram    );
-
 U4 : fsm_write
 PORT map           
 	(       Clk              => Clk,  

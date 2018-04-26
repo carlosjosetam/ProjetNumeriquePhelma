@@ -1,0 +1,10 @@
+# Info: [9566]: Logging project transcript to file /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/synth/TRANSM/serial_in_impl_1/precision.log
+# Info: [9566]: Logging suppressed messages transcript to file /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/synth/TRANSM/serial_in_impl_1/precision.log.suppressed
+# Info: [9550]: Activated implementation serial_in_impl_1 in project /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/synth/TRANSM/serial_in.psp.
+new_project -name serial_in -folder /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/synth/TRANSM -createimpl_name serial_in_impl_1
+# COMMAND: add_input_file {../../vhd/UART/ascii_to_hexa.vhd ../../vhd/UART/emiss_recep_rs232_bram.vhd ../../vhd/UART/emiss_rs232.vhd ../../vhd/UART/fsm_shift_write.vhd ../../vhd/UART/fsm_write.vhd ../../vhd/UART/hexa_to_ascii.vhd ../../vhd/UART/recep_rs232.vhd ../../vhd/UART/shift_register.vhd ../../vhd/UART/zedb_emiss_recep_rs232_bram.xdc}
+add_input_file {../../vhd/UART/ascii_to_hexa.vhd ../../vhd/UART/emiss_recep_rs232_bram.vhd ../../vhd/UART/emiss_rs232.vhd ../../vhd/UART/fsm_shift_write.vhd ../../vhd/UART/fsm_write.vhd ../../vhd/UART/hexa_to_ascii.vhd ../../vhd/UART/recep_rs232.vhd ../../vhd/UART/shift_register.vhd ../../vhd/UART/zedb_emiss_recep_rs232_bram.xdc}
+# COMMAND: move_input_file_to_bottom -from {1}
+move_input_file_to_bottom -from {1}
+# COMMAND: exit -force
+# Warning: [9526]: Discarded unsaved work in implementation serial_in_impl_1.

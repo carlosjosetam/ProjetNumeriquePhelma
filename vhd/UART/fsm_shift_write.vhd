@@ -1,0 +1,92 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+library lib_VHDL;
+
+
+entity fsm_shift_write is
+     port(
+	reset		: in std_logic;
+	clk		: in std_logic;
+        start		: in std_logic;
+      	
+	shift		: out std_logic;
+	enable		: out std_logic;
+	address		: out std_logic_vector(3 downto 0)
+	);	
+end fsm_shift_write;
+
+architecture A of fsm_shift_write is
+
+type STATE is (RESET_S, WRITE);
+
+signal next_state, current_state : STATE;
+signal address_s, next_address_s : unsigned(3 downto 0) := to_unsigned(0, 4);
+
+begin
+
+
+
+    address <= std_logic_vector(address_s);
+
+    P_SEQ: process (clk, reset)
+    begin  -- process P_SEQ
+      -- asynchronous reset (active high)
+      if reset = '1' then
+        current_state <= RESET_S;
+        address_s <= to_unsigned(0, 4);
+ 
+      elsif clk'event and clk = '1' then  -- rising clock edge
+        current_state <= next_state;
+        address_s <= next_address_s;
+       
+      end if;
+
+    end process P_SEQ;
+
+    P_NXT_STATE: process (current_state, address_s, start)
+    begin  -- process  P_NXT_STATE
+      case current_state is
+
+        when RESET_S =>
+	  if start = '1' then
+	    next_state <= WRITE;
+	  else
+	    next_state <= RESET_S;
+	  end if;
+		
+          next_address_s <= to_unsigned(0,4);
+
+        when WRITE =>
+          if address_s = 15 then
+            next_state <= RESET_S;
+          else
+            next_state <= WRITE;
+            next_address_s <= address_s + 1;
+          end if;
+        
+        when others => null;
+      end case;
+    end process  P_NXT_STATE;
+
+    P_OUTPUT: process (current_state)
+    begin  -- process P_OUTPUT
+       case current_state is
+         
+         when RESET_S =>
+		shift 	<= '0';
+		enable 	<= '0';
+
+         when WRITE =>
+		shift 	<= '1';
+		enable 	<= '1';
+
+        when others => null;
+      end case;
+    end process P_OUTPUT;
+
+
+end A;
+
+
+

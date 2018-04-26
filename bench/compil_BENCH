@@ -36,3 +36,9 @@ vcom +acc -work lib_BENCH bench_present.vhd
 vcom +acc -work lib_BENCH bench_present_synth_cryp.vhd
 
 vcom +acc -work lib_BENCH memory_bench.vhd
+
+vcom +acc -work lib_BENCH shift_register_bench.vhd
+
+vcom +acc -work lib_BENCH fsm_shift_register_bench.vhd
+
+vcom +acc -work lib_BENCH serial_in_bench.vhd

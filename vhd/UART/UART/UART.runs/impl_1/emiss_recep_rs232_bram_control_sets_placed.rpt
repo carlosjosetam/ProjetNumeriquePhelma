@@ -1,0 +1,84 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Thu Apr 26 12:01:07 2018
+| Host         : cimepc08 running 64-bit Debian GNU/Linux 7.9 (wheezy)
+| Command      : report_control_sets -verbose -file emiss_recep_rs232_bram_control_sets_placed.rpt
+| Design       : emiss_recep_rs232_bram
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    37 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              14 |            5 |
+| No           | No                    | Yes                    |               8 |            4 |
+| No           | Yes                   | No                     |              10 |            7 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             216 |           61 |
+| Yes          | Yes                   | No                     |              99 |           36 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------------+-------------------------------+-----------------------------------------------+------------------+----------------+
+|                       Clock Signal                      |         Enable Signal         |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++---------------------------------------------------------+-------------------------------+-----------------------------------------------+------------------+----------------+
+|  Clk_IBUF_BUFG                                          | U1/next_txd                   | rst_IBUF                                      |                1 |              1 |
+|  Clk_IBUF_BUFG                                          | U1/next_ind_txd               | rst_IBUF                                      |                2 |              4 |
+|  Clk_IBUF_BUFG                                          | U2/ind_w10                    | rst_IBUF                                      |                1 |              4 |
+|  Clk_IBUF_BUFG                                          |                               | PRESENT_MODULE/F_P/round_Counter_s[4]_i_2_n_0 |                3 |              5 |
+|  PRESENT_MODULE/F_P/next_round_Counter_s_reg[4]_i_2_n_0 |                               |                                               |                2 |              5 |
+|  Clk_IBUF_BUFG                                          | U2/w2[9]_i_1_n_0              | rst_IBUF                                      |                1 |              8 |
+|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/ram_reg[0] | rst_IBUF                                      |                7 |              8 |
+|  PRESENT_MODULE/F_P/next_state                          |                               |                                               |                3 |              9 |
+|  Clk_IBUF_BUFG                                          | U2/p_0_in[4]                  | rst_IBUF                                      |                2 |             10 |
+|  Clk_IBUF_BUFG                                          |                               | rst_IBUF                                      |                8 |             13 |
+|  Clk_IBUF_BUFG                                          | U2/Tap_Number[15]_i_1_n_0     | rst_IBUF                                      |                5 |             16 |
+|  Clk_IBUF_BUFG                                          | U1/next_burst                 | rst_IBUF                                      |                7 |             16 |
+|  Clk_IBUF_BUFG                                          | U1/next_baud_time             | rst_IBUF                                      |                7 |             16 |
+|  Clk_IBUF_BUFG                                          | U1/next_tempo                 | rst_IBUF                                      |               10 |             24 |
+|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/ram_reg[1] | rst_IBUF                                      |               27 |             64 |
+|  Clk_IBUF_BUFG                                          | U2/E[0]                       | rst_IBUF                                      |               17 |             64 |
+|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/ram_reg[3] | rst_IBUF                                      |               10 |             80 |
++---------------------------------------------------------+-------------------------------+-----------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     1 |
+| 4      |                     2 |
+| 5      |                     2 |
+| 8      |                     2 |
+| 9      |                     1 |
+| 10     |                     1 |
+| 13     |                     1 |
+| 16+    |                     7 |
++--------+-----------------------+
+
+

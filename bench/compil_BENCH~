@@ -19,7 +19,9 @@ vcom +acc -work lib_BENCH s_Box_Inv_4x16_Bits_Bench.vhd
 
 vcom +acc -work lib_BENCH register_80_Bits_Bench.vhd
 
-vcom +acc -work lib_BENCH key_Schedule_Bench.vhd 
+vcom +acc -work lib_BENCH key_Schedule_Bench.vhd
+
+vcom +acc -work lib_BENCH key_Schedule_128_Bench.vhd 
 
 vcom +acc -work lib_BENCH register_Generic_Bits_Bench.vhd
 
@@ -34,3 +36,7 @@ vcom +acc -work lib_BENCH bench_present.vhd
 vcom +acc -work lib_BENCH bench_present_synth_cryp.vhd
 
 vcom +acc -work lib_BENCH memory_bench.vhd
+
+vcom +acc -work lib_BENCH shift_register_bench.vhd
+
+vcom +acc -work lib_BENCH fsm_shift_register_bench.vhd
