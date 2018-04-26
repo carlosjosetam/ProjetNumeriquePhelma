@@ -3,6 +3,8 @@ set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN P16 [get_ports {rst}];  # "BTNC"
 set_property src_info {type:XDC file:1 line:35 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R16 [get_ports {start}];  # "BTND"
+set_property src_info {type:XDC file:1 line:36 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N15 [get_ports {mode}];  # "BTNL"
 set_property src_info {type:XDC file:1 line:39 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
 set_property src_info {type:XDC file:1 line:46 export:INPUT save:INPUT read:READ} [current_design]

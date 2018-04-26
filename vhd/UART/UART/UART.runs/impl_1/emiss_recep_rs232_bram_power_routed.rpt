@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-| Date             : Thu Apr 26 12:01:38 2018
+| Date             : Thu Apr 26 12:47:59 2018
 | Host             : cimepc08 running 64-bit Debian GNU/Linux 7.9 (wheezy)
 | Command          : report_power -file emiss_recep_rs232_bram_power_routed.rpt -pb emiss_recep_rs232_bram_power_summary_routed.pb -rpx emiss_recep_rs232_bram_power_routed.rpx
 | Design           : emiss_recep_rs232_bram
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 3.294 |
-| Dynamic (W)              | 3.095 |
-| Device Static (W)        | 0.199 |
+| Total On-Chip Power (W)  | 4.095 |
+| Dynamic (W)              | 3.852 |
+| Device Static (W)        | 0.243 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 47.0  |
-| Junction Temperature (C) | 63.0  |
+| Max Ambient (C)          | 37.8  |
+| Junction Temperature (C) | 72.2  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,17 +49,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.041 |      792 |       --- |             --- |
-|   LUT as Logic |     0.944 |      356 |     53200 |            0.67 |
+| Slice Logic    |     1.367 |      858 |       --- |             --- |
+|   LUT as Logic |     1.270 |      359 |     53200 |            0.67 |
 |   CARRY4       |     0.059 |       18 |     13300 |            0.14 |
-|   Register     |     0.031 |      347 |    106400 |            0.33 |
+|   Register     |     0.032 |      347 |    106400 |            0.33 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |     1.053 |      622 |       --- |             --- |
+| Signals        |     1.479 |      696 |       --- |             --- |
 | Block RAM      |     0.219 |        1 |       140 |            0.71 |
-| I/O            |     0.783 |       17 |       200 |            8.50 |
-| Static Power   |     0.199 |          |           |                 |
-| Total          |     3.294 |          |           |                 |
+| I/O            |     0.787 |       18 |       200 |            9.00 |
+| Static Power   |     0.243 |          |           |                 |
+| Total          |     4.095 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,8 +69,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     2.359 |       2.327 |      0.032 |
-| Vccaux    |       1.800 |     0.053 |       0.028 |      0.025 |
+| Vccint    |       1.000 |     3.130 |       3.084 |      0.046 |
+| Vccaux    |       1.800 |     0.057 |       0.028 |      0.029 |
 | Vcco33    |       3.300 |     0.217 |       0.216 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -78,11 +78,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.008 |       0.005 |      0.002 |
+| Vccbram   |       1.000 |     0.009 |       0.005 |      0.003 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.057 |       0.000 |      0.057 |
+| Vccpint   |       1.000 |     0.077 |       0.000 |      0.077 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,18 +143,18 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| emiss_recep_rs232_bram |     3.095 |
-|   PRESENT_MODULE       |     1.166 |
-|     B_C                |     0.364 |
-|       REG1             |     0.326 |
+| emiss_recep_rs232_bram |     3.852 |
+|   PRESENT_MODULE       |     1.902 |
+|     B_C                |     0.950 |
+|       REG1             |     0.950 |
 |       REG2             |     0.000 |
-|     F_P                |     0.115 |
-|     K_S_80             |     0.016 |
-|       REG              |     0.000 |
-|     M_M                |     0.670 |
+|     F_P                |     0.174 |
+|     K_S_80             |     0.010 |
+|       REG              |     0.010 |
+|     M_M                |     0.769 |
 |   SR64                 |    <0.001 |
-|   U1                   |     0.689 |
-|   U2                   |     0.379 |
+|   U1                   |     0.666 |
+|   U2                   |     0.382 |
 +------------------------+-----------+
 
 

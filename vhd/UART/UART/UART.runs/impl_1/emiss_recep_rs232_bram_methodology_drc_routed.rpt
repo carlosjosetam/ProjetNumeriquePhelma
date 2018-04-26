@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-| Date         : Thu Apr 26 12:01:37 2018
+| Date         : Thu Apr 26 12:47:58 2018
 | Host         : cimepc08 running 64-bit Debian GNU/Linux 7.9 (wheezy)
 | Command      : report_methodology -file emiss_recep_rs232_bram_methodology_drc_routed.rpt -rpx emiss_recep_rs232_bram_methodology_drc_routed.rpx
 | Design       : emiss_recep_rs232_bram

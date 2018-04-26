@@ -14,18 +14,18 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13393 
+INFO: Helper process launched with PID 18417 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1170.176 ; gain = 75.000 ; free physical = 569 ; free virtual = 11569
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1170.176 ; gain = 75.000 ; free physical = 1038 ; free virtual = 11477
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'emiss_recep_rs232_bram' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:104]
-INFO: [Synth 8-3491] module 'ascii_to_hexa' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/ascii_to_hexa.vhd:7' bound to instance 'CASCII_HEXA' of component 'ascii_to_hexa' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'emiss_recep_rs232_bram' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:105]
+INFO: [Synth 8-3491] module 'ascii_to_hexa' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/ascii_to_hexa.vhd:7' bound to instance 'CASCII_HEXA' of component 'ascii_to_hexa' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:212]
 INFO: [Synth 8-638] synthesizing module 'ascii_to_hexa' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/ascii_to_hexa.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'ascii_to_hexa' (1#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/ascii_to_hexa.vhd:13]
-INFO: [Synth 8-3491] module 'shift_register_64_bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register.vhd:8' bound to instance 'SR64' of component 'shift_register_64_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:211]
+INFO: [Synth 8-3491] module 'shift_register_64_bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register.vhd:8' bound to instance 'SR64' of component 'shift_register_64_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:213]
 INFO: [Synth 8-638] synthesizing module 'shift_register_64_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register.vhd:18]
 INFO: [Synth 8-256] done synthesizing module 'shift_register_64_bits' (2#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register.vhd:18]
-INFO: [Synth 8-3491] module 'present' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:8' bound to instance 'PRESENT_MODULE' of component 'present' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:218]
+INFO: [Synth 8-3491] module 'present' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:8' bound to instance 'PRESENT_MODULE' of component 'present' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:227]
 INFO: [Synth 8-638] synthesizing module 'present' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:22]
 INFO: [Synth 8-3491] module 'block_Cypher' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:8' bound to instance 'B_C' of component 'block_Cypher' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:105]
 INFO: [Synth 8-638] synthesizing module 'block_Cypher' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:22]
@@ -116,7 +116,7 @@ INFO: [Synth 8-3491] module 'sync_ram' declared at '/tp/xph2sei/xph2sei401/Proje
 INFO: [Synth 8-638] synthesizing module 'sync_ram' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/memory.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'sync_ram' (16#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/memory.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'present' (17#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:22]
-INFO: [Synth 8-3491] module 'emiss_rs232' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:51' bound to instance 'U1' of component 'emiss_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
+INFO: [Synth 8-3491] module 'emiss_rs232' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:51' bound to instance 'U1' of component 'emiss_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
 INFO: [Synth 8-638] synthesizing module 'emiss_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:63]
 WARNING: [Synth 8-6014] Unused sequential element dp_ram1_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:98]
 WARNING: [Synth 8-6014] Unused sequential element lec_pf_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:99]
@@ -124,16 +124,16 @@ WARNING: [Synth 8-6014] Unused sequential element next_dp_ram1_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element n_lec_pf_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:103]
 WARNING: [Synth 8-6014] Unused sequential element txd_obs_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:230]
 INFO: [Synth 8-256] done synthesizing module 'emiss_rs232' (18#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:63]
-INFO: [Synth 8-3491] module 'recep_rs232' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:40' bound to instance 'U2' of component 'recep_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:251]
+INFO: [Synth 8-3491] module 'recep_rs232' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:40' bound to instance 'U2' of component 'recep_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:260]
 INFO: [Synth 8-638] synthesizing module 'recep_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:51]
 WARNING: [Synth 8-6014] Unused sequential element epar_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:73]
 WARNING: [Synth 8-6014] Unused sequential element nxt_epar_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:80]
 INFO: [Synth 8-256] done synthesizing module 'recep_rs232' (19#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:51]
-INFO: [Synth 8-3491] module 'fsm_write' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:26' bound to instance 'U4' of component 'fsm_write' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:261]
+INFO: [Synth 8-3491] module 'fsm_write' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:26' bound to instance 'U4' of component 'fsm_write' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:270]
 INFO: [Synth 8-638] synthesizing module 'fsm_write' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:34]
 INFO: [Synth 8-256] done synthesizing module 'fsm_write' (20#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:34]
-WARNING: [Synth 8-3848] Net q_bram in module/entity emiss_recep_rs232_bram does not have driver. [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:109]
-INFO: [Synth 8-256] done synthesizing module 'emiss_recep_rs232_bram' (21#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:104]
+WARNING: [Synth 8-3848] Net q_bram in module/entity emiss_recep_rs232_bram does not have driver. [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:110]
+INFO: [Synth 8-256] done synthesizing module 'emiss_recep_rs232_bram' (21#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:105]
 WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[7]
 WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[5]
 WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[4]
@@ -142,7 +142,7 @@ WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[2]
 WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[1]
 WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1213.676 ; gain = 118.500 ; free physical = 576 ; free virtual = 11576
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1213.676 ; gain = 118.500 ; free physical = 1044 ; free virtual = 11485
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -151,16 +151,16 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[7] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
-WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[6] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
-WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[5] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
-WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[4] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
-WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[3] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
-WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[2] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
-WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[1] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
-WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[0] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:240]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[7] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[6] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[5] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[4] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[3] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[2] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[1] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[0] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1213.676 ; gain = 118.500 ; free physical = 577 ; free virtual = 11577
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1213.676 ; gain = 118.500 ; free physical = 1044 ; free virtual = 11485
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -178,22 +178,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1538.613 ; gain = 0.000 ; free physical = 322 ; free virtual = 11322
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1538.613 ; gain = 0.000 ; free physical = 760 ; free virtual = 11228
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 398 ; free virtual = 11398
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 834 ; free virtual = 11303
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 398 ; free virtual = 11398
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 834 ; free virtual = 11303
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 399 ; free virtual = 11399
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 834 ; free virtual = 11303
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5587] ROM size for "hexa_out" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'fsm_Present_MEM'
@@ -260,7 +260,7 @@ WARNING: [Synth 8-6014] Unused sequential element Current_State_reg was removed.
 INFO: [Synth 8-3354] encoded FSM with state register 'Current_State_reg' using encoding 'sequential' in module 'emiss_rs232'
 WARNING: [Synth 8-6014] Unused sequential element Current_State_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:93]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 390 ; free virtual = 11390
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 825 ; free virtual = 11294
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -576,7 +576,7 @@ WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_r
 WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[90]) is unused and will be removed from module emiss_recep_rs232_bram.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 379 ; free virtual = 11379
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 805 ; free virtual = 11275
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -603,13 +603,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 241 ; free virtual = 11241
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 656 ; free virtual = 11139
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 241 ; free virtual = 11241
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 655 ; free virtual = 11138
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -622,7 +622,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance PRESENT_MODULE/M_M/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 239 ; free virtual = 11239
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.629 ; gain = 453.453 ; free physical = 652 ; free virtual = 11135
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -646,7 +646,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 245 ; free virtual = 11245
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 653 ; free virtual = 11135
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -659,7 +659,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 245 ; free virtual = 11245
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 653 ; free virtual = 11135
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -671,25 +671,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 245 ; free virtual = 11245
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 245 ; free virtual = 11245
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 245 ; free virtual = 11245
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 245 ; free virtual = 11245
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -708,17 +708,17 @@ Report Cell Usage:
 |1     |BUFG     |     1|
 |2     |CARRY4   |    18|
 |3     |LUT1     |    69|
-|4     |LUT2     |   153|
-|5     |LUT3     |    17|
-|6     |LUT4     |    93|
-|7     |LUT5     |    30|
-|8     |LUT6     |    93|
+|4     |LUT2     |    96|
+|5     |LUT3     |    16|
+|6     |LUT4     |   222|
+|7     |LUT5     |    23|
+|8     |LUT6     |    95|
 |9     |RAMB36E1 |     1|
 |10    |FDCE     |   224|
 |11    |FDRE     |   107|
 |12    |FDSE     |     2|
 |13    |LD       |    14|
-|14    |IBUF     |     6|
+|14    |IBUF     |     7|
 |15    |OBUF     |    11|
 +------+---------+------+
 
@@ -726,27 +726,27 @@ Report Instance Areas:
 +------+-----------------+-----------------------+------+
 |      |Instance         |Module                 |Cells |
 +------+-----------------+-----------------------+------+
-|1     |top              |                       |   839|
-|2     |  PRESENT_MODULE |present                |   419|
-|3     |    B_C          |block_Cypher           |   208|
-|4     |      REG1       |register_WIDTH_bits    |   128|
+|1     |top              |                       |   906|
+|2     |  PRESENT_MODULE |present                |   485|
+|3     |    B_C          |block_Cypher           |   272|
+|4     |      REG1       |register_WIDTH_bits    |   264|
 |5     |      REG2       |register_WIDTH_bits_0  |     8|
-|6     |    F_P          |fsm_Present_MEM        |    50|
-|7     |    K_S_80       |key_Schedule           |   160|
-|8     |      REG        |register_80_bits       |    80|
+|6     |    F_P          |fsm_Present_MEM        |    57|
+|7     |    K_S_80       |key_Schedule           |   155|
+|8     |      REG        |register_80_bits       |   155|
 |9     |    M_M          |sync_ram               |     1|
 |10    |  SR64           |shift_register_64_bits |    64|
 |11    |  U1             |emiss_rs232            |   222|
 |12    |  U2             |recep_rs232            |   116|
 +------+-----------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 244 ; free virtual = 11245
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 227 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1540.613 ; gain = 120.496 ; free physical = 304 ; free virtual = 11304
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 306 ; free virtual = 11306
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1548.633 ; gain = 128.516 ; free physical = 713 ; free virtual = 11196
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1548.637 ; gain = 453.457 ; free physical = 715 ; free virtual = 11198
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -756,7 +756,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 141 Infos, 151 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1540.613 ; gain = 458.020 ; free physical = 273 ; free virtual = 11273
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 1549.629 ; gain = 467.035 ; free physical = 683 ; free virtual = 11166
 INFO: [Common 17-1381] The checkpoint '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/UART/UART.runs/synth_1/emiss_recep_rs232_bram.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1563.629 ; gain = 0.000 ; free physical = 272 ; free virtual = 11272
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 11:59:32 2018...
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1573.645 ; gain = 0.000 ; free physical = 683 ; free virtual = 11166
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 12:46:43 2018...

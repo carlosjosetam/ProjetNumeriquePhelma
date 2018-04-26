@@ -79,6 +79,7 @@ use IEEE.std_logic_1164.ALL ;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_logic_unsigned.ALL;
 library lib_VHDL;
+use lib_VHDL.present_library.all;
 
 
 --use IEEE.numeric_std.ALL; 
@@ -91,6 +92,7 @@ entity emiss_recep_rs232_bram is
         port(  Clk                   	: in STD_LOGIC ;
                rst                  	: in STD_LOGIC ;
 		start			: in STD_LOGIC;
+		mode			: in MODE_TYPE;
 		sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
                ledr                  	: out STD_LOGIC_VECTOR(7 downto 0);
 			   txd_obs                  	: out STD_LOGIC;	
@@ -214,7 +216,7 @@ begin
 
 -- PRESENT
 
-	PRESENT_MODULE : present port map (rst, clk, start, CRYP, K_80, reg_out_s, x"00000000000000000000000000000000", cypher_text_s);
+	PRESENT_MODULE : present port map (rst, clk, start, mode, K_80, reg_out_s, x"00000000000000000000000000000000", cypher_text_s);
 
 
 -- wren <= '0';

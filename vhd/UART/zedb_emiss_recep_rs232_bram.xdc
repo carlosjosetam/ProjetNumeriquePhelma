@@ -33,7 +33,7 @@
 # ----------------------------------------------------------------------------
 set_property PACKAGE_PIN P16 [get_ports {rst}];  # "BTNC"
 set_property PACKAGE_PIN R16 [get_ports {start}];  # "BTND"
-#set_property PACKAGE_PIN N15 [get_ports {pb_l}];  # "BTNL"
+set_property PACKAGE_PIN N15 [get_ports {mode}];  # "BTNL"
 #set_property PACKAGE_PIN R18 [get_ports {pb_r}];  # "BTNR"
 # set_property PACKAGE_PIN T18 [get_ports {sw6}];  # "BTNU"
 set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];

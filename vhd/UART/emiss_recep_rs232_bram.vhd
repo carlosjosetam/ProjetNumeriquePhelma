@@ -92,6 +92,7 @@ entity emiss_recep_rs232_bram is
         port(  Clk                   	: in STD_LOGIC ;
                rst                  	: in STD_LOGIC ;
 		start			: in STD_LOGIC;
+		mode			: in STD_LOGIC;
 		sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
                ledr                  	: out STD_LOGIC_VECTOR(7 downto 0);
 			   txd_obs                  	: out STD_LOGIC;	
@@ -186,6 +187,7 @@ end component;
 -- PRESENT
 
 signal cypher_text_s 	: std_logic_vector(63 downto 0);
+signal mode_s		: MODE_TYPE;
 
 component present is
      port(
@@ -215,7 +217,14 @@ begin
 
 -- PRESENT
 
-	PRESENT_MODULE : present port map (rst, clk, start, CRYP, K_80, reg_out_s, x"00000000000000000000000000000000", cypher_text_s);
+	process (mode)
+	begin
+		if mode = '1' then mode_s <= CRYP;
+		else mode_s <= DECRYP;
+		end if;
+	end process;
+
+	PRESENT_MODULE : present port map (rst, clk, start, mode_s, K_80, reg_out_s, x"00000000000000000000000000000000", cypher_text_s);
 
 
 -- wren <= '0';

@@ -32,7 +32,7 @@
 # User Push Buttons - Bank 34
 # ----------------------------------------------------------------------------
 set_property PACKAGE_PIN P16 [get_ports {rst}];  # "BTNC"
-#set_property PACKAGE_PIN R16 [get_ports {BTND}];  # "BTND"
+set_property PACKAGE_PIN R16 [get_ports {start}];  # "BTND"
 #set_property PACKAGE_PIN N15 [get_ports {pb_l}];  # "BTNL"
 #set_property PACKAGE_PIN R18 [get_ports {pb_r}];  # "BTNR"
 # set_property PACKAGE_PIN T18 [get_ports {sw6}];  # "BTNU"
@@ -71,6 +71,7 @@ set_property PACKAGE_PIN U14 [get_ports {ledr[7]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {ledr[0] ledr[1] ledr[2] ledr[3] ledr[4] ledr[5] ledr[6] ledr[7] }]
 
+set_property PACKAGE_PIN M15 [get_ports {mode}] # sw7
 
 set_property PACKAGE_PIN F22 [get_ports {sw[0]}]
 
@@ -89,7 +90,7 @@ set_property PACKAGE_PIN H17 [get_ports {sw[6]}]
 set_property PACKAGE_PIN M17 [get_ports {sw[7]}]
 
 
-set_property IOSTANDARD LVCMOS18 [get_ports {sw[0] sw[1] sw[2] sw[3] sw[4] sw[5] sw[6] sw[7] }]
+set_property IOSTANDARD LVCMOS18 [get_ports {sw[0] sw[1] sw[2] sw[3] sw[4] sw[5] sw[6] }]
 # set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];
 # ----------------------------------------------------------------------------
 # JB Pmod - Bank 13
