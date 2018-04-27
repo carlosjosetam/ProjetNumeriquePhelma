@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-| Date         : Thu Apr 26 12:47:28 2018
+| Date         : Fri Apr 27 16:22:36 2018
 | Host         : cimepc08 running 64-bit Debian GNU/Linux 7.9 (wheezy)
 | Command      : report_control_sets -verbose -file emiss_recep_rs232_bram_control_sets_placed.rpt
 | Design       : emiss_recep_rs232_bram
@@ -22,7 +22,7 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    17 |
+| Number of unique control sets                            |    19 |
 | Unused register locations in slices containing registers |    37 |
 +----------------------------------------------------------+-------+
 
@@ -37,35 +37,37 @@ Table of Contents
 | No           | No                    | Yes                    |               8 |            3 |
 | No           | Yes                   | No                     |              10 |            5 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             216 |           61 |
-| Yes          | Yes                   | No                     |              99 |           36 |
+| Yes          | No                    | Yes                    |             344 |          100 |
+| Yes          | Yes                   | No                     |             107 |           37 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------------------------------+-------------------------------+-----------------------------------------------+------------------+----------------+
-|                       Clock Signal                      |         Enable Signal         |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
-+---------------------------------------------------------+-------------------------------+-----------------------------------------------+------------------+----------------+
-|  Clk_IBUF_BUFG                                          | U1/next_txd                   | rst_IBUF                                      |                1 |              1 |
-|  Clk_IBUF_BUFG                                          | U2/ind_w10                    | rst_IBUF                                      |                1 |              4 |
-|  Clk_IBUF_BUFG                                          | U1/next_ind_txd               | rst_IBUF                                      |                3 |              4 |
-|  Clk_IBUF_BUFG                                          |                               | PRESENT_MODULE/F_P/round_Counter_s[4]_i_2_n_0 |                2 |              5 |
-|  PRESENT_MODULE/F_P/next_round_Counter_s_reg[4]_i_2_n_0 |                               |                                               |                2 |              5 |
-|  Clk_IBUF_BUFG                                          | U2/w2[9]_i_1_n_0              | rst_IBUF                                      |                2 |              8 |
-|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/ram_reg[0] | rst_IBUF                                      |                4 |              8 |
-|  PRESENT_MODULE/F_P/next_state                          |                               |                                               |                3 |              9 |
-|  Clk_IBUF_BUFG                                          | U2/p_0_in[5]                  | rst_IBUF                                      |                2 |             10 |
-|  Clk_IBUF_BUFG                                          |                               | rst_IBUF                                      |                6 |             13 |
-|  Clk_IBUF_BUFG                                          | U1/next_burst                 | rst_IBUF                                      |                7 |             16 |
-|  Clk_IBUF_BUFG                                          | U2/Tap_Number[15]_i_1_n_0     | rst_IBUF                                      |                4 |             16 |
-|  Clk_IBUF_BUFG                                          | U1/next_baud_time             | rst_IBUF                                      |                6 |             16 |
-|  Clk_IBUF_BUFG                                          | U1/next_tempo                 | rst_IBUF                                      |               10 |             24 |
-|  Clk_IBUF_BUFG                                          | U2/E[0]                       | rst_IBUF                                      |               14 |             64 |
-|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/ram_reg[1] | rst_IBUF                                      |               30 |             64 |
-|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/ram_reg[3] | rst_IBUF                                      |               13 |             80 |
-+---------------------------------------------------------+-------------------------------+-----------------------------------------------+------------------+----------------+
++---------------------------------------------------------+---------------------------+-----------------------------------------------+------------------+----------------+
+|                       Clock Signal                      |       Enable Signal       |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++---------------------------------------------------------+---------------------------+-----------------------------------------------+------------------+----------------+
+|  Clk_IBUF_BUFG                                          | U1/next_txd               | rst_IBUF                                      |                1 |              1 |
+|  Clk_IBUF_BUFG                                          | U1/next_ind_txd           | rst_IBUF                                      |                2 |              4 |
+|  Clk_IBUF_BUFG                                          | U2/ind_w10                | rst_IBUF                                      |                2 |              4 |
+|  Clk_IBUF_BUFG                                          |                           | PRESENT_MODULE/F_P/round_Counter_s[4]_i_2_n_0 |                2 |              5 |
+|  PRESENT_MODULE/F_P/next_round_Counter_s_reg[4]_i_2_n_0 |                           |                                               |                2 |              5 |
+|  Clk_IBUF_BUFG                                          | U2/w2[9]_i_1_n_0          | rst_IBUF                                      |                1 |              8 |
+|  Clk_IBUF_BUFG                                          | U1/next_dp_ram2           | rst_IBUF                                      |                3 |              8 |
+|  PRESENT_MODULE/F_P/next_state                          |                           |                                               |                3 |              9 |
+|  Clk_IBUF_BUFG                                          | U2/p_0_in[5]              | rst_IBUF                                      |                2 |             10 |
+|  Clk_IBUF_BUFG                                          |                           | rst_IBUF                                      |                6 |             13 |
+|  Clk_IBUF_BUFG                                          | U2/Tap_Number[15]_i_1_n_0 | rst_IBUF                                      |                4 |             16 |
+|  Clk_IBUF_BUFG                                          | U1/next_baud_time         | rst_IBUF                                      |                6 |             16 |
+|  Clk_IBUF_BUFG                                          | U1/next_burst             | rst_IBUF                                      |                6 |             16 |
+|  Clk_IBUF_BUFG                                          | U1/next_tempo             | rst_IBUF                                      |               10 |             24 |
+|  Clk_IBUF_BUFG                                          | U2/E[0]                   | rst_IBUF                                      |               15 |             64 |
+|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/Q[1]   | rst_IBUF                                      |               35 |             64 |
+|  Clk_IBUF_BUFG                                          | U1/E[0]                   | rst_IBUF                                      |               21 |             64 |
+|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/Q[0]   | rst_IBUF                                      |               17 |             72 |
+|  Clk_IBUF_BUFG                                          | PRESENT_MODULE/F_P/Q[3]   | rst_IBUF                                      |               12 |             80 |
++---------------------------------------------------------+---------------------------+-----------------------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
@@ -78,7 +80,7 @@ Table of Contents
 | 9      |                     1 |
 | 10     |                     1 |
 | 13     |                     1 |
-| 16+    |                     7 |
+| 16+    |                     9 |
 +--------+-----------------------+
 
 

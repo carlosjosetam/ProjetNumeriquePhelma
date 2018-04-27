@@ -24,6 +24,7 @@ read_vhdl -library lib_VHDL {
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd
+  /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/hexa_to_ascii.vhd
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule.vhd
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule_128.vhd
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/memory.vhd
@@ -38,6 +39,7 @@ read_vhdl -library lib_VHDL {
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register.vhd
+  /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register_64.vhd
   /tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being

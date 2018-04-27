@@ -1,0 +1,762 @@
+
+*** Running vivado
+    with args -log emiss_recep_rs232_bram.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source emiss_recep_rs232_bram.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source emiss_recep_rs232_bram.tcl -notrace
+Command: synth_design -top emiss_recep_rs232_bram -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18417 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1170.176 ; gain = 75.000 ; free physical = 1038 ; free virtual = 11477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'emiss_recep_rs232_bram' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:105]
+INFO: [Synth 8-3491] module 'ascii_to_hexa' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/ascii_to_hexa.vhd:7' bound to instance 'CASCII_HEXA' of component 'ascii_to_hexa' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:212]
+INFO: [Synth 8-638] synthesizing module 'ascii_to_hexa' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/ascii_to_hexa.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'ascii_to_hexa' (1#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/ascii_to_hexa.vhd:13]
+INFO: [Synth 8-3491] module 'shift_register_64_bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register.vhd:8' bound to instance 'SR64' of component 'shift_register_64_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'shift_register_64_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'shift_register_64_bits' (2#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/shift_register.vhd:18]
+INFO: [Synth 8-3491] module 'present' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:8' bound to instance 'PRESENT_MODULE' of component 'present' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'present' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:22]
+INFO: [Synth 8-3491] module 'block_Cypher' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:8' bound to instance 'B_C' of component 'block_Cypher' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'block_Cypher' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:22]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'register_WIDTH_bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_WIDTH_Bits.vhd:6' bound to instance 'REG1' of component 'register_WIDTH_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'register_WIDTH_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_WIDTH_Bits.vhd:16]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register_WIDTH_bits' (3#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_WIDTH_Bits.vhd:16]
+	Parameter WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'register_WIDTH_bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_WIDTH_Bits.vhd:6' bound to instance 'REG2' of component 'register_WIDTH_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:79]
+INFO: [Synth 8-3491] module 's_Box_4x16_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:7' bound to instance 'SBOX_64' of component 's_Box_4x16_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:81]
+INFO: [Synth 8-638] synthesizing module 's_Box_4x16_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:12]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-638] synthesizing module 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:12]
+INFO: [Synth 8-226] default block is never used [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 's_Box_4_Bits' (4#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:12]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 's_Box_4x16_Bits' (5#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4x16_Bits.vhd:12]
+INFO: [Synth 8-3491] module 's_Box_Inv_4x16_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:7' bound to instance 'SBOX_INV_64' of component 's_Box_Inv_4x16_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:83]
+INFO: [Synth 8-638] synthesizing module 's_Box_Inv_4x16_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:12]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-638] synthesizing module 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:12]
+INFO: [Synth 8-226] default block is never used [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 's_Box_Inv_4_Bits' (6#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:12]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-3491] module 's_Box_Inv_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4_Bits.vhd:7' bound to instance 's_Box_4' of component 's_Box_Inv_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 's_Box_Inv_4x16_Bits' (7#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_Inv_4x16_Bits.vhd:12]
+INFO: [Synth 8-3491] module 'add_Round_Key' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/add_Round_Key.vhd:6' bound to instance 'ADD_ROUND_KEY_COMP' of component 'add_Round_Key' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'add_Round_Key' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/add_Round_Key.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'add_Round_Key' (8#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/add_Round_Key.vhd:13]
+INFO: [Synth 8-3491] module 'p_Layer' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/p_Layer.vhd:8' bound to instance 'P_LAYER_COMP' of component 'p_Layer' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'p_Layer' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/p_Layer.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'p_Layer' (9#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/p_Layer.vhd:13]
+INFO: [Synth 8-3491] module 'p_Layer_Inv' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/p_Layer_Inv.vhd:8' bound to instance 'P_LAYER_INV_COMP' of component 'p_Layer_Inv' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'p_Layer_Inv' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/p_Layer_Inv.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'p_Layer_Inv' (10#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/p_Layer_Inv.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'block_Cypher' (11#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/block_Cypher.vhd:22]
+INFO: [Synth 8-3491] module 'fsm_Present_MEM' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:8' bound to instance 'F_P' of component 'fsm_Present_MEM' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'fsm_Present_MEM' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:23]
+WARNING: [Synth 8-614] signal 'current_state' is read in the process but is not in the sensitivity list [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element address_read_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:146]
+INFO: [Synth 8-256] done synthesizing module 'fsm_Present_MEM' (12#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:23]
+INFO: [Synth 8-3491] module 'key_Schedule' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule.vhd:9' bound to instance 'K_S_80' of component 'key_Schedule' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'key_Schedule' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule.vhd:23]
+INFO: [Synth 8-3491] module 'register_80_bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_80_Bits.vhd:6' bound to instance 'REG' of component 'register_80_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'register_80_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_80_Bits.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'register_80_bits' (13#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_80_Bits.vhd:15]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 'SBOX' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'key_Schedule' (14#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule.vhd:23]
+INFO: [Synth 8-3491] module 'key_Schedule_128' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule_128.vhd:9' bound to instance 'K_S_128' of component 'key_Schedule_128' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'key_Schedule_128' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule_128.vhd:23]
+	Parameter WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-3491] module 'register_WIDTH_bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_WIDTH_Bits.vhd:6' bound to instance 'REG' of component 'register_WIDTH_bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule_128.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'register_WIDTH_bits__parameterized2' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_WIDTH_Bits.vhd:16]
+	Parameter WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register_WIDTH_bits__parameterized2' (14#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/register_WIDTH_Bits.vhd:16]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 'SBOX1' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule_128.vhd:50]
+INFO: [Synth 8-3491] module 's_Box_4_Bits' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/s_Box_4_Bits.vhd:7' bound to instance 'SBOX2' of component 's_Box_4_Bits' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule_128.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'key_Schedule_128' (15#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/key_Schedule_128.vhd:23]
+INFO: [Synth 8-3491] module 'sync_ram' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/memory.vhd:12' bound to instance 'M_M' of component 'sync_ram' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'sync_ram' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/memory.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'sync_ram' (16#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/memory.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'present' (17#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/present.vhd:22]
+INFO: [Synth 8-3491] module 'emiss_rs232' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:51' bound to instance 'U1' of component 'emiss_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+INFO: [Synth 8-638] synthesizing module 'emiss_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element dp_ram1_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element lec_pf_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:99]
+WARNING: [Synth 8-6014] Unused sequential element next_dp_ram1_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element n_lec_pf_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element txd_obs_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:230]
+INFO: [Synth 8-256] done synthesizing module 'emiss_rs232' (18#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:63]
+INFO: [Synth 8-3491] module 'recep_rs232' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:40' bound to instance 'U2' of component 'recep_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'recep_rs232' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:51]
+WARNING: [Synth 8-6014] Unused sequential element epar_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element nxt_epar_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'recep_rs232' (19#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:51]
+INFO: [Synth 8-3491] module 'fsm_write' declared at '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:26' bound to instance 'U4' of component 'fsm_write' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:270]
+INFO: [Synth 8-638] synthesizing module 'fsm_write' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'fsm_write' (20#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:34]
+WARNING: [Synth 8-3848] Net q_bram in module/entity emiss_recep_rs232_bram does not have driver. [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:110]
+INFO: [Synth 8-256] done synthesizing module 'emiss_recep_rs232_bram' (21#1) [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:105]
+WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[7]
+WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[5]
+WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[4]
+WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[3]
+WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[2]
+WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[1]
+WARNING: [Synth 8-3331] design emiss_rs232 has unconnected port sw[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1213.676 ; gain = 118.500 ; free physical = 1044 ; free virtual = 11485
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[7] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[6] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[5] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[4] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[3] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[2] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[1] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+WARNING: [Synth 8-3295] tying undriven pin U1:q_bram[0] to constant 0 [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_recep_rs232_bram.vhd:249]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1213.676 ; gain = 118.500 ; free physical = 1044 ; free virtual = 11485
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/zedb_emiss_recep_rs232_bram.xdc]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/zedb_emiss_recep_rs232_bram.xdc:39]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/zedb_emiss_recep_rs232_bram.xdc:48]
+Finished Parsing XDC File [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/zedb_emiss_recep_rs232_bram.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/zedb_emiss_recep_rs232_bram.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/emiss_recep_rs232_bram_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/emiss_recep_rs232_bram_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1538.613 ; gain = 0.000 ; free physical = 760 ; free virtual = 11228
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 834 ; free virtual = 11303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 834 ; free virtual = 11303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 834 ; free virtual = 11303
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "hexa_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'fsm_Present_MEM'
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:58]
+INFO: [Synth 8-5546] ROM "next_round_Counter_s" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'Current_State_reg' in module 'emiss_rs232'
+WARNING: [Synth 8-6014] Unused sequential element Current_State_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:93]
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "Next_State" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Next_State" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_ind_w1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "nxt_w1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nxt_b_ld" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element bram_ad_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:54]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:58]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:54]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:58]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 reset_s |                              000 |                              000
+                load_key |                              001 |                              001
+            generate_key |                              010 |                              010
+                wait_mem |                              011 |                              011
+               load_text |                              100 |                              100
+               loop_text |                              101 |                              101
+                text_out |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'fsm_Present_MEM'
+WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:58]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:54]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:58]
+WARNING: [Synth 8-327] inferring latch for variable 'buffer_CNT_reg' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:35]
+WARNING: [Synth 8-327] inferring latch for variable 'next_round_Counter_s_reg' [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/fsm_present_MEM.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element Current_State_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element Current_State_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:93]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   init0 |                             0000 |                             0000
+                    init |                             0001 |                             0001
+                   start |                             0010 |                             0010
+                   emiss |                             0011 |                             0011
+              data_emiss |                             0100 |                             0100
+                    stop |                             0101 |                             0101
+                     att |                             0110 |                             0110
+               lec_pf_st |                             0111 |                             0111
+                   stop2 |                             1000 |                             1000
+                 tempo_t |                             1001 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Current_State_reg' using encoding 'sequential' in module 'emiss_rs232'
+WARNING: [Synth 8-6014] Unused sequential element Current_State_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/emiss_rs232.vhd:93]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1539.613 ; gain = 444.438 ; free physical = 825 ; free virtual = 11294
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
++---XORs : 
+	   2 Input     64 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               80 Bit    Registers := 1     
+	               64 Bit    Registers := 3     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---RAMs : 
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     80 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 5     
+	  10 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	  10 Input     16 Bit        Muxes := 2     
+	   7 Input     16 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 3     
+	  10 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  23 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 2     
+	  18 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 7     
+	  10 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ascii_to_hexa 
+Detailed RTL Component Info : 
++---Muxes : 
+	  23 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module shift_register_64_bits 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+Module register_WIDTH_bits 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+Module add_Round_Key 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
+Module block_Cypher 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+Module fsm_Present_MEM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   7 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 4     
+Module register_80_bits 
+Detailed RTL Component Info : 
++---Registers : 
+	               80 Bit    Registers := 1     
+Module key_Schedule 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      5 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     80 Bit        Muxes := 1     
+Module register_WIDTH_bits__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+Module key_Schedule_128 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      5 Bit         XORs := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+Module sync_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module present 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module emiss_rs232 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	  10 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  10 Input     16 Bit        Muxes := 2     
+	  10 Input      8 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 2     
+	  18 Input      4 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 8     
+Module recep_rs232 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   9 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   7 Input     16 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 3     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 2     
+Module fsm_write 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element U2/b_ld_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/recep_rs232.vhd:74]
+WARNING: [Synth 8-6014] Unused sequential element U4/bram_ad_reg was removed.  [/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/fsm_write.vhd:50]
+INFO: [Synth 8-5587] ROM size for "CASCII_HEXA/hexa_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "U2/Next_State" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U2/Next_State" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "U2/nxt_w1" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design emiss_recep_rs232_bram has unconnected port sw[7]
+WARNING: [Synth 8-3331] design emiss_recep_rs232_bram has unconnected port sw[5]
+WARNING: [Synth 8-3331] design emiss_recep_rs232_bram has unconnected port sw[4]
+WARNING: [Synth 8-3331] design emiss_recep_rs232_bram has unconnected port sw[3]
+WARNING: [Synth 8-3331] design emiss_recep_rs232_bram has unconnected port sw[2]
+WARNING: [Synth 8-3331] design emiss_recep_rs232_bram has unconnected port sw[1]
+RAM Pipeline Warning: Read Address Register Found For RAM PRESENT_MODULE/M_M/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-3332] Sequential element (U2/w1_reg[11]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (U2/w1_reg[0]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (U2/w2_reg[11]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (U2/w2_reg[10]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (U2/w2_reg[1]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (U2/w2_reg[0]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[63]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[62]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[61]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[60]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[59]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[58]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[57]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[56]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[55]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[54]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[53]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[52]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[51]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[50]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[49]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[48]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[47]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[46]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[45]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[44]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[43]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[42]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[41]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[40]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[39]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[38]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[37]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[36]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[35]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[34]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[33]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[32]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[31]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[30]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[29]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[28]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[27]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[26]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[25]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[24]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[23]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[22]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[21]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[20]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[19]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[18]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[17]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[16]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[15]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[14]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[13]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[12]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[11]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[10]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[9]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/B_C/REG2/reg_out_reg[8]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[127]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[126]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[125]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[124]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[123]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[122]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[121]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[120]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[119]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[118]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[117]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[116]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[115]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[114]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[113]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[112]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[111]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[110]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[109]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[108]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[107]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[106]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[105]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[104]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[103]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[102]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[101]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[100]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[99]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[98]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[97]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[96]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[95]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[94]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[93]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[92]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[91]) is unused and will be removed from module emiss_recep_rs232_bram.
+WARNING: [Synth 8-3332] Sequential element (PRESENT_MODULE/K_S_128/REG/reg_out_reg[90]) is unused and will be removed from module emiss_recep_rs232_bram.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 805 ; free virtual = 11275
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|sync_ram:   | ram_reg    | 32 x 64(READ_FIRST)    | W |   | 32 x 64(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 656 ; free virtual = 11139
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1540.613 ; gain = 445.438 ; free physical = 655 ; free virtual = 11138
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance PRESENT_MODULE/M_M/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.629 ; gain = 453.453 ; free physical = 652 ; free virtual = 11135
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 653 ; free virtual = 11135
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 653 ; free virtual = 11135
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    18|
+|3     |LUT1     |    69|
+|4     |LUT2     |    96|
+|5     |LUT3     |    16|
+|6     |LUT4     |   222|
+|7     |LUT5     |    23|
+|8     |LUT6     |    95|
+|9     |RAMB36E1 |     1|
+|10    |FDCE     |   224|
+|11    |FDRE     |   107|
+|12    |FDSE     |     2|
+|13    |LD       |    14|
+|14    |IBUF     |     7|
+|15    |OBUF     |    11|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------------+-----------------------+------+
+|      |Instance         |Module                 |Cells |
++------+-----------------+-----------------------+------+
+|1     |top              |                       |   906|
+|2     |  PRESENT_MODULE |present                |   485|
+|3     |    B_C          |block_Cypher           |   272|
+|4     |      REG1       |register_WIDTH_bits    |   264|
+|5     |      REG2       |register_WIDTH_bits_0  |     8|
+|6     |    F_P          |fsm_Present_MEM        |    57|
+|7     |    K_S_80       |key_Schedule           |   155|
+|8     |      REG        |register_80_bits       |   155|
+|9     |    M_M          |sync_ram               |     1|
+|10    |  SR64           |shift_register_64_bits |    64|
+|11    |  U1             |emiss_rs232            |   222|
+|12    |  U2             |recep_rs232            |   116|
++------+-----------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1548.633 ; gain = 453.457 ; free physical = 654 ; free virtual = 11136
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 227 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1548.633 ; gain = 128.516 ; free physical = 713 ; free virtual = 11196
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1548.637 ; gain = 453.457 ; free physical = 715 ; free virtual = 11198
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  LD => LDCE: 14 instances
+
+141 Infos, 151 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 1549.629 ; gain = 467.035 ; free physical = 683 ; free virtual = 11166
+INFO: [Common 17-1381] The checkpoint '/tp/xph2sei/xph2sei401/ProjetNumeriquePhelma/vhd/UART/UART/UART.runs/synth_1/emiss_recep_rs232_bram.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1573.645 ; gain = 0.000 ; free physical = 683 ; free virtual = 11166
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 12:46:43 2018...

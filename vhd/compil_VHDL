@@ -40,6 +40,8 @@ vcom +acc -work lib_VHDL present.vhd
 
 vcom +acc -work lib_VHDL UART/shift_register.vhd
 
+vcom +acc -work lib_VHDL UART/shift_register_64.vhd
+
 vcom +acc -work lib_VHDL UART/fsm_shift_write.vhd
 
 vcom +acc -work lib_VHDL UART/hexa_to_ascii.vhd

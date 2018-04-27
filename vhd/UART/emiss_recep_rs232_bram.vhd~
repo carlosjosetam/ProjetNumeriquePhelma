@@ -92,7 +92,8 @@ entity emiss_recep_rs232_bram is
         port(  Clk                   	: in STD_LOGIC ;
                rst                  	: in STD_LOGIC ;
 		start			: in STD_LOGIC;
-		mode			: in MODE_TYPE;
+		mode			: in STD_LOGIC;
+		start_emiss		: in STD_LOGIC;
 		sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
                ledr                  	: out STD_LOGIC_VECTOR(7 downto 0);
 			   txd_obs                  	: out STD_LOGIC;	
@@ -116,16 +117,16 @@ signal		txd_int  								:   std_logic;
 
 
 component emiss_rs232 is
-        port(  Clk                     : in STD_LOGIC ;
-               rst                  	: in STD_LOGIC ;
---               sw9                  	: in STD_LOGIC ;
---					sw9_gpio                  	: in STD_LOGIC ;
-					sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
-               ledR                  	: out STD_LOGIC;
-					q_bram						: in STD_LOGIC_VECTOR(7 downto 0);
-					raddress_bram				: out STD_LOGIC_VECTOR(3 downto 0);
-			   txd_obs                  	: out STD_LOGIC;	
-			   txd_out                  	: out STD_LOGIC );
+        port(   Clk                     : in STD_LOGIC ;
+                rst                  	: in STD_LOGIC ;
+		start_emiss		: in STD_LOGIC ;
+		sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
+                ledR                  	: out STD_LOGIC;
+		q_bram 			: in STD_LOGIC_VECTOR(7 downto 0);
+		raddress_bram 		: out STD_LOGIC_VECTOR(3 downto 0);
+		shift_out		: out STD_LOGIC;
+		txd_obs                 : out STD_LOGIC;	
+		txd_out                 : out STD_LOGIC );
 end component;
 
 component recep_rs232 is
@@ -137,19 +138,6 @@ component recep_rs232 is
                data_mem                : out STD_LOGIC_VECTOR(7 downto 0);
 --					wraddress_bram          : out STD_LOGIC_VECTOR(3 downto 0);
                err_parite              : out STD_LOGIC); 
-end component;
-
-component bram_16x8 IS
-	PORT
-	(
-    clka : IN STD_LOGIC;
-    wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    addra : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    dina : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    clkb : IN STD_LOGIC;
-    addrb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    doutb : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
-	);
 end component;
 
 component fsm_write is
@@ -187,6 +175,7 @@ end component;
 -- PRESENT
 
 signal cypher_text_s 	: std_logic_vector(63 downto 0);
+signal mode_s		: MODE_TYPE;
 
 component present is
      port(
@@ -203,6 +192,30 @@ end component;
 
 -- END PRESENT
 
+-- SERIAL OUT
+
+signal converter_out_ascii_s		: STD_LOGIC_VECTOR(7 downto 0);
+signal shift_out_s			: STD_LOGIC;
+signal parallel_reg_out			: STD_LOGIC_VECTOR(63 downto 0);
+
+component hexa_to_ascii is
+        port(   hexa_in                 : in STD_LOGIC_VECTOR(3 downto 0);
+		ascii_out               : out STD_LOGIC_VECTOR(7 downto 0)
+               
+	);
+end component;
+
+component parallel_shift_register_64_bits is
+   port(reg_in  	: in  std_logic_vector(63 downto 0);
+	enable		: in  std_logic;
+	shift		: in  std_logic;
+	reset		: in  std_logic;
+	clk		: in  std_logic;
+	reg_out		: out std_logic_vector(63 downto 0));
+end component;
+
+-- END SERIAL OUT
+
 
 
 begin
@@ -216,7 +229,23 @@ begin
 
 -- PRESENT
 
-	PRESENT_MODULE : present port map (rst, clk, start, mode, K_80, reg_out_s, x"00000000000000000000000000000000", cypher_text_s);
+	process (mode)
+	begin
+		if mode = '1' then mode_s <= CRYP;
+		else mode_s <= DECRYP;
+		end if;
+	end process;
+
+	PRESENT_MODULE : present port map (rst, clk, start, mode_s, K_80, reg_out_s, x"00000000000000000000000000000000", cypher_text_s);
+
+-- END PRESENT
+
+-- SERIAL OUT
+
+	CHEXA_ASCII : 	hexa_to_ascii port map (parallel_reg_out(63 downto 60), converter_out_ascii_s);
+	PSR64 : 	parallel_shift_register_64_bits port map (cypher_text_s, start_emiss, '1', rst, clk, parallel_reg_out);
+
+-- END SERIAL OUT
 
 
 -- wren <= '0';
@@ -238,16 +267,19 @@ txd_out <= rxd;
 
 ledr(7 downto 0) <= cypher_text_s(7 downto 0);
 
+
 U1 : emiss_rs232
 port map
-        (           Clk         => Clk,  
-                    rst     => rst,
-					sw      => sw,
-                    ledR    => ledr0,
-					q_bram  => q_bram,
-					raddress_bram => raddress_bram,
-					txd_obs    => txd_obs,
-					txd_out    => txd_int		);
+        (       Clk         => Clk,  
+                rst     => rst,
+		start_emiss => start_emiss,
+		sw      => sw,
+                ledR    => ledr0,
+		converter_out_ascii_s => q_bram,
+		raddress_bram => raddress_bram,
+		shift_out_s => shift_out,
+		txd_obs    => txd_obs,
+		txd_out    => txd_int);
 
 U2 : recep_rs232
 PORT map

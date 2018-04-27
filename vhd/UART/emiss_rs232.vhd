@@ -49,15 +49,16 @@ use IEEE.STD_LOGIC_unsigned.ALL;
 --use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity emiss_rs232 is
-        port(  Clk                     : in STD_LOGIC ;
-               rst                  	: in STD_LOGIC ;
---               sw9                  	: in STD_LOGIC ;
-					sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
-               ledR                  	: out STD_LOGIC;
-					q_bram 						: in STD_LOGIC_VECTOR(7 downto 0);
-					raddress_bram 				: out STD_LOGIC_VECTOR(3 downto 0);
-			   txd_obs                  	: out STD_LOGIC;	
-			   txd_out                  	: out STD_LOGIC );
+        port(   Clk                     : in STD_LOGIC ;
+                rst                  	: in STD_LOGIC ;
+		start_emiss		: in STD_LOGIC ;
+		sw                   	: in STD_LOGIC_VECTOR(7 downto 0);
+                ledR                  	: out STD_LOGIC;
+		q_bram 			: in STD_LOGIC_VECTOR(7 downto 0);
+		raddress_bram 		: out STD_LOGIC_VECTOR(3 downto 0);
+		shift_out		: out STD_LOGIC;
+		txd_obs                 : out STD_LOGIC;	
+		txd_out                 : out STD_LOGIC );
 end emiss_rs232;
 
 architecture A of emiss_rs232 is
@@ -114,14 +115,16 @@ begin
 	case Current_State is 
 	    
 		 when init0 =>
+
 		     next_ad_bram <= "0000"; -- positionner l'adr. à l'avance
-		     if ( sw9_sync = '1') then
+		     if ( sw9_sync = '1' and start_emiss = '1') then
 			   Next_State <= init;
 			  else
 			   Next_State <= init0;
 			  end if;
 
 		 when init =>
+
 			  next_baud_time <= rs232_speed ;
 			  next_txd <= '0'; 
 			  next_ind_txd <= "1000";		-- valeur de depart de l'ind_txd
@@ -131,6 +134,7 @@ begin
 			   Next_State <= start;
 			  
  		 when start =>
+
 			  next_dp_ram2 <= q_bram(7 downto 0);  -- on lit la sortie de la bram poids faible
 
 		 	  next_txd <= '0';  -- START bit = 0 
@@ -143,6 +147,7 @@ begin
 			  end if;					
 		
 		 when emiss =>
+
 			  next_txd <= dp_ram2(0);   -- poids faible transmis en premier	
 		     if ( baud_time=unsigned'(x"0000") ) then
 				Next_State <= data_emiss;
@@ -153,6 +158,7 @@ begin
 			  end if;	
 			  
 		when data_emiss =>
+
 		     if (ind_txd = unsigned'(x"1" )) then
 				Next_State <= stop;
 				Next_baud_time <= rs232_speed;
@@ -166,6 +172,7 @@ begin
 		     next_baud_time <= rs232_speed ;					  
 		
 		 when stop =>
+
 			  next_txd <= '1';   -- STOP bit = 1		 	  
 		     if ( baud_time=unsigned'(x"0000") ) then
 				Next_State <= att;
@@ -177,6 +184,7 @@ begin
 			  end if;	
 
 		when att =>
+
 			  if ( baud_time=unsigned'(x"0000") ) then
 				 Next_State <= lec_pf_st;
 --				 next_txd <= '0'; 						-- marqueur pour le debug
@@ -187,12 +195,14 @@ begin
 			  end if;
 			  
 		 when lec_pf_st	=>	
-				   Next_State <= stop2; --> Sinon on continue
-					next_ad_bram <= ad_bram + "0001";	-- et on incrémente l'adr. RAM
+				Next_State <= stop2; --> Sinon on continue
+				next_ad_bram <= ad_bram + "0001";	-- et on incrémente l'adr. RAM
+
 				
 		
 		when stop2 =>
-		      next_txd <= '1'; 
+		      next_txd <= '1';
+
 				
 --				if (burst=x"0FFF") then   -- taille burst 4k
 			   if (burst=x"000F") then   -- taille burst 15
@@ -212,6 +222,7 @@ begin
 				end if;
 								
 		when tempo_t =>
+
 				if (tempo=x"FFFFFF" and sw9_sync ='1') then			-- temporisation d'environ une seconde, temps mort pour buffer Linux
 				 Next_State <= init0;
 				 next_burst <= x"0000";				-- on relance toute la sequence
@@ -224,13 +235,28 @@ begin
 				end if;
 				
 				Next_State <= tempo_t;   -- FIN cul de sac (si pas commente)
+
+	
 				
  	 end case;
 				 							 
  	txd_out <=   txd; ledR <= not txd;	txd_obs <= txd;	 
-	raddress_bram <= ad_bram; 
+	raddress_bram <= ad_bram;
+
 	
  end process P_FSM;
+
+process (current_state, next_state)
+begin
+	case current_state is
+	when lec_pf_st => shift_out <= '1';
+	when stop2 => shift_out <= '1';
+	when att => shift_out <= '1';
+	when init => shift_out <= '1';
+	when others => shift_out <= '0';
+	end case;
+
+end process;	
 
 end A;
 

@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+library lib_VHDL;
+
+-- shift register with 4 bits shift each clock cycle
+
+entity parallel_shift_register_64_bits is
+   port(reg_in  	: in  std_logic_vector(63 downto 0);
+	enable		: in  std_logic;
+	shift		: in  std_logic;
+	reset		: in  std_logic;
+	clk		: in  std_logic;
+	reg_out		: out std_logic_vector(63 downto 0));
+       
+end parallel_shift_register_64_bits;
+
+architecture A of parallel_shift_register_64_bits is
+
+signal reg_out_s : std_logic_vector(63 downto 0);
+
+begin
+
+reg_out <= reg_out_s;
+
+process (clk, reset)
+	begin
+	    if (reset = '1') then
+		reg_out_s <= x"0000000000000000";
+	    elsif clk'event and clk = '1' then
+		if(enable = '1' and shift = '0') then
+			reg_out_s <= reg_in;
+		end if;
+		if (shift = '1') then
+			reg_out_s <= std_logic_vector(shift_left(unsigned(reg_out_s), 4));
+		end if;
+	    end if;
+	end process;
+end A;

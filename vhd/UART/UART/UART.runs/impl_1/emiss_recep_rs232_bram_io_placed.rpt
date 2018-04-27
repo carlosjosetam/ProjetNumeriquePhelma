@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
-| Date                      : Thu Apr 26 12:47:28 2018
+| Date                      : Fri Apr 27 16:22:34 2018
 | Host                      : cimepc08 running 64-bit Debian GNU/Linux 7.9 (wheezy)
 | Command                   : report_io -file emiss_recep_rs232_bram_io_placed.rpt
 | Design                    : emiss_recep_rs232_bram
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            24 |
+|            25 |
 +---------------+
 
 
@@ -404,7 +404,7 @@ Table of Contents
 | R15        |             | High Range | IO_25_34                | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | R16        | start       | High Range | IO_L24N_T3_34           | INPUT       | LVCMOS18    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | R17        |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
-| R18        |             | High Range | IO_L23P_T3_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| R18        | start_emiss | High Range | IO_L23P_T3_34           | INPUT       | LVCMOS18    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | R19        |             | High Range | IO_L22P_T3_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | R20        |             | High Range | IO_L17P_T2_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | R21        |             | High Range | IO_L17N_T2_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |

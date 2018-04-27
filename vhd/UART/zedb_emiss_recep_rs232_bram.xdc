@@ -34,7 +34,7 @@
 set_property PACKAGE_PIN P16 [get_ports {rst}];  # "BTNC"
 set_property PACKAGE_PIN R16 [get_ports {start}];  # "BTND"
 set_property PACKAGE_PIN N15 [get_ports {mode}];  # "BTNL"
-#set_property PACKAGE_PIN R18 [get_ports {pb_r}];  # "BTNR"
+set_property PACKAGE_PIN R18 [get_ports {start_emiss}];  # "BTNR"
 # set_property PACKAGE_PIN T18 [get_ports {sw6}];  # "BTNU"
 set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
 
@@ -43,6 +43,7 @@ set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
 # ----------------------------------------------------------------------------
 # Clock Source - Bank 13
 # ----------------------------------------------------------------------------
+create_clock -period 10.000 -name Clk [get_ports Clk] 
 set_property PACKAGE_PIN Y9 [get_ports {Clk}];  # "GCLK"
 # Note that the bank voltage for IO Bank 13 is fixed to 3.3V on ZedBoard.
 set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];

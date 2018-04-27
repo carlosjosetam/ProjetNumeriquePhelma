@@ -196,11 +196,88 @@ begin
 	wait for 10 ns;
 	start_s <= '0';
 	wait for 300 ns;
+
+	-- TEST POUR LE CR
+	
+	reset_s <= '1';
+	wait for 10 ns;
+
+	K_SIZE_s <= '0';
+	MODE_s <= '0';
+	plein_Text_S <= x"FFFFFFFFFFFFFFFF";
+	key_S <= x"00000000000000000000000000000000";
+	reset_s <= '0';
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 300 ns;
+
+	K_SIZE_s <= '1';
+	MODE_s <= '0';
+	plein_Text_S <= x"0000000000000000";
+	key_S <= x"00000000000000000000000000000000";
+	reset_s <= '0';
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 600 ns;
+
+	reset_s <= '1';
+	wait for 10 ns;
+
+	K_SIZE_s <= '0';
+	MODE_s <= '1';
+	plein_Text_S <= x"A112FFC72F68417B";
+	key_S <= x"00000000000000000000000000000000";
+	reset_s <= '0';
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 300 ns;
+
+	K_SIZE_s <= '1';
+	MODE_s <= '1';
+	plein_Text_S <= x"96DB702A2E6900AF";
+	key_S <= x"00000000000000000000000000000000";
+	reset_s <= '0';
+	start_s <= '1';
+	wait for 10 ns;
+	start_s <= '0';
+	wait for 500 ns;
 	
 	
 	assert false report "END OF SIMULATION" severity failure;
  end process;
 end arch;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
